@@ -1,0 +1,24 @@
+<ng-sidebar-container class="sidebar-container-custom" (animate)="_animate">
+
+    <!-- A sidebar -->
+    <ng-sidebar [(opened)]="_opened" [mode]="'push'">
+        <div class="container px-0 sidebar-custom">
+
+        </div>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content class="px-0">
+        <div class="container px-0" style="width: 100%;">
+            <div class="row mx-0" style="background-color: #bdbdbd; height: 40px; width: 100%">
+                <div (click)="_toggleSideBar()" class="col-2 button-collapse">
+                    <i class="fa fa-bars fa-2x mt-1" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</ng-sidebar-container>

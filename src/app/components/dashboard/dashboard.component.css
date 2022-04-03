@@ -1,0 +1,18 @@
+@import url('../../../../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../../../../node_modules/font-awesome/css/font-awesome.css');
+.sidebar-container-custom {
+    height: 100vh;
+    background-color: #424242;
+}
+
+.sidebar-custom {
+    height: 100vh;
+    width: 320px;
+    background-color: #303f9f;
+    color: #bdbdbd;
+}
+
+.button-collapse {
+    background-color: #bdbdbd;
+    max-width: fit-content !important;
+}
