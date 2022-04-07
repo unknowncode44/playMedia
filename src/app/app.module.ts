@@ -24,10 +24,13 @@ import { provideDatabase,getDatabase }      from '@angular/fire/database';
 import { DashboardComponent }               from './components/dashboard/dashboard.component';
 
 //sidebar
-import { Sidebar, SidebarModule }                    from 'ng-sidebar';
+// import { Sidebar, SidebarModule }                    from 'ng-sidebar';
 
-// font-awesome
-
+// ngPrime
+import {SidebarModule} from 'primeng/sidebar';
+import {ButtonModule} from 'primeng/button';
+import {MenuModule} from 'primeng/menu';
+import {CardModule} from 'primeng/card';
 
 
 
@@ -47,7 +50,10 @@ import { Sidebar, SidebarModule }                    from 'ng-sidebar';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    SidebarModule.forRoot(),
+    SidebarModule,
+    ButtonModule,
+    MenuModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

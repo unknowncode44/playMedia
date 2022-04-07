@@ -1,16 +1,79 @@
-<ng-sidebar-container class="sidebar-container-custom" (animate)="_animate">
+<!-- <ng-sidebar-container class="sidebar-container-custom" (animate)="_animate">
 
-    <!-- A sidebar -->
     <ng-sidebar [(opened)]="_opened" [mode]="'push'">
         <div class="container px-0 sidebar-custom">
+            <div class="row sidebar-row">
+                <div class="col-md-6 mb-4 sidebar-col text-center">
+                    <h2 class="my-0">Play Media</h2>
+                    <img src="./../../../assets/icons/play-forward-circle-outline.svg" alt="">
+                </div>
+            </div>
 
+            <div class="row ps-3">
+                <div class="col">
+                    <ul class="list-group">
+                        <li>
+                            <div class="container px-0 py-2">
+                                <div class="row" >
+                                    <div class="col ul-icon">
+                                        <img src="./../../../assets/icons/person-add-outline.svg" alt="" height="30px">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 22px; margin-bottom: 0;">Crear usuario</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="container px-0 py-2">
+                                <div class="row" >
+                                    <div class="col ul-icon">
+                                        <img src="./../../../assets/icons/people-outline.svg" alt="" height="30px">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 22px; margin-bottom: 0;">Ver Usuarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="container px-0 py-2">
+                                <div class="row" >
+                                    <div class="col ul-icon">
+                                        <img src="./../../../assets/icons/settings-outline.svg" alt="" height="30px">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 22px; margin-bottom: 0;">Gestionar Canales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="container px-0 py-2">
+                                <div class="row" >
+                                    <div class="col ul-icon">
+                                        <img src="./../../../assets/icons/logout_black_24dp.svg" alt="" height="30px">
+                                    </div>
+                                    <div class="col">
+                                        <p style="font-size: 22px; margin-bottom: 0;">Cerrar Sesion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
     </ng-sidebar>
 
-    <!-- Page content -->
-    <div ng-sidebar-content class="px-0">
-        <div class="container px-0" style="width: 100%;">
-            <div class="row mx-0" style="background-color: #bdbdbd; height: 40px; width: 100%">
+
+    <div ng-sidebar-content class="mx-0">
+        <div class="container p-0">
+            <div class="row mx-0" style="background-color: #bdbdbd; height: 40px; width: 100%; margin-left: 0px;">
                 <div (click)="_toggleSideBar()" class="col-2 button-collapse">
                     <i class="fa fa-bars fa-2x mt-1" aria-hidden="true"></i>
                 </div>
@@ -21,4 +84,44 @@
 
     </div>
 
-</ng-sidebar-container>
+</ng-sidebar-container> -->
+<div class="grid" style="height: 100vh;">
+
+        <div class="col-3 px-0">
+            <p-card class="text-center p-0 bg">
+                <div class="row mb-0 pb-0">
+                    <h3 class="mb-0">Play Media</h3>
+                </div>
+                <div class="row">
+                   <div class="grid">
+                    <div class="col-4 p-0"></div>
+                    <div class="col-4 p-0">
+                        <img src="./../../../assets/icons/play-forward-circle-outline.svg" style="height: 60px;">
+                    </div>
+                    <div class="col-4  p-0"></div>
+                   </div>
+                </div>
+            </p-card>
+        </div>
+        <div class="col-9">
+            <p-card class="text-center">
+                <div class="container block h-100"></div>
+            </p-card>
+        </div>
+
+</div>
+
+
+<!-- <div class="container p-0 mx-0">
+    <div class="row" style="height: 100vh; width: 100%; justify-content: flex-start;">
+        <div class="col" style="background-color: darkgray; max-width: 300px;">
+            <p-card class="text-center" header="PlayMedia">
+                <div class="container block surface-500 h-100"></div>
+            </p-card>
+        </div>
+        
+    </div>
+</div> -->
+
+
+

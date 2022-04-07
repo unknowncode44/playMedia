@@ -1,5 +1,18 @@
 @import url('../../../../node_modules/bootstrap/dist/css/bootstrap.css');
-@import url('../../../../node_modules/font-awesome/css/font-awesome.css');
+@import url('../../../../node_modules/primeflex/primeflex.min.css');
+/* @import url('../../../../node_modules/font-awesome/css/font-awesome.css'); */
+
+
+
+*{
+    font-family: 'Ubuntu', sans-serif !important;
+    background-color: var(--bluegray-800);
+    
+}
+
+
+
+/*
 .sidebar-container-custom {
     height: 100vh;
     background-color: #424242;
@@ -7,12 +20,42 @@
 
 .sidebar-custom {
     height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
     width: 320px;
     background-color: #303f9f;
     color: #bdbdbd;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.ul-icon {
+    max-width: fit-content !important;
+    padding-left: 1rem !important;
+    padding-right: 0;
+}
+
+.sidebar-row {
+    align-content: space-around !important;
+    margin-top: 1rem;
+}
+.sidebar-col {
+    padding: 5px;
+    height: 100px;
+    width: 60px;
+}
+.sidebar-col p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.sidebar-col img {
+    height: 60px;
+}
+
 .button-collapse {
     background-color: #bdbdbd;
     max-width: fit-content !important;
-}
+} */
