@@ -11,6 +11,24 @@
 }
 
 
+li {
+    list-style: none;
+}
+
+
+.row h3 {
+    background-color: #1e1e1e;
+}
+
+.row  {
+    background-color: #1e1e1e;
+}
+
+.row-custom .col-4, .row-custom img  {
+    background-color: #1e1e1e;
+}
+
+
 
 /*
 .sidebar-container-custom {
