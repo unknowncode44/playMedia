@@ -1,126 +1,113 @@
-<!-- <ng-sidebar-container class="sidebar-container-custom" (animate)="_animate">
-
-    <ng-sidebar [(opened)]="_opened" [mode]="'push'">
-        <div class="container px-0 sidebar-custom">
-            <div class="row sidebar-row">
-                <div class="col-md-6 mb-4 sidebar-col text-center">
-                    <h2 class="my-0">Play Media</h2>
-                    <img src="./../../../assets/icons/play-forward-circle-outline.svg" alt="">
-                </div>
+<div class="grid pb-0 mb-0 pe-2" style="height: 100vh;">
+    <div class="col-3 px-0 my-0">
+        <p-card class="text-center">
+            <div class="row mb-0 pb-0">
+                <h3 class="mb-1">Play Media</h3>
             </div>
-
-            <div class="row ps-3">
-                <div class="col">
-                    <ul class="list-group">
-                        <li>
-                            <div class="container px-0 py-2">
-                                <div class="row" >
-                                    <div class="col ul-icon">
-                                        <img src="./../../../assets/icons/person-add-outline.svg" alt="" height="30px">
-                                    </div>
-                                    <div class="col">
-                                        <p style="font-size: 22px; margin-bottom: 0;">Crear usuario</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="container px-0 py-2">
-                                <div class="row" >
-                                    <div class="col ul-icon">
-                                        <img src="./../../../assets/icons/people-outline.svg" alt="" height="30px">
-                                    </div>
-                                    <div class="col">
-                                        <p style="font-size: 22px; margin-bottom: 0;">Ver Usuarios</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="container px-0 py-2">
-                                <div class="row" >
-                                    <div class="col ul-icon">
-                                        <img src="./../../../assets/icons/settings-outline.svg" alt="" height="30px">
-                                    </div>
-                                    <div class="col">
-                                        <p style="font-size: 22px; margin-bottom: 0;">Gestionar Canales</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <div class="container px-0 py-2">
-                                <div class="row" >
-                                    <div class="col ul-icon">
-                                        <img src="./../../../assets/icons/logout_black_24dp.svg" alt="" height="30px">
-                                    </div>
-                                    <div class="col">
-                                        <p style="font-size: 22px; margin-bottom: 0;">Cerrar Sesion</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </ng-sidebar>
-
-
-    <div ng-sidebar-content class="mx-0">
-        <div class="container p-0">
-            <div class="row mx-0" style="background-color: #bdbdbd; height: 40px; width: 100%; margin-left: 0px;">
-                <div (click)="_toggleSideBar()" class="col-2 button-collapse">
-                    <i class="fa fa-bars fa-2x mt-1" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-</ng-sidebar-container> -->
-<div class="grid" style="height: 100vh;">
-        <div class="col-3 px-0 my-1">
-            <p-card class="text-center p-0">
-                <div class="row mb-0 pb-0"> 
-                    <h3 class="mb-0">Play Media</h3>
-                </div>
-                <div class="row row-custom">
-                   <div class="grid" style="background-color: #1e1e1e;">
+            <div class="row row-custom">
+                <div class="grid mb-2" style="background-color: #1e1e1e;">
                     <div class="col-4 p-0"></div>
                     <div class="col-4 p-0">
                         <img src="./../../../assets/icons/play-forward-circle-outline.svg" style="height: 60px;">
                     </div>
                     <div class="col-4  p-0"></div>
-                   </div>
                 </div>
-                <div class="row" >
-                    <div class="grid p-0">
-                        <div class="col ms-2" style="min-width: 100%;">
-                            <div class="ul text-start">
-                                <li>
-                                    <a href="">
-                                        <span class="mx-2"><img src="./../../../assets/icons/play-forward-circle-outline.svg" style="height: 30px;"></span>
-                                        <span>Panel De Control</span>
-                                    </a>
-                                </li>
+            </div>
+            <div class="row">
+                <div class="grid p-0">
+                    <div class="col ms-2 ul-col-custom">
+                        <div class="ul ul-custom text-start">
+
+                            <li class="mb-2">
+                                <a href="">
+                                    <div class="row">
+                                        <div class="grid ps-3 pe-0">
+                                            <div class="col-2">
+                                                <img src="./../../../assets/icons/person-add-outline.svg" style="height: 30px;">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="p-custom">Agregar Usuario</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="">
+                                    <div class="row">
+                                        <div class="grid ps-3 pe-0">
+                                            <div class="col-2">
+                                                <img src="./../../../assets/icons/people-outline.svg" style="height: 30px;">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="p-custom">Ver Usuarios</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="">
+                                    <div class="row">
+                                        <div class="grid ps-3 pe-0">
+                                            <div class="col-2">
+                                                <img src="./../../../assets/icons/play-outline.svg" style="height: 30px;">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="p-custom">Agregar Canales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="mb-2">
+                                <a href="">
+                                    <div class="row">
+                                        <div class="grid ps-3 pe-0">
+                                            <div class="col-2">
+                                                <img src="./../../../assets/icons/play-forward-outline.svg" style="height: 30px;">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="p-custom">Ver Canales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <div class="divider-container"></div>
+
+                            <li class="mb-2">
+                                <a href="">
+                                    <div class="row">
+                                        <div class="grid ps-3 pe-0">
+                                            <div class="col-2">
+                                                <img src="./../../../assets/icons/log-out-outline.svg" style="height: 30px;">
+                                            </div>
+                                            <div class="col-10">
+                                                <p class="p-custom">Cerrar Sesion</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <div class="container-custom text-center">
+                                <p>Desarrollado por HV Devs - Alto Valle, RN NQN</p>
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </p-card>
-        </div>
-        <div class="col-9">
-            <p-card class="text-center">
-                <div class="container block h-100"></div>
-            </p-card>
-        </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="col-9 py-4">
+        <app-adduser></app-adduser>
+    </div>
 
 </div>
 
@@ -135,6 +122,3 @@
         
     </div>
 </div> -->
-
-
-

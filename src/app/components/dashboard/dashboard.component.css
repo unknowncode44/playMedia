@@ -1,33 +1,126 @@
 @import url('../../../../node_modules/bootstrap/dist/css/bootstrap.css');
 @import url('../../../../node_modules/primeflex/primeflex.min.css');
-/* @import url('../../../../node_modules/font-awesome/css/font-awesome.css'); */
-
-
-
-*{
-    font-family: 'Ubuntu', sans-serif !important;
-    background-color: var(--bluegray-800);
-    
+:root {
+    --primary-color: #1e1e1e;
+    --background-color: #35454c;
+    --text-color: #bdbdbb;
 }
 
+
+/* @import url('../../../../node_modules/font-awesome/css/font-awesome.css'); */
+
+* {
+    font-family: 'Ubuntu', sans-serif !important;
+    background-color: var(--bluegray-800);
+}
 
 li {
     list-style: none;
 }
 
-
 .row h3 {
     background-color: #1e1e1e;
+    font-size: 40px;
 }
 
-.row  {
+.ul-col-custom {
+    min-width: 100% !important;
+    background-color: #1e1e1e;
+    padding: 0;
+}
+
+.ul-custom {
+    background-color: #1e1e1e !important;
+}
+
+.p-card-body {
+    margin-bottom: 0px !important;
+}
+
+.ul-col-custom a,
+.ul-col-custom img,
+.ul-col-custom span,
+.ul-col-custom .grid {
+    color: #bdbdbd;
+    background-color: #1e1e1e;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.divider-container {
+    height: 24rem;
+    width: 100%;
     background-color: #1e1e1e;
 }
 
-.row-custom .col-4, .row-custom img  {
+.container-custom {
+    height: 4rem;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding-top: 2.5rem;
+}
+
+.container-custom p {
+    font-size: 12px;
     background-color: #1e1e1e;
 }
 
+.ul-col-custom .p-custom {
+    background-color: transparent !important;
+    line-height: 0%;
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.ul-col-custom .col-10:hover {
+    background-color: #35454c !important;
+}
+
+.ul-col-custom .div-custom span {
+    margin-left: 1.5rem;
+    min-width: 100% !important;
+}
+
+.ul-col-custom img {
+    margin-left: 1rem;
+    min-height: 100% !important;
+}
+
+.ul-col-custom .col-2 {
+    background-color: #1e1e1e !important;
+}
+
+.ul-col-custom .col-10 {
+    background-color: #1e1e1e !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.row {
+    background-color: #1e1e1e;
+}
+
+.row-custom {
+    margin-bottom: 2rem;
+}
+
+.row-custom .col-4,
+.row-custom img {
+    background-color: #1e1e1e;
+}
+
+@media (max-width: 1360px) {
+    .ul-col-custom img {
+        display: none;
+    }
+    .ul-col-custom .col-2 {
+        display: none;
+    }
+    .ul-col-custom p {
+        font-weight: lighter;
+        margin-left: 0.5rem !important;
+    }
+}
 
 
 /*

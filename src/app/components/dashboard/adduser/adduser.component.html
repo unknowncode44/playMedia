@@ -1,0 +1,49 @@
+<p-card>
+    <h3>Crear Usuario</h3>
+    <hr>
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+        <h5>Ingresa los datos</h5>
+        <div class="grid">
+            <div class="col-3">
+                <span class="p-float-label p-input-icon-left mt-2">
+                <i class="pi pi-envelope"></i>
+                <input formControlName="email" class="p-inputtext-lg" id="email-input" type="email" pInputText />
+                <label for="email-input">Email</label>
+            </span>
+                <br><br>
+                <span class="p-float-label p-input-icon-left mt-2">
+                <i class="pi pi-at"></i>
+                <input formControlName="password" class="p-inputtext-lg" id="password-input" type="password" pInputText />
+                <label for="password-input">Contraseña</label>
+            </span>
+            </div>
+
+        </div>
+        <br>
+        <h5>Roles</h5>
+        <div class="grid">
+            <div class="col-3">
+                <p-dropdown formControlName="role" class="p-dropdown-lg" [options]="rolesStr" placeholder="Elije un rol"></p-dropdown>
+            </div>
+
+        </div>
+        <br>
+        <h5>Ingresa tipo de suscripcion</h5>
+        <div class="grid">
+            <div class="col-3">
+                <p-dropdown formControlName="plan" class="p-dropdown-lg" [options]="results" placeholder="Elije un plan"></p-dropdown>
+            </div>
+
+        </div>
+        <br>
+        <div class="container-custom">
+        </div>
+        <hr>
+        <div class="text-start">
+            <button [disabled]="!registerForm.valid" pButton type="submit" icon="pi pi-save" label="Crear" class="p-button-lg"></button>
+        </div>
+    </form>
+
+
+
+</p-card>

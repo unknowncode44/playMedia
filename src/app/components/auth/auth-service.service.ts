@@ -20,12 +20,54 @@ export class AuthService {
   }
 
   register(email: string, password: string) {
-    this.auth.createUserWithEmailAndPassword(email, password);
+    return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
   logOut() {
     this.auth.signOut();
   }
+
+  catchRole(role: string): number {
+    var code: number;
+    switch (role) {
+      case 'Cliente':
+        code = 2;
+        break;
+      case 'Vendedor':
+        code = 1;
+        break;
+      default:
+        code = 0;
+    }
+
+    return code;
+
+  }
+
+  catchPlan(plan: string): number {
+    var code: number;
+    switch (plan) {
+      case 'Demo 3 horas':
+        code = 0;
+        break;
+      case 'Pack Estandar Mensual':
+        code = 1;
+        break;
+      case 'Pack Futbol Mensual':
+        code = 2;
+        break;
+      case 'Pack Adultos Mensual':
+        code = 3;
+        break;
+      default:
+        code = 0;
+    }
+
+    return code;
+
+  }
+
+
 
 
 

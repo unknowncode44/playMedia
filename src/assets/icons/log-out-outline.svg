@@ -141,17 +141,11 @@
   }, false);
   //]]>
 }
-          )();</script>
-          <title>Add Circle</title>
+          )();</script><title>Log Out</title>
           <path 
-          d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" 
+          d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" 
           fill="none" 
-          stroke="white" 
-          stroke-miterlimit="10" stroke-width="32"/>
-          <path 
-          fill="none" 
-          stroke="white" 
+          stroke="#bdbdbd" 
           stroke-linecap="round" 
           stroke-linejoin="round" 
-          stroke-width="32" d="M256 176v160M336 256H176"/>
-        </svg>
+          stroke-width="32"/></svg>

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
   ) {
     this.loginForm = this.fb.group({});
-    this.user = { pass: '', email: '', type: 0 };
+    this.user = { pass: '', email: '', uid:'', type: 0 };
   }
 
 
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
+
 
   loginUser() {
     if(this.loginForm.invalid) {
@@ -54,8 +55,8 @@ export class LoginComponent implements OnInit {
     this.authService
     .logIn(email, password)
     .then((credentials) => {
-      this.user.uid = credentials.user?.uid;
-
+      this.user.uid = credentials.user!.uid;
+      localStorage.setItem('currentUser', JSON.stringify(this.user));
       this.router.navigate(['/']);
     })
     .catch((err) => {

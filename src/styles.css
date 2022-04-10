@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-html{
+html {
     padding: 0%;
     overflow: hidden !important;
 }
+
 body {
-    background: #f9faff;
+    background-color: #35454c !important;
     margin-top: 0px;
-    
+    padding-bottom: 0px;
+    margin-bottom: 0px !important;
 }

@@ -1,15 +1,21 @@
 import { NgModule }                         from '@angular/core';
 import { BrowserModule }                    from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // reactive forms 
+import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule}                from '@angular/forms'
 
 // routing
 import { AppRoutingModule }                 from './app-routing.module';
 
-// app modules
+// app components
 import { AppComponent }                     from './app.component';
 import { LoginComponent }                   from './components/auth/login/login.component';
+import { AdduserComponent } from './components/dashboard/adduser/adduser.component';
+import { SeeusersComponent } from './components/dashboard/seeusers/seeusers.component';
+import { AddchannelComponent } from './components/dashboard/addchannel/addchannel.component';
+import { SeechannelsComponent } from './components/dashboard/seechannels/seechannels.component';
 
 // enviroment
 import { environment }                      from '../environments/environment';
@@ -31,6 +37,9 @@ import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
 import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {DropdownModule} from 'primeng/dropdown';
+import{AutoCompleteModule} from 'primeng/autocomplete';
 
 
 
@@ -39,9 +48,15 @@ import {CardModule} from 'primeng/card';
     AppComponent,
     LoginComponent,
     DashboardComponent,
+    AdduserComponent,
+    SeeusersComponent,
+    AddchannelComponent,
+    SeechannelsComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireAuthModule,
@@ -53,7 +68,11 @@ import {CardModule} from 'primeng/card';
     SidebarModule,
     ButtonModule,
     MenuModule,
-    CardModule
+    CardModule,
+    InputTextModule,
+    DropdownModule,
+    AutoCompleteModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
