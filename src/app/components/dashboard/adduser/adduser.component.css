@@ -13,3 +13,9 @@ button {
 .container-custom {
     height: 15rem;
 }
+
+@media (max-width: 1400px) {
+    .container-custom {
+        height: 2rem;
+    }
+}

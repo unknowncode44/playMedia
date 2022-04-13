@@ -128,15 +128,39 @@ export class AdduserComponent implements OnInit {
         this.role = role;
         this.newUser.type = this.authService.catchRole(role);
         var suscrCode: number = this.authService.catchPlan(plan);
-        console.log(`SUSC: ${plan}`);
+        console.log(`SUSC: ${suscrCode}`);
 
-        if (suscrCode != 0) {
+        if (suscrCode !== 0) {
+          console.log('ENTRE AL IF');
+          
           var epochExpirationDate: Date = new Date();
+          console.log(epochExpirationDate);
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)
           var expireDate: Date = new Date(epochExpirationDate);
-          this.newUser.expire = expireDate.toLocaleDateString();
-        }
 
+          console.log(expireDate);
+          
+
+          let date = expireDate.getDate()
+          let month = expireDate.getMonth()
+          let year = expireDate.getFullYear()
+
+          var dateStr = `${date}/${month}/${year}`
+
+          console.log(dateStr);
+          
+
+          if(month < 10) {
+            dateStr = `${date}/0${month}/${year}`
+          }
+          console.log(dateStr);
+
+          this.newUser.expire = dateStr;
+
+          console.log(dateStr);
+
+          console.log(`saliendo del if, ${this.newUser.expire}`);
+        }
 
         this.dbService.saveUser(this.newUser, this.newUser.uid)
           .then((done) => { console.log('exito') })
@@ -167,6 +191,5 @@ export class AdduserComponent implements OnInit {
 
 
   }
-
 
 }

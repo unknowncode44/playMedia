@@ -1,1 +1,57 @@
-<p>seeusers works!</p>
+<p-card>
+    <h3>Usuarios</h3>
+    <hr>
+    <div class="p-mb-3 text-center">
+        <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
+        <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
+        <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+    </div>
+
+    <p-table class="p-table-sm" 
+        [value]="usrs" 
+        [paginator]="true" 
+        [rows]="rows" 
+        [showCurrentPageReport]="true" 
+        [(first)]="first"
+        currentPageReportTemplate="Mostrando desde {first} a {last} de {totalRecords} usuarios"
+        [rowsPerPageOptions]="[5,10,15]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Email</th>
+                <th>ID</th>
+                <th>Rol</th>
+                <th>Expira</th>
+                <th>Acciones</th>
+                
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr style="font-size: 14px;">
+                <td>{{user.email}}</td>
+                <td>{{user.uid}}</td>
+                <td>{{user.type}}</td>
+                <td>{{user.expire}}</td>
+                <td>
+                    <button pButton class="p-button-sm p-button-rounded p-button-raised p-button-outlined p-button-info" label="Modificar"></button>        
+                    <button pButton class="p-button-sm p-button-rounded p-button-raised p-button-outlined p-button-danger" label="Bloquear"></button>
+
+                </td>
+            </tr>
+        </ng-template>
+
+        
+    </p-table>
+
+<!-- 
+
+    <ul>
+        <li *ngFor="let item of items | async">
+          <input type="text" #updatetext [value]="item.pass" />
+        </li>
+      </ul> -->
+    
+    
+
+
+
+</p-card>

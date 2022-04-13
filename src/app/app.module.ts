@@ -40,6 +40,7 @@ import {CardModule} from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import{AutoCompleteModule} from 'primeng/autocomplete';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -71,7 +72,8 @@ import{AutoCompleteModule} from 'primeng/autocomplete';
     CardModule,
     InputTextModule,
     DropdownModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    TableModule
 
   ],
   providers: [],

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Observable } from 'rxjs';
+import { DbService } from 'src/app/db/dbservice.service';
 
 @Component({
   selector: 'app-seechannels',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeechannelsComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
   }
