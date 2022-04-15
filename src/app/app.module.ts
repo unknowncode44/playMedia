@@ -41,6 +41,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import{AutoCompleteModule} from 'primeng/autocomplete';
 import {TableModule} from 'primeng/table';
+import { DrmComponent } from './components/dashboard/drm/drm.component';
 
 
 
@@ -53,6 +54,7 @@ import {TableModule} from 'primeng/table';
     SeeusersComponent,
     AddchannelComponent,
     SeechannelsComponent,
+    DrmComponent,
   ],
   imports: [
     FormsModule,

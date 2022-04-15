@@ -141,10 +141,22 @@
   }, false);
   //]]>
 }
-          )();</script><title>Play Forward</title>
+          )();</script>
+          <title>Lock Closed</title>
           <path 
-          d="M32 145.52v221c0 13.28 13 21.72 23.63 15.35l188.87-113c9.24-5.53 9.24-20.07 0-25.6l-188.87-113C45 123.8 32 132.24 32 145.52zM260.57 145.52v221c0 13.28 13 21.72 23.63 15.35l188.87-113c9.24-5.53 9.24-20.07 0-25.6l-188.87-113c-10.64-6.47-23.63 1.97-23.63 15.25z" 
+          d="M336 208v-95a80 80 0 00-160 0v95" 
+          fill="none" stroke="#6c757d" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="32"/>
+          <rect 
+          x="96" y="208" 
+          width="320" 
+          height="272" 
+          rx="48" 
+          ry="48" 
           fill="none" 
-          stroke="#1e1e1e" 
-          stroke-miterlimit="10" 
+          stroke="#6c757d" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
           stroke-width="32"/></svg>

@@ -16,7 +16,8 @@
     
     .background { 
         grid-area: 1 / 1 / 6 / 6;
-        background-color: blueviolet !important;
+        background: rgb(156,39,176);
+        background: linear-gradient(180deg, rgba(156,39,176,1) 0%, rgba(62,16,70,1) 100%);  
         width: 100%;
         height: 100vh;
         position: relative;
@@ -24,7 +25,8 @@
      }
     .sidebar { 
         grid-area: 1 / 1 / 6 / 2; 
-        background-color: #1e1e1e;
+        background-color: var(--surface-card);
+        padding: 0px;
         position: relative;
         z-index: 10;
         height: 100%;
@@ -42,8 +44,8 @@
     }
 
     .row h3 {
-        background-color: #1e1e1e;
-        font-size: 36px;
+       
+        font-size: 32px;
     }
 
     li {
@@ -59,7 +61,7 @@
     .ul-col-custom img,
     .ul-col-custom span,
     .ul-col-custom .grid {
-        color: #bdbdbd;
+        color: #1e1e1e;
         text-decoration: none;
         font-size: 16px;
         font-weight: 200;
@@ -72,8 +74,35 @@
     }
 
     .divider-container {
-        min-height: 5rem !important;
+        min-height: 7rem !important;
         width: 100%;
+    }
+
+    .container-custom p {
+        margin-top: 1.5rem;
+        font-size: 4px;
+    }
+
+    
+
+    @media (min-height: 750px){
+        .divider-container {
+            min-height: 15rem !important;
+            width: 100%;
+        }
+
+        .container-custom p {
+            margin-top: 2.5rem;
+            font-size: 9px;
+        }
+    }
+
+    @media (min-height: 900px){
+        .divider-container {
+            min-height: 25rem !important;
+            width: 100%;
+        }
+
     }
 
     .ul-col-custom .col-10 {
@@ -93,12 +122,27 @@
 
     .container-custom p {
         font-size: 12px;
-        color: #bdbdbd;
+        color: #1e1e1e;
     }
 
     a, a label {
         cursor: pointer;
     }
+
+    @media (max-width: 1200px) {
+        .row h3 {
+       
+            font-size: 26px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .row h3 {
+       
+            font-size: 24px;
+        }
+    }
+
 
     
 

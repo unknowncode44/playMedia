@@ -1,17 +1,12 @@
 <div class="parent">
     <div class="background">
         <div class="sidebar text-center">
-            <p-card class="text-center min-h-full justify-content-center min-w-full flex flex-wrap py-0">
-                <div class="row mb-1 pb-0">
-                    <h3 class="mb-1">Play Media</h3> 
-                </div>
+            <p-card class="text-center min-h-full justify-content-center min-w-full py-0">
                 <div class="row row-custom">
                     <div class="grid mb-2">
-                        <div class="col-4 p-0"></div>
-                        <div class="col-4 p-0">
-                            <img src="./../../../assets/icons/play-forward-circle-outline.svg" style="height: 60px;">
+                        <div class="col-12 p-0">
+                            <img src="./../../../assets/logo/TeluniveTV.svg" class="mb-4" style="height: 100px;">
                         </div>
-                        <div class="col-4  p-0"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -20,7 +15,7 @@
                             <div class="ul ul-custom text-start">
     
                                 <li class="mb-2">
-                                    <a href="">
+                                    <a href="/">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
                                                 <div class="col-2">
@@ -35,7 +30,7 @@
                                 </li>
     
                                 <li class="mb-2">
-                                    <a href="">
+                                    <a href="/users">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
                                                 <div class="col-2">
@@ -50,7 +45,7 @@
                                 </li>
     
                                 <li class="mb-2">
-                                    <a href="">
+                                    <a href="/addchannel">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
                                                 <div class="col-2">
@@ -65,7 +60,7 @@
                                 </li>
     
                                 <li class="mb-2">
-                                    <a href="">
+                                    <a href="/channels">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
                                                 <div class="col-2">
@@ -73,6 +68,21 @@
                                                 </div>
                                                 <div class="col-10 justify-content-start min-w-auto flex flex-wrap">
                                                     <p class="p-custom mt-3  ms-2">Ver Canales</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="mb-2">
+                                    <a href="/drm">
+                                        <div class="row">
+                                            <div class="grid ps-3 pe-0">
+                                                <div class="col-2">
+                                                    <img src="./../../../assets/icons/settings-outline.svg" style="height: 24px;">
+                                                </div>
+                                                <div class="col-10 justify-content-start min-w-auto flex flex-wrap">
+                                                    <p class="p-custom mt-3  ms-2">Modificar DRM</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -97,7 +107,7 @@
                                 </li>
     
                                 <div class="container-custom text-center">
-                                    <p>Desarrollado por HV Devs<br> Alto Valle, RN NQN</p>
+                                    <p>Desarrollado con ❤ por HV Devs<br><strong>Alto Valle, RN NQN</strong></p>
                                 </div>
     
                             </div>
@@ -110,7 +120,9 @@
     </div>
     <div class="content border-round">
         <!-- <app-adduser></app-adduser> -->
-        <app-seeusers></app-seeusers>
+        <!-- <app-seeusers></app-seeusers> -->
+        <router-outlet>
+        </router-outlet>
     </div>
     
 </div>

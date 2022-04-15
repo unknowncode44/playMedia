@@ -2,8 +2,8 @@
     <h3>Crear Usuario</h3>
     <hr>
     <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
-        <h5>Ingresa los datos</h5>
-        <div class="grid">
+        <h5 class="mb-1">Ingresa los datos</h5>
+        <div class="grid mt-3 mb-2">
             <div class="col-3">
                 <span class="p-float-label p-input-icon-left mt-1">
                 <i class="pi pi-envelope"></i>
@@ -20,13 +20,12 @@
         </div>
 
         <h5>Roles</h5>
-        <div class="grid">
+        <div class="grid mb-2">
             <div class="col-3">
                 <p-dropdown formControlName="role" class="p-dropdown-lg" [options]="rolesStr" placeholder="Elije un rol"></p-dropdown>
             </div>
 
         </div>
-        <br>
         <h5>Ingresa tipo de suscripcion</h5>
         <div class="grid">
             <div class="col-3">

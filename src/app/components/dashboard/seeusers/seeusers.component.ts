@@ -16,6 +16,8 @@ export class SeeusersComponent implements OnInit {
 
   usrs: CurrentUser[];
 
+  filterValue: string;
+
   first: number =  0;
   rows: number  = 10;
 
@@ -25,6 +27,7 @@ export class SeeusersComponent implements OnInit {
   constructor(private db: AngularFireDatabase) {
     this.items = db.list('users').valueChanges();
     this.usrs = []
+    this.filterValue = '';
 
    }
 
@@ -52,6 +55,7 @@ export class SeeusersComponent implements OnInit {
 
   reset() {
     this.first = 0
+    return this.usrs = this.users
   }
 
   isLastPage(): boolean {
@@ -60,6 +64,33 @@ export class SeeusersComponent implements OnInit {
 
   isFirstPage(): boolean {
     return this.usrs ? this.first === 0 : true
+  }
+
+  filter(value: string) {
+    let filteredArray = [];
+    console.log(`valor: ${value}`);
+    
+    for (let i = 0; i < this.usrs.length; i++) {
+      if(this.usrs[i].email.valueOf().startsWith(value)){
+        filteredArray.unshift(this.users[i])
+      }
+
+    }
+    console.log(` usuarios: ${filteredArray.length}`);
+      this.usrs = filteredArray
+
+    return this.usrs
+  }
+
+  detTypeUsr(code: number): string {
+    switch (code) {
+      case 1:
+        return 'Vendedor'
+      case 2:
+        return 'Cliente'
+      default:
+        return 'Administrador'
+    }
   }
 
 

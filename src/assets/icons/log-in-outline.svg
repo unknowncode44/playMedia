@@ -141,10 +141,21 @@
   }, false);
   //]]>
 }
-          )();</script><title>Play Forward</title>
+          )();</script>
+          <title>Log In</title>
+          
           <path 
-          d="M32 145.52v221c0 13.28 13 21.72 23.63 15.35l188.87-113c9.24-5.53 9.24-20.07 0-25.6l-188.87-113C45 123.8 32 132.24 32 145.52zM260.57 145.52v221c0 13.28 13 21.72 23.63 15.35l188.87-113c9.24-5.53 9.24-20.07 0-25.6l-188.87-113c-10.64-6.47-23.63 1.97-23.63 15.25z" 
+          d="M192 176v-40a40 40 0 0140-40h160a40 40 0 0140 40v240a40 40 0 01-40 40H240c-22.09 0-48-17.91-48-40v-40" 
           fill="none" 
-          stroke="#1e1e1e" 
-          stroke-miterlimit="10" 
-          stroke-width="32"/></svg>
+          stroke="white" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="32"/>
+          
+          <path 
+          fill="none" 
+          stroke="white" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          stroke-width="32" 
+          d="M288 336l80-80-80-80M80 256h272"/></svg>
