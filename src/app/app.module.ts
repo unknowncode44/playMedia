@@ -12,10 +12,12 @@ import { AppRoutingModule }                 from './app-routing.module';
 // app components
 import { AppComponent }                     from './app.component';
 import { LoginComponent }                   from './components/auth/login/login.component';
-import { AdduserComponent } from './components/dashboard/adduser/adduser.component';
-import { SeeusersComponent } from './components/dashboard/seeusers/seeusers.component';
-import { AddchannelComponent } from './components/dashboard/addchannel/addchannel.component';
-import { SeechannelsComponent } from './components/dashboard/seechannels/seechannels.component';
+import { AdduserComponent }                 from './components/dashboard/adduser/adduser.component';
+import { SeeusersComponent }                from './components/dashboard/seeusers/seeusers.component';
+import { AddchannelComponent }              from './components/dashboard/addchannel/addchannel.component';
+import { SeechannelsComponent }             from './components/dashboard/seechannels/seechannels.component';
+import { DashboardComponent }               from './components/dashboard/dashboard.component';
+import { DrmComponent }                     from './components/dashboard/drm/drm.component';
 
 // enviroment
 import { environment }                      from '../environments/environment';
@@ -27,7 +29,9 @@ import { AngularFireDatabaseModule }        from '@angular/fire/compat/database'
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth }              from '@angular/fire/auth';
 import { provideDatabase,getDatabase }      from '@angular/fire/database';
-import { DashboardComponent }               from './components/dashboard/dashboard.component';
+
+
+
 
 //sidebar
 // import { Sidebar, SidebarModule }                    from 'ng-sidebar';
@@ -41,7 +45,16 @@ import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import{AutoCompleteModule} from 'primeng/autocomplete';
 import {TableModule} from 'primeng/table';
-import { DrmComponent } from './components/dashboard/drm/drm.component';
+import {PanelModule} from 'primeng/panel';
+import {ConfirmDialogModule}                from 'primeng/confirmdialog';
+import {ConfirmationService}                from 'primeng/api';
+import { MessagesModule }                   from 'primeng/messages';
+import {DynamicDialogModule}                from 'primeng/dynamicdialog';
+import {DialogService}                      from 'primeng/dynamicdialog';
+
+
+
+
 
 
 
@@ -75,10 +88,15 @@ import { DrmComponent } from './components/dashboard/drm/drm.component';
     InputTextModule,
     DropdownModule,
     AutoCompleteModule,
-    TableModule
-
+    TableModule,
+    PanelModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    DynamicDialogModule
+    
+  
   ],
-  providers: [],
+  providers: [ConfirmationService, DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -68,7 +68,8 @@ export class AdduserComponent implements OnInit {
     this.newUser = { 
       pass: '', 
       email: '', 
-      type: 0, 
+      type: 0,
+      role: 0, 
       uid: '', 
       canales: [],
       expire: '',  
@@ -126,7 +127,7 @@ export class AdduserComponent implements OnInit {
         this.planStr = plan;
         console.log(`PLAN: ${plan}`);
         this.role = role;
-        this.newUser.type = this.authService.catchRole(role);
+        this.newUser.role = this.authService.catchRole(role);
         var suscrCode: number = this.authService.catchPlan(plan);
         console.log(`SUSC: ${suscrCode}`);
 
@@ -161,6 +162,8 @@ export class AdduserComponent implements OnInit {
 
           console.log(`saliendo del if, ${this.newUser.expire}`);
         }
+
+        this.newUser.time = '10800000'
 
         this.dbService.saveUser(this.newUser, this.newUser.uid)
           .then((done) => { console.log('exito') })

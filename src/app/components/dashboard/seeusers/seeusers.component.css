@@ -1,4 +1,3 @@
-
 h3,
 h5,
 input,
@@ -7,19 +6,21 @@ p-dropdown,
 select,
 option,
 span,
-button {
+button,
+tr {
     font-family: 'Ubuntu', sans-serif !important;
+}
+
+tr {
+    font-size: 18px !important;
 }
 
 .container-custom {
     height: 15rem;
 }
 
-
-
 @media (max-width: 1400px) {
     .container-custom {
         height: 2rem;
     }
 }
-

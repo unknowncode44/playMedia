@@ -48,16 +48,16 @@ export class AuthService {
     var code: number;
     switch (plan) {
       case 'Demo 3 horas':
-        code = 0;
+        code = 1;
         break;
       case 'Pack Estandar Mensual':
-        code = 1;
+        code = 2;
         break;
       case 'Pack Futbol Mensual':
         code = 2;
         break;
       case 'Pack Adultos Mensual':
-        code = 3;
+        code = 2;
         break;
       default:
         code = 0;

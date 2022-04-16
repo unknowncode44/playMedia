@@ -1,0 +1,30 @@
+h3,
+h5,
+input,
+label,
+p-dropdown,
+select,
+option,
+span,
+button {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+p-panel p {
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+p-panel h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+input {
+    font-size: 18px;
+}
+
+button {
+    font-size: 18px;
+}

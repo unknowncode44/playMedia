@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
   ) {
     this.loginForm = this.fb.group({});
-    this.user = { pass: '', email: '', uid:'', type: 0 };
+    this.user = { pass: '', email: '', uid:'', type: 0, role: 0 };
   }
 
 
