@@ -9,9 +9,9 @@ import { SeeusersComponent } from "./seeusers/seeusers.component";
 
 
 export const dashboardRoutes: Routes = [
-    {path: '', component: AdduserComponent},
-    {path: 'users', component: SeeusersComponent},
-    {path: 'addchannel', component: AddchannelComponent},
-    {path: 'channels', component: SeechannelsComponent},
-    {path: 'drm', component: DrmComponent},
+    {path: '/', component: AdduserComponent},
+    {path: '/users', component: SeeusersComponent},
+    {path: '/addchannel', component: AddchannelComponent},
+    {path: '/channels', component: SeechannelsComponent},
+    {path: '/drm', component: DrmComponent},
 ]
