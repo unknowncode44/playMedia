@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/datab
 import { CurrentUser } from '../models/currente-user.model';
 import { Observable } from 'rxjs';
 import { Channel } from '../models/channel.model';
+import { Sample } from '../models/sample.model';
 
 
 @Injectable({
@@ -23,6 +24,12 @@ export class DbService {
   saveUser(user: CurrentUser, uid: string){
     return this.db.list('users').set(uid, user);
   };
+
+  updateDRM(samplesArr: Sample[], index: number, category: string) {
+    this.db.list(`channel_test/${index.toString()}`).set('name', category).then(() => {
+      return this.db.list(`channel_test/${index.toString()}`).set('samples', samplesArr)
+    })
+  }
 
   getChannels(): Observable<any[]>{
 

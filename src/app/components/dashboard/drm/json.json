@@ -1,0 +1,1356 @@
+[{
+        "name": "ARGENTINA",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Am%C3%A9rica_TV_%28Nuevo_logo_Junio_2020%29.png",
+                "name": "AMERICA TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/AmericaTV/SA_Live_dash_enc_2A/AmericaTV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Logo_Televisi%C3%B3n_P%C3%BAblica_Argentina.png",
+                "name": "TV PUBLICA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Canal7/SA_Live_dash_enc_2A/Canal7.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Canal_9_2015.png",
+                "name": "CANAL 9",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Canal9/SA_Live_dash_enc_2A/Canal9.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/32/Logo_de_eltrece_lanzado_en_2016.png",
+                "name": "EL TRECE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/ArtearHD/SA_Live_dash_enc_2A/ArtearHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/800px-Telefe_%28nuevo_logo%29.png",
+                "name": "TELEFE",
+                "uri": "http://chromecast.cvattv.com.ar/live/c3eds/TelefeHD/SA_Live_dash_enc_2A/TelefeHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/f/f4/Logocanalrural2016.png/revision/latest/scale-to-width-down/250?cb=20170805004919",
+                "name": "CANAL RURAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_Rural/SA_Live_dash_enc_2A/Canal_Rural.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://www.foromedios.com/uploads/monthly_2016_11/large.Encuentro.png.deccb9064823e717962cf70838ecc508.png",
+                "name": "ENCUENTRO TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Encuentro/SA_Live_dash_enc_2A/Encuentro.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://forounivers.com/uploads/monthly_2017_04/large.58eed67e36563_canalviajar.png.4fe1067e3c67900883e99313ae660e9f.png",
+                "name": "VIAJAR",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Turismo_Vision_Argentina/SA_Live_dash_enc_2A/Turismo_Vision_Argentina.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://media.canalnet.tv/2018/08/N-600x720.png",
+                "name": "NET TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Net_TV/SA_Live_dash_enc_2A/Net_TV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/81/LN%2B.png",
+                "name": "LN+",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/La_Nacion/SA_Live_dash_enc_2A/La_Nacion.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://www.foromedios.com/uploads/monthly_2020_10/large.1027530100_IP2.png.09507349c734309f8ec316ccd9633b41.png",
+                "name": "INFORMACION PERIODISTICA",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Investigacion_Periodistica/SA_Live_dash_enc_2A/Investigacion_Periodistica.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/TN_todo_noticias_logo.svg/1280px-TN_todo_noticias_logo.svg.png",
+                "name": "TN NOTICIAS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TodoNoticias/SA_Live_dash_enc_2A/TodoNoticias.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/82/A24_%282019-1%29.png",
+                "name": "A24",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/America24/SA_Live_dash_enc_2A/America24.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5a/C5N_%282017%29.png",
+                "name": "C5N",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/C5N/SA_Live_dash_enc_2A/C5N.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "http://www.marketdemedios.com/wp-content/uploads/2018/07/publicidad-cronica-tv.png",
+                "name": "CRONICA TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/CronicaTV/SA_Live_dash_enc_2A/CronicaTV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8c/LogoCanal26.png",
+                "name": "CANAL 26",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/26_TV_HD/SA_Live_dash_enc_2A/26_TV_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/676/CH_LOGO/350/500/0/0/566991570762.png",
+                "name": "CNN EN ESPAÑOL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/CNN_en_Espanol/SA_Live_dash_enc_2A/CNN_en_Espanol.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://dtv.hchromecast.gob.ar/system/modules/ar.gov.hchromecast/resources/img/DTV/logo-DTV.png",
+                "name": "DTV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Diputados_TV/SA_Live_dash_enc_2A/Diputados_TV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/664/CH_LOGO/350/500/0/0/162756280757.png",
+                "name": "ARGENTINISIMA SATELITAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Argentinisima/SA_Live_dash_enc_2A/Argentinisima.mpd"
+            }
+        ]
+    },
+    {
+        "name": "INTERIOR ARGENTINO",
+        "samples": [{
+                "icon": "https://canal12misiones.com/nuevo/wp-content/uploads/2021/01/Doce-Misiones-03.png",
+                "name": "CANAL DOCE MISIONES",
+                "uri": "https://cdn3.wowza.com/1/WENEMTJNT25tQnpG/VGRRSUdQ/hls/live/playlist.m3u8"
+            },
+            {
+                "icon": "https://api.argentinatv.live/logos/radioactivatv.jpeg",
+                "name": "RADIO ACTIVA TV",
+                "uri": "https://api.argentinatv.live/radioactivatv/radio.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/radioaer.png",
+                "name": "RADIO AER STUDIO",
+                "uri": "https://vdo2.streamgato.us:3186/stream/play.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/CANAL11IGUAZU.jpg",
+                "name": "CANAL 11 IGUAZU",
+                "uri": "https://vdo2.streamgato.us:3680/stream/play.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/3masradio.png",
+                "name": "MAS RADIO MISIONES",
+                "uri": "https://vdo2.streamgato.us:3920/live/tresmasradiolive.m3u8"
+            },
+            {
+                "icon": "https://pbs.twimg.com/profile_images/978088312429858816/5QYhbEew_400x400.jpg",
+                "name": "LAPACHO CANAL 11",
+                "uri": "http://stream2.livestreamingservices.com:1935/tvcanal11/tvcanal11/chunklist_w1389188551.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/canal3fsa.png",
+                "name": "CANAL 3 FORMOSA",
+                "uri": "https://stmvideo2.livecastv.com/agenfor/agenfor/playlist.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/radioformosa.jpg",
+                "name": "RADIO FORMOSA 88.1",
+                "uri": "https://stmvideo2.livecastv.com/radioformosa1/radioformosa1/playlist.m3u8"
+            },
+            {
+                "icon": "https://pbs.twimg.com/profile_images/1271249421053853696/7LgFakvn.jpg",
+                "name": "OBERA INSIDE TV",
+                "uri": "https://vdo2.streamgato.us:3670/live/oberainsidelive.m3u8"
+            },
+            {
+                "icon": "https://aermultinet.com/iptv/logos/guilleatencio.png",
+                "name": "GUILLERMO ATENCIO DJ",
+                "uri": "https://vdo2.streamgato.us:3691/live/guillermoatenciolive.m3u8"
+            },
+            {
+                "icon": "https://canal12misiones.com/nuevo/wp-content/uploads/2021/01/Doce-Misiones-03.png",
+                "name": "CANAL DOCE MISIONES",
+                "uri": "https://altaredtv.com.ar/index.m3u8"
+            },
+            {
+                "icon": "http://directostv.teleame.com/wp-content/uploads/2016/05/Canal-4-Jujuy-en-vivo-Online.png",
+                "name": "CANAL 4 JUJUY",
+                "uri": "https://el4live1.boldmss.com/ELCUATRO/ELCUATRO.isml/ELCUATRO.mpd"
+            },
+            {
+                "icon": "https://2.bp.blogspot.com/-XeKs-8yWg9k/VDHYARgGUZI/AAAAAAAAoX8/m_rbGEMELn0/s1600/logo-c7jujuy-abril2014.png",
+                "name": "CANAL 7 JUJUY",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/canal7jujuy/ngrp:canal7jujuy_all/playlist.m3u8"
+            },
+            {
+                "icon": "https://lavozdesanpedro.com.ar/wp-content/uploads/2020/04/LOGO-NUEVO-2020_3.png",
+                "name": "SPTV SAN PEDRO",
+                "uri": "https://srv4.zcast.com.br/sptv/sptv/playlist.m3u8"
+            },
+            {
+                "icon": "https://directostv.teleame.com/wp-content/uploads/2018/06/Canal-9-Multivision-en-vivo-Online.png",
+                "name": "Multivision canal 9 de salta",
+                "uri": "https://panel.dattalive.com/8250/8250/playlist.m3u8"
+            },
+            {
+                "icon": "https://pbs.twimg.com/profile_images/462168942698446848/aD89IHFa_400x400.png",
+                "name": "CANAL 7 SALTA",
+                "uri": "https://589ff3c36f7e8.streamlock.net:443/crespo3/crespo3/playlist.m3u8"
+            },
+            {
+                "icon": "https://bragadotv.com.ar/wp-content/uploads/2020/08/logoicono.png",
+                "name": "BRAGADO TV",
+                "uri": "https://inliveserver.com:1936/9500/9500/playlist.m3u8"
+            },
+            {
+                "icon": "https://forounivers.com/uploads/monthly_2018_04/large.2repretel.png.f1d211f239938978a365fed765228936.png",
+                "name": "CANAL 2 POSADAS MISIONES",
+                "uri": "https://nd106.republicaservers.com/canal2misiones.mp4"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/0/0b/Canal_7_Santiago_del_Estero_%28Logo_55%C2%BA_aniversario_-_2020%29.png",
+                "name": "CANAL 7 SANTIAGO DEL ESTERO",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/envivo/castv/chunklist_w698214521.m3u8"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/c/c9/Canal13cteslogo2018.png",
+                "name": "CANAL 13 MAX",
+                "uri": "http://coninfo.net:1935/13maxhd/live13maxtvnuevo_720p/playlist.m3u8"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-cordoba",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Logo-teleocho-C%C3%B3rdoba-Canal-8.png",
+                "name": "TELEFE CORDOBA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_8_CBA/SA_Live_dash_enc_2A/Canal_8_CBA.mpd"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-cordoba",
+                "drm_scheme": "widevine",
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/1/10/1000px-El_Doce_C%C3%B3rdoba_%28Logo_2010_-_2%29.png",
+                "name": "CANAL 12 CORDOBA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_12_CBA/SA_Live_dash_enc_2A/Canal_12_CBA.mpd"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-cordoba",
+                "drm_scheme": "widevine",
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/e/e6/Canal_10_C%C3%B3rdoba_2018.png",
+                "name": "CANAL 10 CORDOBA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c4eds/Canal10_CBA_HD/SA_Live_dash_enc_2A/Canal10_CBA_HD.mpd"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/e/e7/800px-Canal_13_R%C3%ADo_Cuarto_%28Logo_2008%29.png",
+                "name": "CANAL 13 RIO CUARTO",
+                "uri": "https://mediacp.hostradios.com.ar:19360/telediario/telediario.m3u8"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-rosario",
+                "drm_scheme": "widevine",
+                "icon": "https://www.foromedios.com/uploads/monthly_2016_10/large.LogCV-SomosRosario.png.33ae08d97e201d23ceccbae58e755524.png",
+                "name": "SOMOS ROSARIOS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c4eds/Somos_Rosario/SA_Live_dash_enc_2A/Somos_Rosario.mpd"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-rosario",
+                "drm_scheme": "widevine",
+                "icon": "https://www.foromedios.com/uploads/monthly_2019_12/large.335318779_TelefeRosario.png.6b8f75bafef6b7224e6d238714be28c2.png",
+                "name": "TELEFE ROSARIO",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_5_Rosario/SA_Live_dash_enc_2A/Canal_5_Rosario.mpd"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv-rosario",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/2/22/Eltres_RGB-grad_%28positivo%29.png",
+                "name": "CANAL 3 ROSARIO",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Canal_3_Rosario/SA_Live_dash_enc_2A/Canal_3_Rosario.mpd"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/2/22/Canal_13_R%C3%ADo_Cuarto_%28Logo_2010%29.png",
+                "name": "CANAL 13 RIO CUARTO",
+                "uri": "https://stmvideo2.livecastv.com/telediariotelevision/telediariotelevision/chunklist_w1806436451.m3u8"
+            },
+            {
+                "icon": "https://e7.pngegg.com/pngimages/705/766/png-clipart-canal-13-logo-television-channel-wiki-others-television-blue.png",
+                "name": "CANAL 13 LA RIOJA",
+                "uri": "http://arcast.net:1935/mp/mp/playlist.m3u8"
+            },
+            {
+                "icon": "http://3.bp.blogspot.com/-uGoccAT1M38/T0xKoHTs8sI/AAAAAAAAScM/Nes43bKyhcU/s1600/canal3lp.png",
+                "name": "CANAL 3 LA PAMPA",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/c3lapampa/ngrp:c3lapampa_all/.m3u8"
+            },
+            {
+                "icon": "https://1.bp.blogspot.com/-zRsbCQ057WQ/XsSJeLXVw5I/AAAAAAAAv24/FcMy1_I8EVcTB6PkfCz7BuAfWZcJZfo-ACNcBGAsYHQ/s1600/LOGO%2BCANAL%2B4%2BDEGRADE_OK%25282%2529.png",
+                "name": "CANAL 4 POSADAS",
+                "uri": "https://589ff3c36f7e8.streamlock.net/canal4/canal4/chunklist.m3u8"
+            },
+            {
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Repretel_6_logo.png",
+                "name": "CANAL 6 POSADAS",
+                "uri": "https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8"
+            },
+            {
+                "icon": "https://www.clipartmax.com/png/middle/63-631904_coop-logo-co-op-local-community-fund.png",
+                "name": "CANAL COOP JESUS MARIA",
+                "uri": "https://panel.dattalive.com/8138/8138/chunklist_w1027290367.m3u8"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/9/91/Logo_Canal_de_la_Ciudad.png",
+                "name": "CANAL DE LA CIUDAD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Cana_de_la_ciudad/SA_Live_dash_enc_2A/Cana_de_la_ciudad.mpd"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/e/eb/609px-Canal_Trece_San_Luis_%28Logo_2016%29.png",
+                "name": "CANAL 13 SAN LUIS",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/sanluistv/ngrp:sanluistv_all/playlist.m3u8"
+            },
+            {
+                "icon": "http://directostv.teleame.com/wp-content/uploads/2019/11/Canal-8-Catamarca-en-vivo.png",
+                "name": "CANAL 8 CATAMARCA",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/c8/c8/playlist.m3u8"
+            },
+            {
+                "icon": "https://4.bp.blogspot.com/-tw04UcqvtdQ/WeN6E34Yx7I/AAAAAAAAA2U/tQyCmAq1W3oIw3q07LPSEuTIiHYciMNuwCLcBGAs//liitus.png",
+                "name": "LITUS TV",
+                "uri": "http://192.99.38.174:1935/litustv/ngrp:litustv_all/playlist.m3u8"
+            },
+            {
+                "icon": "https://t5satelital.com/theme/img/T5logo.png",
+                "name": "TELE NORT CORRIENTES",
+                "uri": "http://www.coninfo.net:1935/previsoratv/live/playlist.m3u8"
+            },
+            {
+                "icon": "https://canal6moreno.com/wp-content/uploads/2016/06/LOGO-PERMANENTE-FIJO--e1503976768253.png",
+                "name": "CANAL 6 MORENO",
+                "uri": "https://5975e06a1f292.streamlock.net:4443/canal6moreno/canal6moreno/playlist.m3u8"
+            },
+            {
+                "icon": "https://static.wikia.nocookie.net/logopedia/images/2/26/Canal11-usuahia.png",
+                "name": "TV PUBLICA FUEGUINA",
+                "uri": "https://vivo.solumedia.com:19360/tvpublicafueguina/tvpublicafueguina.m3u8"
+            }
+        ]
+    },
+    {
+        "name": "DEPORTES",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/3545/CH_LOGO/350/500/0/0/15179620073951.png",
+                "name": "FOX SPORTS PREMIUM",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Fox_Sports_Premiun_HD/SA_Live_dash_enc_2A/Fox_Sports_Premiun_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/ac8c5fc2-b457-4784-8911-6b8cecd2b12d.png",
+                "name": "TNT SPORTS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TNT_Sports_HD/SA_Live_dash_enc_2A/TNT_Sports_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/74/CH_LOGO/350/500/0/0/78711436072355.png",
+                "name": "TyC Sports",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TyCSport/SA_Live_dash_enc_2A/TyCSport.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/280/CH_LOGO/350/500/0/0/71306601073189.png",
+                "name": "ESPN HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/ESPN2HD/SA_Live_dash_enc_2A/ESPN2HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/278/CH_LOGO/350/500/0/0/294103520718.png",
+                "name": "ESPN 2 HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/ESPN_HD/SA_Live_dash_enc_2A/ESPN_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/72/CH_LOGO/350/500/0/0/29145259072020.png",
+                "name": "ESPN 3 HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/ESPN3/SA_Live_dash_enc_2A/ESPN3.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/279/CH_LOGO/350/500/0/0/16919764071132.png",
+                "name": "ESPN EXTRA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/ESPNHD/SA_Live_dash_enc_2A/ESPNHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/73/CH_LOGO/350/500/0/0/3044145807979.png",
+                "name": "FOX SPORTS HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FoxSports/SA_Live_dash_enc_2A/FoxSports.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/292/CH_LOGO/350/500/0/0/17148449072785.png",
+                "name": "FOX SPORTS 2 HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FoxSports2HD/SA_Live_dash_enc_2A/FoxSports2HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/293/CH_LOGO/350/500/0/0/56828142072366.png",
+                "name": "FOX SPORTS 3 HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FoxSports3HD/SA_Live_dash_enc_2A/FoxSports3HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/270/CH_LOGO/350/500/0/0/81432910072195.png",
+                "name": "DEPORTV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/DeporTVHD/SA_Live_dash_enc_2A/DeporTVHD.mpd"
+            },
+            {
+                "icon": "https://s2.dmchromecast.net/v/JuZbf1VYYq7DiR0on/x720",
+                "name": "TYC SPORTS (PLAY)",
+                "uri": "https://d21no6qan3ol31.cloudfront.net/out/v1/a2f25f61e9d44701aa4e813ac5efc4a4/index_13.m3u8"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/685/CH_LOGO/350/500/0/0/3464211407358.png",
+                "name": "GARAGE TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/El_Garage/SA_Live_dash_enc_2A/El_Garage.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/696/CH_LOGO/350/500/0/0/79970160072682.png",
+                "name": "GOLF CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Golf_Channel/SA_Live_dash_enc_2A/Golf_Channel.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/710/CH_LOGO/350/500/0/0/4594011307753.png",
+                "name": "NBA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/NBA_TV/SA_Live_dash_enc_2A/NBA_TV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/663/CH_LOGO/350/500/0/0/927952730784.png",
+                "name": "AMERICA SPORTS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/America_Sports/SA_Live_dash_enc_2A/America_Sports.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/7840/CH_LOGO/350/500/0/0/25734747073582.png",
+                "name": "PX SPORTS",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/PX_Sports/SA_Live_dash_enc_2A/PX_Sports.mpd"
+            },
+            {
+                "drm_license_url": "https://tucumantvdigital.xyz/dtv1_widevine",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/c12f19ec-fff5-4f21-a599-2a3b10f70833.png",
+                "name": "DIRECTV SPORTS 1",
+                "uri": "https://dtv-latam-abc.akamaized.net/dash/live/700426/dtv/DTV-ABC-dtvsportsargentina/master.mpd"
+            },
+            {
+                "drm_license_url": "https://tucumantvdigital.xyz/dtv2_widevine",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/6dd5978dc7c047eb27b932b8f50d1c5b",
+                "name": "DIRECTV SPORTS 2",
+                "uri": "https://dtv-latam-abc.akamaized.net/dash/live/700404/dtv/DTV-ABC-directtvsports2/master.mpd"
+            },
+            {
+                "drm_license_url": "https://tucumantvdigital.xyz/dtv3_widevine",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/68150d12d02ab2a071327a29049a63b4",
+                "name": "DIRECTV SPORTS PLUS",
+                "uri": "http://odenfull.co:2086/live/5q7H5qdlSv/D8d93xHMEo/109483.m3u8"
+            }
+        ]
+    },
+    {
+        "name": "INFANTILES",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/1594px-Cartoon_Network_2010_logo.svg.png",
+                "name": "CARTOON NETWORK",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/CartoonNetwork/SA_Live_dash_enc_2A/CartoonNetwork.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pakapaka_logotipo_%282010-2016%29.png",
+                "name": "PAKAPAKA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/PAKA_PAKA/SA_Live_dash_enc_2A/PAKA_PAKA.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/78/Disney_Channel_Germany_Logo_2014.png",
+                "name": "DISNEY CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/DisneyChannelHD/SA_Live_dash_enc_2A/DisneyChannelHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/8/85/Nick_%28Logo%29.png",
+                "name": "NICK",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Nickelodeon/SA_Live_dash_enc_2A/Nickelodeon.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logo_Disney_XD.svg/1200px-Logo_Disney_XD.svg.png",
+                "name": "DISNEY XD",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/DisneyXD/SA_Live_dash_enc_2A/DisneyXD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/2016_Discovery_Kids_logo.svg/1200px-2016_Discovery_Kids_logo.svg.png",
+                "name": "DISCOVERY KIDS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Discovery_Kids/SA_Live_dash_enc_2A/Discovery_Kids.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Boomerang_tv_logo.png/758px-Boomerang_tv_logo.png",
+                "name": "BOOMERANG",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Boomerang/SA_Live_dash_enc_2A/Boomerang.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fb%2Fbb%2FDisney_Junior.svg%2F1200px-Disney_Junior.svg.png&f=1&nofb=1",
+                "name": "DISNEY JUNIOR",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/DisneyJr/SA_Live_dash_enc_2A/DisneyJr.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/it/6/6c/Baby_tv_logo_senza_sfondo.png",
+                "name": "BABY TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/BabyTV/SA_Live_dash_enc_2A/BabyTV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Ftvcable%2Fimages%2Ff%2Fff%2FTooncas_logo_jpg.png%2Frevision%2Flatest%3Fcb%3D20140720173926%26path-prefix%3Des&f=1&nofb=1",
+                "name": "TOONCAST",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Tooncast/SA_Live_dash_enc_2A/Tooncast.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa1%2FNick_Jr._logo_2009.svg%2F1280px-Nick_Jr._logo_2009.svg.png&f=1&nofb=1",
+                "name": "NICK JR",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Nick_Jr/SA_Live_dash_enc_2A/Nick_Jr.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F54%2FNatgeo_Kids_logo.svg%2F1200px-Natgeo_Kids_logo.svg.png&f=1&nofb=1",
+                "name": "NAT GEO KIDS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/NatGeo_Kids/SA_Live_dash_enc_2A/NatGeo_Kids.mpd"
+            },
+            {
+                "icon": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fdreamlogos%2Fimages%2F4%2F4c%2FLocomotion_logo.png%2Frevision%2Flatest%3Fcb%3D20150305143028&f=1&nofb=1",
+                "name": "LOCOMOTION",
+                "uri": "http://51.222.85.85:81/hls/loco/index.m3u8"
+            }
+        ]
+    },
+    {
+        "name": "CANALES PREMIUM",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/3545/CH_LOGO/350/500/0/0/15179620073951.png",
+                "name": "FOX SPORTS PREMIUM",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Fox_Sports_Premiun_HD/SA_Live_dash_enc_2A/Fox_Sports_Premiun_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/ac8c5fc2-b457-4784-8911-6b8cecd2b12d.png",
+                "name": "TNT SPORTS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TNT_Sports_HD/SA_Live_dash_enc_2A/TNT_Sports_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/68/CH_LOGO/350/500/0/0/8527518907875.png",
+                "name": "HBO",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/HBOHD/SA_Live_dash_enc_2A/HBOHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/881/CH_LOGO/350/500/0/0/30164333072684.png",
+                "name": "HBO 2",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/HBO_2/SA_Live_dash_enc_2A/HBO_2.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/883/CH_LOGO/350/500/0/0/17024645072165.png",
+                "name": "HBO PLUS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/HBO_Plus/SA_Live_dash_enc_2A/HBO_Plus.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/704/CH_LOGO/350/500/0/0/931513860712.png",
+                "name": "HBO MUNDI",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Max_HD/SA_Live_dash_enc_2A/Max_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1441/CH_LOGO/350/500/0/0/71702634073927.png",
+                "name": "HBO POP",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Max_UP_HD/SA_Live_dash_enc_2A/Max_UP_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/705/CH_LOGO/350/500/0/0/7754024707334.png",
+                "name": "HBO XTREME",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Max_Prime_HD/SA_Live_dash_enc_2A/Max_Prime_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/882/CH_LOGO/350/500/0/0/9358483307335.png",
+                "name": "HBO FAMILY",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/HBO_Family/SA_Live_dash_enc_2A/HBO_Family.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/884/CH_LOGO/350/500/0/0/1793376207500.png",
+                "name": "HBO SIGNATURE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/HBO_Signature/SA_Live_dash_enc_2A/HBO_Signature.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/290/CH_LOGO/350/500/0/0/16309313071964.png",
+                "name": "STAR Hits",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FoxMoviesHD/SA_Live_dash_enc_2A/FoxMoviesHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/284/CH_LOGO/350/500/0/0/54716946071000.png",
+                "name": "STAR SERIES",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FOX1HD/SA_Live_dash_enc_2A/FOX1HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/285/CH_LOGO/350/500/0/0/23345888072036.png",
+                "name": "STAR ACTION",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FoxActionHD/SA_Live_dash_enc_2A/FoxActionHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/289/CH_LOGO/350/500/0/0/83852980071016.png",
+                "name": "STAR FUN",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/FoxFamily/SA_Live_dash_enc_2A/FoxFamily.mpd"
+            },
+            {
+                "icon": "https://static.flow.com.ar/images/288/CH_LOGO/350/500/0/0/32383105073124.png",
+                "name": "STAR COMEDY",
+                "uri": "https://el4live1.boldmss.com/FOX_COMEDY/FOX_COMEDY.isml/FOX_COMEDY.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/286/CH_LOGO/350/500/0/0/41297971073249.png",
+                "name": "STAR CINEMA",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/FoxCinema/SA_Live_dash_enc_2A/FoxCinema.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/287/CH_LOGO/350/500/0/0/2400146307324.png",
+                "name": "STAR CLASSICS",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/FoxClassics/SA_Live_dash_enc_2A/FoxClassics.mpd"
+            }
+        ]
+    },
+    {
+        "name": "CINE",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/722/CH_LOGO/350/500/0/0/7001532007328.png",
+                "name": "TCM",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/TCM/SA_Live_dash_enc_2A/TCM.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/689/CH_LOGO/350/500/0/0/25635809073478.png",
+                "name": "EUROPA EUROPA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Europa_Europa/SA_Live_dash_enc_2A/Europa_Europa.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/267/CH_LOGO/350/500/0/0/75126015073445.png",
+                "name": "CINECANAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/CinecanalHD/SA_Live_dash_enc_2A/CinecanalHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/6877/CH_LOGO/350/500/0/0/67214550074230.png",
+                "name": "TNT HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TNT_HD_Arg/SA_Live_dash_enc_2A/TNT_HD_Arg.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/701/CH_LOGO/350/500/0/0/20222966074359.png",
+                "name": "CINE AR",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/INCAA_Tv/SA_Live_dash_enc_2A/INCAA_Tv.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/673/CH_LOGO/350/500/0/0/57692590072292.png",
+                "name": "CINEMAX",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Cinemax/SA_Live_dash_enc_2A/Cinemax.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/282/CH_LOGO/350/500/0/0/75215900074098.png",
+                "name": "FXM",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TheFilmZoneHD/SA_Live_dash_enc_2A/TheFilmZoneHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/732/CH_LOGO/350/500/0/0/952123260745.png",
+                "name": "VOLVER",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Volver/SA_Live_dash_enc_2A/Volver.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/67/CH_LOGO/350/500/0/0/38603286074535.png",
+                "name": "SPACE HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Space/SA_Live_dash_enc_2A/Space.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/322/CH_LOGO/350/500/0/0/77955190072999.png",
+                "name": "TNT SERIES",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TNTSeries/SA_Live_dash_enc_2A/TNTSeries.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/294/CH_LOGO/350/500/0/0/74525133072040.png",
+                "name": "FX HD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FXHD/SA_Live_dash_enc_2A/FXHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/123/CH_LOGO/350/500/0/0/7718553707879.png",
+                "name": "START Channel",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/FOXHD/SA_Live_dash_enc_2A/FOXHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/961/CH_LOGO/350/500/0/0/12091021073400.png",
+                "name": "STAR LIFE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Fox_Life/SA_Live_dash_enc_2A/Fox_Life.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/124/CH_LOGO/350/500/0/0/72622580071579.png",
+                "name": "SONY CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/SonyHD/SA_Live_dash_enc_2A/SonyHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/298/CH_LOGO/350/500/0/0/90263585073787.png",
+                "name": "WARNER CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/WarnerHD/SA_Live_dash_enc_2A/WarnerHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/731/CH_LOGO/350/500/0/0/89305925071508.png",
+                "name": "UNIVERSAL CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Universal_Channel_HD/SA_Live_dash_enc_2A/Universal_Channel_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/263/CH_LOGO/350/500/0/0/92889820071862.png",
+                "name": "AXN",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/AXNHD/SA_Live_dash_enc_2A/AXNHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/718/CH_LOGO/350/500/0/0/358638080777.png",
+                "name": "STUDIO UNIVERSAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Studio_Universal/SA_Live_dash_enc_2A/Studio_Universal.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/242/CH_LOGO/350/500/0/0/52297703071584.png",
+                "name": "A&E",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/AEHD/SA_Live_dash_enc_2A/AEHD.mpd"
+            },
+            {
+                "drm_license_url": "https://iptvtucuman.com/sv",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/721/CH_LOGO/350/500/0/0/67139517071967.png",
+                "name": "TBS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/TBS/SA_Live_dash_enc_2A/TBS.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/261/CH_LOGO/350/500/0/0/37079692071250.png",
+                "name": "AMC",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/AMC/SA_Live_dash_enc_2A/AMC.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/700/CH_LOGO/350/500/0/0/688644660722.png",
+                "name": "ISAT",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/ISAT/SA_Live_dash_enc_2A/ISAT.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1161/CH_LOGO/350/500/0/0/99608630073988.png",
+                "name": "A3SERIES",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/A3_Series/SA_Live_dash_enc_2A/A3_Series.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/720/CH_LOGO/350/500/0/0/4227040607760.png",
+                "name": "SYFY",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/SyFy/SA_Live_dash_enc_2A/SyFy.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/268/CH_LOGO/350/500/0/0/53613656073953.png",
+                "name": "COMEDY CENTRAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/ComedyCentral/SA_Live_dash_enc_2A/ComedyCentral.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/714/CH_LOGO/350/500/0/0/96618789072910.png",
+                "name": "PARAMOUNT",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Paramount/SA_Live_dash_enc_2A/Paramount.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/8177/CH_LOGO/350/500/0/0/17553447073627.png",
+                "name": "A3CINE",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/A3_Cine/SA_Live_dash_enc_2A/A3_Cine.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/691/CH_LOGO/350/500/0/0/444140520763.png",
+                "name": "FILM&ARTS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Film_Arts/SA_Live_dash_enc_2A/Film_Arts.mpd"
+            }
+        ]
+    },
+    {
+        "name": "CULTURALES",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/643/CH_LOGO/350/500/0/0/72827036071623.png",
+                "name": "ANIMAL PLANET",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/AnimalPlanet/SA_Live_dash_enc_2A/AnimalPlanet.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/8417/CH_LOGO/350/500/0/0/60015425071531.png",
+                "name": "HGTV",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Home_and_Garden/SA_Live_dash_enc/Home_and_Garden.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/271/CH_LOGO/350/500/0/0/48950714073066.png",
+                "name": "DISCOVERY",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/DiscoveryHD/SA_Live_dash_enc_2A/DiscoveryHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/272/CH_LOGO/350/500/0/0/95901550072218.png",
+                "name": "DISCOVERY H&H",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/DiscoveryHomeHealthHD/SA_Live_dash_enc_2A/DiscoveryHomeHealthHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/642/CH_LOGO/350/500/0/0/1734922607111.png",
+                "name": "DISCOVERY ID",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/ID/SA_Live_dash_enc_2A/ID.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/680/CH_LOGO/350/500/0/0/8147709107493.png",
+                "name": "DISCOVERY SCIENCE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Discovery_Science/SA_Live_dash_enc_2A/Discovery_Science.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/641/CH_LOGO/350/500/0/0/52117167073223.png",
+                "name": "DISCOVERY TURBO",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/DiscoveryTurbo/SA_Live_dash_enc_2A/DiscoveryTurbo.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/725/CH_LOGO/350/500/0/0/79088230071181.png",
+                "name": "DISCOVERY THEATER",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Theater_HD/SA_Live_dash_enc_2A/Theater_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1027/CH_LOGO/350/500/0/0/49211360074909.png",
+                "name": "DISCOVERY TLC",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/TLC/SA_Live_dash_enc_2A/TLC.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/681/CH_LOGO/350/500/0/0/68418478071389.png",
+                "name": "DISCOVERY WORLD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Discovery_World_HD/SA_Live_dash_enc_2A/Discovery_World_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/301/CH_LOGO/350/500/0/0/53628570071499.png",
+                "name": "HISTORY",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/HistoryHD/SA_Live_dash_enc_2A/HistoryHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/698/CH_LOGO/350/500/0/0/56094192072823.png",
+                "name": "HISTORY 2",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/History_2/SA_Live_dash_enc_2A/History_2.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/300/CH_LOGO/350/500/0/0/18355579072710.png",
+                "name": "NAT GEO",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/NatGeoHD/SA_Live_dash_enc_2A/NatGeoHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/299/CH_LOGO/350/500/0/0/64855729071403.png",
+                "name": "NAT GEO WILD",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/NatGeoWildHD/SA_Live_dash_enc_2A/NatGeoWildHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/295/CH_LOGO/350/500/0/0/3052891707125.png",
+                "name": "GOURMET",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Gourmet/SA_Live_dash_enc_2A/Gourmet.mpd"
+            }
+        ]
+    },
+    {
+        "name": "~ // VARIEDADES \\~",
+        "samples": [{
+                "drm_license_url": "https://tucumantvdigital.xyz/ondirectv_widevine.php",
+                "drm_scheme": "widevine",
+                "icon": "https://images.istreamplanet.net/w_200.00000596046448,c_limit/dtv-latam-prod/86f324ab233e05d2e8f1bd4bb5cc7d94",
+                "name": "ON DIRECTV",
+                "uri": "https://dtv-latam-abc.akamaized.net/dash/live/2017813/dtv/dtv-ondirectvsouth/master.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1254/CH_LOGO/350/500/0/0/6858782907349.png",
+                "name": "CANAL LUZ",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/CANAL_LUZ/SA_Live_dash_enc_2A/CANAL_LUZ.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7a/CiudadMagazine_%282017%29.png",
+                "name": "CIUDAD MAGAZINE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Magazine/SA_Live_dash_enc_2A/Magazine.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/684/CH_LOGO/350/500/0/0/65437164074292.png",
+                "name": "E!",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/E_Entertainment_Television/SA_Live_dash_enc_2A/E_Entertainment_Television.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/687/CH_LOGO/350/500/0/0/8002435507337.png",
+                "name": "EURO CHANNEL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Eurochannel/SA_Live_dash_enc_2A/Eurochannel.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/690/CH_LOGO/350/500/0/0/477115640764.png",
+                "name": "EWTN",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/EWTN/SA_Live_dash_enc_2A/EWTN.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/901/CH_LOGO/350/500/0/0/87811089073450.png",
+                "name": "FOOD NETWORK",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Food_Network/SA_Live_dash_enc_2A/Food_Network.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/695/CH_LOGO/350/500/0/0/2499809907104.png",
+                "name": "GLITZ",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Glitz/SA_Live_dash_enc_2A/Glitz.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1181/CH_LOGO/350/500/0/0/33795330072670.png",
+                "name": "HOLA TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Hola_TV/SA_Live_dash_enc_2A/Hola_TV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/697/CH_LOGO/350/500/0/0/95216322073987.png",
+                "name": "KZO ENTERTAINMENT",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Gran_Hermano_24hs/SA_Live_dash_enc_2A/Gran_Hermano_24hs.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/692/CH_LOGO/350/500/0/0/20412471072788.png",
+                "name": "LIFETIME",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Lifetime/SA_Live_dash_enc_2A/Lifetime.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/703/CH_LOGO/350/500/0/0/7838548607108.png",
+                "name": "MAS CHIC",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Mas_Chic/SA_Live_dash_enc_2A/Mas_Chic.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/706/CH_LOGO/350/500/0/0/90493668072263.png",
+                "name": "METRO",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Metro/SA_Live_dash_enc_2A/Metro.mpd"
+            },
+            {
+                "icon": "https://scontent.fcnq2-2.fna.fbchromecast.net/v/t1.18169-9/27459876_2278968105462397_7759928134736230235_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=WbyJIzV_CgQAX9OpTnS&_nc_ht=scontent.fcnq2-2.fna&oh=129faf67dc0493311ddc90327426dfc6&oe=60B8D089",
+                "name": "METROPOLITANA TV",
+                "uri": "https://streamtv12.ddns.net:5443/LiveApp/streams/193945633734205616732920.m3u8?token=nullhttps://streamtv12.ddns.net:5443/LiveApp/streams/193945633734205616732920.m3u8?token=null"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/712/CH_LOGO/350/500/0/0/6514958607308.png",
+                "name": "NUEVA IMAGEN TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Nueva_Imagen/SA_Live_dash_enc_2A/Nueva_Imagen.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/668/CH_LOGO/350/500/0/0/49041028073437.png",
+                "name": "ORBE 21",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_21/SA_Live_dash_enc_2A/Canal_21.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/6619/CH_LOGO/350/500/0/0/93318670071976.png",
+                "name": "PASIONES TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Pasiones/SA_Live_dash_enc_2A/Pasiones.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://chromecast.icon-icons.com/icons2/1261/PNG/512/1496676738-rounded-high-ultra-colour05-television_84626.png",
+                "name": "SANTA MARIA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Senal_Maria/SA_Live_dash_enc_2A/Senal_Maria.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/723/CH_LOGO/350/500/0/0/7392338407887.png",
+                "name": "TELEMAX",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Telemax/SA_Live_dash_enc_2A/Telemax.mpd"
+            },
+            {
+                "icon": "https://image.flaticon.com/icons/png/512/3046/3046122.png",
+                "name": "TIKTOK CHANNEL",
+                "uri": "http://srv2.zcast.com.br/tiktok/tiktok/playlist.m3u8"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/122/CH_LOGO/350/500/0/0/61224231071260.png",
+                "name": "TRU TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/TruTV/SA_Live_dash_enc_2A/TruTV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/733/CH_LOGO/350/500/0/0/2654526707723.png",
+                "name": "WOBI",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/WOBI/SA_Live_dash_enc_2A/WOBI.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/670/CH_LOGO/350/500/0/0/74835190079.png",
+                "name": "CANAL DE LAS ESTRELLAS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Canal_de_las_estrellas/SA_Live_dash_enc_2A/Canal_de_las_estrellas.mpd"
+            },
+            {
+                "icon": "https://blancolorenz.com/wp-content/uploads/2012/06/TLNovelas2.png",
+                "name": "TL NOVELA",
+                "uri": "https://el4live1.boldmss.com/TL_NOVELAS/TL_NOVELAS.isml/TL_NOVELAS.mpd?filter=systemBitrate%3C2500000&dvr_window_length=30"
+            }
+        ]
+    },
+    {
+        "name": "~ // MUSICA \\~",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/715/CH_LOGO/350/500/0/0/80393273073281.png",
+                "name": "QUIERO TV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Quiero_HD/SA_Live_dash_enc_2A/Quiero_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/707/CH_LOGO/350/500/0/0/14664562073858.png",
+                "name": "MTV",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/MTV_HD/SA_Live_dash_enc_2A/MTV_HD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/7018/CH_LOGO/350/500/0/0/89851195074330.png",
+                "name": "VORTERIX",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Vorterix/SA_Live_dash_enc_2A/Vorterix.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1044/CH_LOGO/350/500/0/0/3170640807319.png",
+                "name": "VH1",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/VH1/SA_Live_dash_enc_2A/VH1.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/699/CH_LOGO/350/500/0/0/1116039107115.png",
+                "name": "HTV",
+                "uri": "http://chromecast.cvattv.com.ar/live/c2live/HTV/SA_Live_dash_enc_2A/HTV.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/674/CH_LOGO/350/500/0/0/3383758507230.png",
+                "name": "CM",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/CM/SA_Live_dash_enc_2A/CM.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://chromecast.mitvstatic.com/channels/co_vh1-mega-hits_m.png",
+                "name": "VH1 MEGA HITS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/VH1_Megahits/SA_Live_dash_enc_2A/VH1_Megahits.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/7277/CH_LOGO/350/500/0/0/75476816073439.png",
+                "name": "ALLEGRO",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/AllegroHD/SA_Live_dash_enc_2A/AllegroHD.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/708/CH_LOGO/350/500/0/0/987873140728.png",
+                "name": "MUCH MUSIC",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Much_Music/SA_Live_dash_enc_2A/Much_Music.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1022/CH_LOGO/350/500/0/0/3867624707727.png",
+                "name": "MTV HITS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/MTV_Hits/SA_Live_dash_enc_2A/MTV_Hits.mpd"
+            }
+        ]
+    },
+    {
+        "name": "~ // TELEVISION INTERNACIONAL \\~",
+        "samples": [{
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/666/CH_LOGO/350/500/0/0/5518044607730.png",
+                "name": "BLOOMBERG",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Bloomberg/SA_Live_dash_enc_2A/Bloomberg.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/716/CH_LOGO/350/500/0/0/577119940729.png",
+                "name": "RAI ITALIA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/RAI/SA_Live_dash_enc_2A/RAI.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/727/CH_LOGO/350/500/0/0/112212470739.png",
+                "name": "TV CHILE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Tv_Chile/SA_Live_dash_enc_2A/Tv_Chile.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/724/CH_LOGO/350/500/0/0/2237715507388.png",
+                "name": "TELESUR",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Telesur/SA_Live_dash_enc_2A/Telesur.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/677/CH_LOGO/350/500/0/0/920134780713.png",
+                "name": "CNN INTERNACIONAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/CNN_Internacional/SA_Live_dash_enc_2A/CNN_Internacional.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/864/CH_LOGO/350/500/0/0/312421890780.png",
+                "name": "BBC NEWS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/BBC_World_News/SA_Live_dash_enc_2A/BBC_World_News.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/688/CH_LOGO/350/500/0/0/6473888207962.png",
+                "name": "EURO NEWS",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Euronews/SA_Live_dash_enc_2A/Euronews.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/683/CH_LOGO/350/500/0/0/37933898072067.png",
+                "name": "DW",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/DW/SA_Live_dash_enc_2A/DW.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/728/CH_LOGO/350/500/0/0/834899000759.png",
+                "name": "TV ESPAÑA",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/TV_Espana/SA_Live_dash_enc_2A/TV_Espana.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/1061/CH_LOGO/350/500/0/0/90975798073402.png",
+                "name": "CANAL U",
+                "uri": "https://chromecast.cvattv.com.ar/live/c3eds/Canal_U/SA_Live_dash_enc_2A/Canal_U.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/730/CH_LOGO/350/500/0/0/573961450738.png",
+                "name": "TV5MONDE AMERIQUE LATINE",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/TV5_Monde/SA_Live_dash_enc_2A/TV5_Monde.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/962/CH_LOGO/350/500/0/0/116715800761.png",
+                "name": "ANTENA 3",
+                "uri": "https://chromecast.cvattv.com.ar/live/c2live/Antena_3/SA_Live_dash_enc_2A/Antena_3.mpd"
+            },
+            {
+                "drm_license_url": "matias",
+                "drm_scheme": "widevine",
+                "icon": "https://static.flow.com.ar/images/7117/CH_LOGO/350/500/0/0/96362376074301.png",
+                "name": "TELEMUNDO INTERNACIONAL",
+                "uri": "https://chromecast.cvattv.com.ar/live/live/Telemundo_HD/SA_Live_dash_enc_2A/Telemundo_HD.mpd"
+            }
+        ]
+    }
+]

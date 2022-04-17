@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import {MenuItem} from 'primeng/api';
+import { AuthService } from '../auth/auth-service.service';
 
 
 @Component({
@@ -13,12 +15,15 @@ export class DashboardComponent implements OnInit {
 
 
 
-  constructor(private primengConfig: PrimeNGConfig) {
+  constructor(private primengConfig: PrimeNGConfig, private authService: AuthService, private router: Router) {
     this.items = [];
     
   }
 
   ngOnInit(): void {
+    if(this.authService.auth.currentUser === null) {
+      this.router.navigate(['login'])
+    }
     this.primengConfig.ripple = true;
     this.items = [{
       label: 'Nuevo Usuario',
@@ -30,7 +35,10 @@ export class DashboardComponent implements OnInit {
     },]
   }
 
-  
+  logOut() {
+    this.authService.logOut()
+    this.router.navigate(['login'])
+  }
 
   // sidebarOpen() {
   //   this._sidebar.open()

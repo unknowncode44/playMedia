@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { ConfirmationService, Message, PrimeNGConfig } from 'primeng/api';
-import { DialogService } from 'primeng/dynamicdialog/dialogservice';
+import { DialogService } from 'primeng/dynamicdialog';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Channel } from 'src/app/models/channel.model';
+import { Sample } from 'src/app/models/sample.model';
+import { DbService } from 'src/app/db/dbservice.service';
+import { Router } from '@angular/router';
 
 interface SChannels {
   channelIndx?: string,
@@ -20,57 +24,49 @@ interface SChannels {
 })
 export class DrmComponent implements OnInit {
 
+  counter: number;
   oldLink: string;
   disabled: boolean = true
   newLink: string;
+  category?: string;
   obs?: Observable<any[]>;
   scChannels: SChannels[];
   bkScChannels: SChannels[];
   loading: boolean;
+  displayModal: boolean = false;
   channels: Channel[];
+  channelsBU: Channel[];
   obsItemsList: AngularFireList<Channel>
+  drmForm: FormGroup;
 
   array_Tabla: any[] = []
 
   msgs: Message[] = [];
   postion: string = '';
 
-  constructor(private db: AngularFireDatabase, private confirmation: ConfirmationService, private primengCpnfig: PrimeNGConfig,public dialogService: DialogService) { 
+  constructor(
+    private db: AngularFireDatabase,
+    private dbService: DbService, 
+    private confirmation: ConfirmationService, 
+    private primengCpnfig: PrimeNGConfig,
+    public dialogService: DialogService,
+    public fb: FormBuilder,
+    private router: Router) { 
+
     this.oldLink = '';
     this.newLink = '';
     this.channels = [];
-    this.obsItemsList = db.list<Channel>('/channels')
+    this.channelsBU = [];
+    this.obsItemsList = db.list<Channel>('/channel_test')
     this.scChannels = [];
     this.bkScChannels = [];
     this.loading = true
     this.primengCpnfig.ripple = true;
 
+    this.counter = 0
+
+    this.drmForm  = fb.group({})
     
-    
-  }
-
-  confirm() {
-
-    this.confirmation.confirm({
-      message: 'Estas seguro que queres cambiar la DRM?',
-      header: 'Confirmacion',
-      icon: 'pi pi-exclamation-triangle',
-      accept: () => {
-        this.msgs = [{severity:'info', summary:'Confirmado', detail:'Aceptaste cambiar las drm'}];
-    },
-    reject: () => {
-        this.msgs = [{severity:'info', summary:'Rechazado', detail:'Rechazaste cambiar las drm'}];
-    }
-
-    })
-  }
-
-  editClick() {
-    this.disabled = !this.disabled
-  }
-
-  delete() {
-
   }
 
   ngOnInit(): void {
@@ -80,7 +76,6 @@ export class DrmComponent implements OnInit {
         for (let i = 0; i < channels.length; i++) {
           let arr = this.getSCObject(channels[i], i)
           for (let e = 0; e < arr.length; e++) {
-            console.log(arr[e])
             this.scChannels.push(arr[e])
 
           }
@@ -94,7 +89,84 @@ export class DrmComponent implements OnInit {
 
       }
     )
+
+    this.drmForm = this.fb.group({
+      drm: ['',[Validators.required]]
+    })
   }
+  
+  confirm(drm: string, cat: string) {
+    this.oldLink = drm;
+    this.category = cat;
+    this.confirmation.confirm({
+      message: `Estas seguro que queres cambiar la DRM??!!: <br> DRM actual: ${this.oldLink} `,
+      header: 'Cambiar DRM',
+      icon: 'pi pi-exclamation-circle',
+      acceptLabel: 'Si, estoy seguro',
+      rejectLabel: 'No, mejor no',
+      acceptButtonStyleClass: 'p-button-success',
+      rejectButtonStyleClass: 'p-button-outlined p-button-danger',
+      accept: () => {
+        this.displayForm();
+        // 
+    },
+    reject: () => {
+      this.msgs = [{severity:'warn', summary:'No se realizaron cambios', detail:'Cancelanste la modificacion del DRM'}];
+    }
+
+    })
+  }
+
+
+  displayForm() {
+    this.displayModal = true
+  }
+
+  hide() {
+    this.displayModal = false
+    this.msgs = [{severity:'warn', summary:'No se realizaron cambios', detail:'Cancelanste la modificacion del DRM'}];
+  }
+
+  modifyDRM() {
+    this.channelsBU = this.channels
+    if(this.drmForm.invalid) {
+      return
+    }
+
+    const drm = this.drmForm.value
+    console.log(drm.drm)
+    this.newLink = drm
+    
+    for (let i = 0; i < this.channelsBU.length; i++) {
+      const e = this.channelsBU[i];
+      this.loopInSamples(this.oldLink, e.samples!, drm.drm)
+      
+      
+    }
+    this.loading = true
+    for (let e = 0; e < this.channelsBU.length; e++) {
+      const el = this.channelsBU[e];
+
+      this.dbService.updateDRM(el.samples!, e, el.name!)
+      
+    }
+    let cambios = localStorage.getItem('counter')
+    this.msgs = [{severity:'success', summary:'DRM Modificada Exitosamente', detail:`Se realizaron ${cambios} cambios`}];
+    this.displayModal = false
+    this.counter = 0
+    
+
+  }
+
+
+  editClick() {
+    this.disabled = !this.disabled
+  }
+
+  delete() {
+
+  }
+
 
   getSCObject(obj: Channel, index: number) {
     var arr: SChannels[] = [];
@@ -132,6 +204,20 @@ export class DrmComponent implements OnInit {
       })
       
     return newScChannels
+  }
+
+  loopInSamples(drmURL: string, sample: Sample[], newDrm: string) {
+    
+    for (let i = 0; i < sample.length; i++) {
+      const e = sample[i];
+      if (e.drm_license_url === drmURL) {
+        e.drm_license_url = newDrm
+        this.counter++
+        // update DB Value
+      }
+      
+    }
+    localStorage.setItem('counter', this.counter.toString());
   }
 
   

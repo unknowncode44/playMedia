@@ -7,13 +7,13 @@
     <hr class="mt-1 mb-4">
 
 
-
+    <p-messages [value]="msgs"></p-messages>
     <p-table class="p-table" dataKey="id" responsiveLayout="scroll" [lazy]="true" [loading]="loading" [value]="array_Tabla">
         <ng-template pTemplate="header">
             <tr>
-                <th class="p-0">Nombre</th>
-                <th class="p-0">DRM</th>
-                <th class="p-0">Acciones</th>
+                <th class="p-0"> Categoria </th>
+                <th class="p-0"> DRM </th>
+                <th class="p-0"> Acciones </th>
 
             </tr>
         </ng-template>
@@ -26,8 +26,8 @@
                 <td class="p-0">
                     <div class="p-2 flex flex-wrap">
                         <div class="p-buttonset">
-                            <p-button class="p-button-sm p-1 p-button-raised" (onClick)="confirm()" icon="pi pi-cog"></p-button>
-                            <p-button class="p-button-sm p-1 p-button-raised p-button-danger" (onClick)="delete()" icon="pi pi-trash"></p-button>
+                            <p-button class="p-button-sm p-1 p-button-raised" (onClick)="confirm(chan_nel.drmLicense,chan_nel.category)" icon="pi pi-refresh" label="Cambiar DRM"></p-button>
+                            <p-button class="p-button-sm p-button-outline p-button-danger p-1 p-button-raised " (onClick)="delete()" icon="pi pi-trash"></p-button>
                         </div>
                     </div>
                 </td>
@@ -38,10 +38,34 @@
 
 
     </p-table>
-    <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <p-confirmDialog [style]="{width: '65vw'}" [baseZIndex]="10000">
 
     </p-confirmDialog>
-    <p-messages [value]="msgs"></p-messages>
+
+
+    <p-dialog [modal]="true" [visible]="displayModal" [style]="{width: '75vh'}">
+        <ng-template pTemplate="header">
+            <h3>Ingresa Nueva DRM</h3>
+        </ng-template>
+
+        <hr class="mt-1">
+        <div class="grid p-fluid">
+            <div class="col-12">
+                <form [formGroup]="drmForm">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText formControlName="drm" placeholder="Ingresa Nueva DRM">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <ng-template pTemplate="footer">
+            <button type="button" pButton class="p-button-outline p-button-danger" icon="pi pi-times" (click)="hide()" label="Cancelar"></button>
+            <button pButton icon="pi pi-check" class="p-button-success" type="button" (click)="modifyDRM()" label="Aceptar"></button>
+        </ng-template>
+
+    </p-dialog>
+
 
 
 

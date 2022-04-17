@@ -51,6 +51,8 @@ import {ConfirmationService}                from 'primeng/api';
 import { MessagesModule }                   from 'primeng/messages';
 import {DynamicDialogModule}                from 'primeng/dynamicdialog';
 import {DialogService}                      from 'primeng/dynamicdialog';
+import { DialogModule }                     from "primeng/dialog";
+
 
 
 
@@ -92,7 +94,9 @@ import {DialogService}                      from 'primeng/dynamicdialog';
     PanelModule,
     ConfirmDialogModule,
     MessagesModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    DialogModule
+    
     
   
   ],

@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
     .then((credentials) => {
       this.user.uid = credentials.user!.uid;
       localStorage.setItem('currentUser', JSON.stringify(this.user));
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
       Swal.close()
     })
     .catch((err) => {

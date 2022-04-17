@@ -8,15 +8,12 @@
             <input class="ps-2" [(ngModel)]="filterValue" type="text" pInputText placeholder="email">
         </div>
     </div>
-    <hr class="my-0">
+    <hr class="mb-2">
     <div class="p-mb-1 mt-0 flex">
-        <p-button class="flex-none" type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
-        <p-button class="flex-grow-1 text-center" type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
-        <p-button class="flex-none" type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
 
     </div>
 
-    <p-table class="p-table-sm" [value]="usrs" [paginator]="true" [rows]="rows" [showCurrentPageReport]="true" [(first)]="first" currentPageReportTemplate="Mostrando desde {first} a {last} de {totalRecords} usuarios" [rowsPerPageOptions]="[5,10,15]">
+    <p-table class="p-table-sm" [value]="usrs" [loading]="loading" [rows]="rows" scrollHeight="75vh" [paginator]="true" [showCurrentPageReport]="true" [(first)]="first" currentPageReportTemplate="Mostrando {{rows}} usuarios de {{usrs.length}}" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">
             <tr>
                 <th class="p-0">Email</th>
@@ -24,6 +21,7 @@
                 <th class="p-0">Rol</th>
                 <th class="p-0">Expira</th>
                 <th class="p-0">Acciones</th>
+                <!-- <th class="p-0">Estado Suscripcion</th> -->
 
 
             </tr>
@@ -35,6 +33,7 @@
                 <td class="p-0">{{detTypeUsr(user.role)}}</td>
                 <td class="p-0">{{user.expire}}</td>
 
+
                 <td class="p-0">
                     <div class="p-2 flex flex-wrap">
                         <div class="p-buttonset">
@@ -43,6 +42,7 @@
                         </div>
                     </div>
                 </td>
+
             </tr>
         </ng-template>
 

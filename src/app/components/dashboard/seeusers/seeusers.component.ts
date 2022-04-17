@@ -20,6 +20,7 @@ export class SeeusersComponent implements OnInit {
 
   first: number =  0;
   rows: number  = 10;
+  loading: boolean = true
 
 
 
@@ -40,22 +41,25 @@ export class SeeusersComponent implements OnInit {
       for (let i = 0; i < users.length; i++) {
         array.push(users[i])
       }
+      this.loading = false
       
     })
     this.usrs = array
+    
   }
 
+
+
   next() {
-    this.first + this.rows
+    this.first = this.first + this.rows
   }
 
   prev() {
-    this.first - this.rows
+    this.first = this.first - this.rows
   }
 
   reset() {
     this.first = 0
-    return this.usrs = this.users
   }
 
   isLastPage(): boolean {
@@ -90,6 +94,29 @@ export class SeeusersComponent implements OnInit {
         return 'Cliente'
       default:
         return 'Administrador'
+    }
+  }
+  detSuscrB(date: string): boolean {
+    let today = new Date()
+    let expDate = new Date(date)
+
+    if (today >= expDate) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
+
+  detSuscr(date: string): string {
+    let today = new Date()
+    let expDate = new Date(date)
+
+    if (today >= expDate) {
+      return 'Suscripcion OK'
+    }
+    else {
+      return 'Suscripcion Vencida'
     }
   }
 
