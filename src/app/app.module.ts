@@ -54,6 +54,9 @@ import {DialogService}                      from 'primeng/dynamicdialog';
 import { DialogModule }                     from "primeng/dialog";
 
 
+import {APP_BASE_HREF}                      from '@angular/common';
+
+
 
 
 
@@ -100,7 +103,7 @@ import { DialogModule }                     from "primeng/dialog";
     
   
   ],
-  providers: [ConfirmationService, DialogService],
+  providers: [ConfirmationService, DialogService, {provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
