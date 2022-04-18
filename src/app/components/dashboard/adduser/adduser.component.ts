@@ -146,6 +146,8 @@ export class AdduserComponent implements OnInit {
           let month = expireDate.getMonth()
           let year = expireDate.getFullYear()
 
+          month++
+
           var dateStr = `${date}/${month}/${year}`
 
           console.log(dateStr);

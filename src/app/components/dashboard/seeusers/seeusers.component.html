@@ -13,7 +13,7 @@
 
     </div>
 
-    <p-table class="p-table-sm" [value]="usrs" [loading]="loading" [rows]="rows" scrollHeight="75vh" [paginator]="true" [showCurrentPageReport]="true" [(first)]="first" currentPageReportTemplate="Mostrando {{rows}} usuarios de {{usrs.length}}" [rowsPerPageOptions]="[10,25,50]">
+    <p-table class="p-table-sm" [value]="usrs" [loading]="loading" [rows]="rows" scrollHeight="75vh" [paginator]="true" pag [showCurrentPageReport]="true" [(first)]="first" currentPageReportTemplate="Mostrando {{rows}} usuarios de {{usrs.length}}" [rowsPerPageOptions]="[25,50]">
         <ng-template pTemplate="header">
             <tr>
                 <th class="p-0">Email</th>

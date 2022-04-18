@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -7,11 +8,14 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AuthService {
 
-  constructor(public auth: AngularFireAuth) { }
+  constructor(public auth: AngularFireAuth, public router: Router) { }
 
-  initFirebaseUser() {
+  initFirebaseUser(path: string) {
     this.auth.authState.subscribe(fuser => {
       console.log(fuser);
+      if(fuser === null) {
+        this.router.navigateByUrl(`/${path}`)
+      }
     })
   }
 

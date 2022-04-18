@@ -17,14 +17,15 @@ export class DashboardComponent implements OnInit {
 
   constructor(private primengConfig: PrimeNGConfig, private authService: AuthService, private router: Router) {
     this.items = [];
+    this.primengConfig.ripple = true;
     
   }
 
   ngOnInit(): void {
-    if(this.authService.auth.currentUser === null) {
-      this.router.navigate(['login'])
-    }
-    this.primengConfig.ripple = true;
+    this.authService.initFirebaseUser('login');
+    
+    
+    
     this.items = [{
       label: 'Nuevo Usuario',
       icon:'pi pi-plus'
@@ -40,11 +41,4 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
-  // sidebarOpen() {
-  //   this._sidebar.open()
-  // }
-
-  // sidebarClose() {
-  //   this._sidebar.close()
-  // }
 }
