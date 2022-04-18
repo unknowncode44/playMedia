@@ -41,4 +41,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['login'])
   }
 
+  customNavigate(path: string){
+    this.router.navigate([path])
+  }
+
 }
