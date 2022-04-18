@@ -165,7 +165,7 @@ export class AdduserComponent implements OnInit {
           console.log(`saliendo del if, ${this.newUser.expire}`);
         }
 
-        this.newUser.time = '10800000'
+        this.newUser.time = 10800000
 
         this.dbService.saveUser(this.newUser, this.newUser.uid)
           .then((done) => { console.log('exito') })

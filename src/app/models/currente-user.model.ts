@@ -8,5 +8,5 @@ export interface CurrentUser {
     uid: string,            // identificacion unica de usuario
     canales?: Channel[];    // array de canales
     expire?: string;        // string DD/MM/AAAA
-    time?: string;          // epoch date que equivale a 10800000    
+    time?: number;          // epoch date que equivale a 10800000    
 }
