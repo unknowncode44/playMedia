@@ -57,7 +57,7 @@ export class DrmComponent implements OnInit {
     this.newLink = '';
     this.channels = [];
     this.channelsBU = [];
-    this.obsItemsList = db.list<Channel>('/channel_test')
+    this.obsItemsList = db.list<Channel>('/channels')
     this.scChannels = [];
     this.bkScChannels = [];
     this.loading = true

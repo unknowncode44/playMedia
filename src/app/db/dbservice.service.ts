@@ -27,8 +27,12 @@ export class DbService {
 
   updateDRM(samplesArr: Sample[], index: number, category: string) {
     this.db.list(`channel_test/${index.toString()}`).set('name', category).then(() => {
-      return this.db.list(`channel_test/${index.toString()}`).set('samples', samplesArr)
+      return this.db.list(`channels/${index.toString()}`).set('samples', samplesArr)
     })
+  }
+
+  addChannel(index: number, channel: Sample  ) {
+   this.db.object(`channels/${index.toString()}/samples`).set(channel)
   }
 
   getChannels(): Observable<any[]>{

@@ -148,7 +148,7 @@ export class AdduserComponent implements OnInit {
 
           month++
 
-          var dateStr = `${date}/${month}/${year}`
+          var dateStr = `${month}/${date}/${year}`
 
           console.log(dateStr);
           

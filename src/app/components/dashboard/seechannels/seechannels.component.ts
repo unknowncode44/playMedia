@@ -52,9 +52,7 @@ export class SeechannelsComponent implements OnInit {
     this.cols = [];
     this.rows = 14;
     this.loading = true
-
-
-
+    
   }
 
   ngOnInit(): void {
