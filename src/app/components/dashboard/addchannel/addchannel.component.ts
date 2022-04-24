@@ -51,25 +51,12 @@ export class AddchannelComponent implements OnInit {
 
 
 
-    const {cat, uri, name, drmLicense, drmSch, icon} = this.channelForm.value
-    this.channel = {
-      name: this.cat,
-      samples: [
-        {
-          uri: this.uri,
-          name: this.name,
-          drm_license_url: this.drm_license_url,
-          drm_scheme: this.drm_scheme,
-          icon: this.icon
-          
-        }
-
-      ]
-    }
-    console.log(this.channel);
+    // const {cat, uri, name, drmLicense, drmSch, icon} = this.channelForm.value
+    
+    // console.log(this.channel);
     
 
-    this.cat = cat
+    // this.cat = cat
   }
 
 
@@ -103,6 +90,20 @@ getCatMatch(sample: Sample[], cat: string): boolean {
 
 
 createChannel() {
+  this.channel = {
+    name: this.cat.toUpperCase(),
+    samples: [
+      {
+        uri: this.uri,
+        name: this.name.toUpperCase(),
+        drm_license_url: this.drm_license_url,
+        drm_scheme: this.drm_scheme,
+        icon: this.icon
+        
+      }
+    
+    ]
+  }
   var index = this.getIndex(this.channels, this.cat);
   this.db.object(`channels/${this.channels.length}`).update(this.channel).then(
     channel => {

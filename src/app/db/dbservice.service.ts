@@ -35,10 +35,23 @@ export class DbService {
    this.db.object(`channels/${index.toString()}/samples`).set(channel)
   }
 
-  getChannels(): Observable<any[]>{
+  editChannelFeature(chnlIndex: string, sampleIndx: string, sample: Sample) {
+    return this.db.object(`channels/${chnlIndex}/samples/${sampleIndx}`).update(sample)
+  }
 
+  deleteChannel(chnlIndex: string, sampleIndx: string) {
+    return this.db.object(`channels/${chnlIndex}/samples/${sampleIndx}`).remove()
+  }
+
+  getChannels(): Observable<any[]>{
     return this.db.list('/channels').valueChanges()
   }
+
+  deleteUser(uid: string) {
+    return this.db.object(`/users/${uid}`).remove()
+  }
+
+
 
  
 

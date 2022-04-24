@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { deleteUser, User } from '@firebase/auth';
 import { Router } from '@angular/router';
 
 
@@ -8,7 +9,10 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(public auth: AngularFireAuth, public router: Router) { }
+  user?: User
+
+  constructor(public auth: AngularFireAuth, public router: Router) {
+   }
 
   initFirebaseUser(path: string) {
     this.auth.authState.subscribe(fuser => {
@@ -29,6 +33,10 @@ export class AuthService {
 
   logOut() {
     this.auth.signOut();
+  }
+
+  deleteUser(uid: string){
+    
   }
 
   catchRole(role: string): number {

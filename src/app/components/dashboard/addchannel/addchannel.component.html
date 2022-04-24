@@ -8,21 +8,21 @@
                 <h5>Categoria:</h5>
             </div>
             <div class="col-4">
-                <p-dropdown ngModel="{{cat}}" [options]="categories"></p-dropdown>
+                <p-dropdown [(ngModel)]="cat" [options]="categories"></p-dropdown>
             </div>
             <div class="col-1"></div>
             <div class="col-2">
                 <button pButton icon="pi pi-plus" label="Nueva"></button>
             </div>
             <div class="col-4">
-                <input type="text" ngModel="{{cat}}" pInputText placeholder="Nueva Categoria">
+                <input type="text" [(ngModel)]="cat" pInputText placeholder="Nueva Categoria">
             </div>
             <div class="col-2 text-lg-end justify-content-end pt-3">
                 <h5>uri:</h5>
             </div>
             <div class="col-10">
                 <div class="p-inputgroup">
-                    <input type="text" ngModel="{{uri}}" pInputText placeholder="Ingresa uri">
+                    <input type="text" [(ngModel)]="uri" pInputText placeholder="Ingresa uri">
                 </div>
             </div>
             <div class="col-2 text-lg-end justify-content-end pt-3">
@@ -30,7 +30,7 @@
             </div>
             <div class="col-10">
                 <div class="p-inputgroup">
-                    <input type="text" ngModel="{{name}}" pInputText placeholder="Nombre">
+                    <input type="text" [(ngModel)]="name" pInputText placeholder="Nombre">
                 </div>
             </div>
             <div class="col-2 text-lg-end justify-content-end pt-3">
@@ -38,7 +38,7 @@
             </div>
             <div class="col-9">
                 <div class="p-inputgroup">
-                    <input type="text" ngModel="{{drm_scheme}}" pInputText placeholder="Ingresa drm_scheme">
+                    <input type="text" [(ngModel)]="drm_scheme" pInputText placeholder="Ingresa drm_scheme">
                 </div>
             </div>
             <div class="col-2 text-lg-end justify-content-end pt-3">
@@ -46,7 +46,7 @@
             </div>
             <div class="col-10">
                 <div class="p-inputgroup">
-                    <input type="text" ngModel="{{drm_license_url}}" pInputText placeholder="Ingresa drm_license_url">
+                    <input type="text" [(ngModel)]="drm_license_url" pInputText placeholder="Ingresa drm_license_url">
                 </div>
             </div>
             <div class="col-2 text-lg-end justify-content-end pt-3">
@@ -54,12 +54,13 @@
             </div>
             <div class="col-10">
                 <div class="p-inputgroup">
-                    <input type="text"  ngModel="{{drm_scheme}}" pInputText placeholder="Ingresa icon">
+                    <input type="text"  [(ngModel)]="icon" pInputText placeholder="Ingresa icon">
                 </div>
             </div>
         </div>
         <hr>
         <div class="text-end">
+
             <button type="button" pButton class="p-button-outline m-2" icon="pi pi-times" label="Cancelar"></button>
             <button pButton icon="pi pi-check" class="p-button-success m-2" (click)="createChannel()" type="button" label="Aceptar"></button>
         </div>

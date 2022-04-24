@@ -31,6 +31,11 @@ export class SeechannelsComponent implements OnInit {
   scChannels: SChannels[];
   bkScChannels: SChannels[];
 
+  oldSample: Sample;
+  newSample: Sample;
+
+  isVisibleForm: boolean = false
+
 
 
   totalRecords: number;
@@ -52,8 +57,12 @@ export class SeechannelsComponent implements OnInit {
     this.cols = [];
     this.rows = 14;
     this.loading = true
+    this.oldSample = {}
+    this.newSample = {}
     
   }
+
+  
 
   ngOnInit(): void {
     this.loading = true
@@ -66,14 +75,21 @@ export class SeechannelsComponent implements OnInit {
     this.obsItemsList.valueChanges().subscribe(
       channels => {
         this.channels = channels
-        for (let i = 0; i < channels.length; i++) {
-          let arr = this.getSCObject(channels[i], i)
-          for (let e = 0; e < arr.length; e++) {
-            this.scChannels.push(arr[e])
-
-          }
-
-        }
+        channels.map((channel, index) => {
+          const sampleList: Sample[] = channel.samples!
+          var sample: Sample = {}
+          sampleList.map((sample, sindex) => {
+            var sampleObj: SChannels = {
+              name: sample.name,
+              channelIndx: index.toString(),
+              sampleIndx: sindex.toString(),
+              category: channel.name,
+              uri: sample.uri,
+              drmLicense: sample.drm_license_url
+            }
+            this.scChannels.push(sampleObj)
+          })
+        })
         this.loading = false
         this.bkScChannels = this.scChannels
 
@@ -81,6 +97,19 @@ export class SeechannelsComponent implements OnInit {
       }
     )
 
+  }
+
+  visibleForm(value: string) {
+    
+    if(this.isVisibleForm) {
+      this.filter('')
+      this.isVisibleForm = false
+    }
+    else {
+      this.filter(value)
+      this.isVisibleForm = true
+    }
+    
   }
 
   getSCObject(obj: Channel, index: number) {
@@ -145,7 +174,7 @@ export class SeechannelsComponent implements OnInit {
       }
 
     }
-    return this.scChannels = filteredArray
+    return this.scChannels = filteredArray.reverse()
   }
 
   filterbyDRM() {

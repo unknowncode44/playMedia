@@ -68,8 +68,8 @@ export class AdduserComponent implements OnInit {
     this.newUser = { 
       pass: '', 
       email: '', 
-      type: 0,
-      role: 0, 
+      type: 1,
+      role: 2, 
       uid: '', 
       canales: [],
       expire: '',  
