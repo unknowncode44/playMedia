@@ -1,0 +1,56 @@
+<!-- FORMULARIO MODIFICAR CANAL -->
+<div class="grid p-fluid  min-w-full">
+
+    <!-- URL DE CANAL -->
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <button type="button" [disabled]="true" pButton pRipple icon="pi pi-link" class="p-button-sm"></button>
+            <input type="text" [(ngModel)]="uri" [disabled]="enableUri" id="uri" pInputText class="p-inputtext-sm p-1" placeholder="{{sample!.uri}}">
+            <button type="button" pButton pRipple (click)="edit('uri')" icon="pi pi-pencil" class="p-button-sm" label="Editar"></button>
+        </div>
+    </div>
+
+    <!-- NOMBRE DE CANAL -->
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <button type="button" [disabled]="true" pButton pRipple icon="pi pi-caret-right" class="p-button-sm"></button>
+            <input type="text" [(ngModel)]="name" [disabled]="enableName" id="name" pInputText class="p-inputtext-sm p-1" placeholder="{{sample!.name}}">
+            <button type="button" pButton pRipple icon="pi pi-pencil" (click)="edit('name')" class="p-button-sm" label="Editar"></button>
+        </div>
+    </div>
+
+    <!-- URL DE LA DRM -->
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <button type="button" [disabled]="true" pButton pRipple icon="pi pi-key" class="p-button-sm"></button>
+            <input type="text" [(ngModel)]="license" [disabled]="enableDrmLicense" id="drmLicense" pInputText class="p-inputtext-sm p-1" placeholder="{{drmLicense}}">
+            <button type="button" pButton pRipple icon="pi pi-pencil" (click)="edit('license')" class="p-button-sm" label="Editar"></button>
+        </div>
+    </div>
+
+    <!-- Esquema de DRM -->
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <button type="button" [disabled]="true" pButton pRipple icon="pi pi-sitemap" class="p-button-sm"></button>
+            <input type="text" [(ngModel)]="scheme" autofocus [disabled]="enableDrmScheme" id="drmScheme" pInputText class="p-inputtext-sm p-1" placeholder="{{drmScheme}}">
+            <button type="button" pButton pRipple icon="pi pi-pencil" (click)="edit('sch')" class="p-button-sm" label="Editar"></button>
+        </div>
+    </div>
+
+    <!-- CATEGORIA -->
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <button type="button" [disabled]="true" pButton pRipple icon="pi pi-th-large" class="p-button-sm"></button>
+            <input type="text" [disabled]="enableCategory" id="category" pInputText class="p-inputtext-sm p-1" placeholder="{{category}}">
+            <button type="button" pButton pRipple icon="pi pi-pencil" (click)="edit('cat')" class="p-button-sm" label="Editar"></button>
+        </div>
+    </div>
+    <div class="col-12 text-end">
+        <div class="col-3"> <button type="button" pButton pRipple icon="pi pi-times" class="p-button-sm p-button-outlined p-button-danger" label="Cancelar"></button></div>
+        <div class="col-3">
+            <button type="button" pButton pRipple icon="pi pi-check" class="p-button-sm p-button-success" (click)="updateChannel()" label="Ok"></button>
+
+        </div>
+    </div>
+
+</div>

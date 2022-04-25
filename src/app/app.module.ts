@@ -55,6 +55,7 @@ import { DialogModule }                     from "primeng/dialog";
 
 
 import {APP_BASE_HREF}                      from '@angular/common';
+import { ModifychannelComponent } from './components/dashboard/seechannels/modifychannel/modifychannel.component';
 
 
 
@@ -73,6 +74,7 @@ import {APP_BASE_HREF}                      from '@angular/common';
     AddchannelComponent,
     SeechannelsComponent,
     DrmComponent,
+    ModifychannelComponent,
   ],
   imports: [
     FormsModule,

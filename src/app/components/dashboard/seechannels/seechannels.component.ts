@@ -11,7 +11,9 @@ interface SChannels {
   category?: string,
   uri?: string,
   drmLicense?: string,
+  drmScheme?: string,
   name?: string,
+  icon?: string,
 }
 
 
@@ -32,7 +34,11 @@ export class SeechannelsComponent implements OnInit {
   bkScChannels: SChannels[];
 
   oldSample: Sample;
+  pathToModify: string;
+  categoryToModify: string;
   newSample: Sample;
+  drmToModify: string
+  drmLicenseToModify: string
 
   isVisibleForm: boolean = false
 
@@ -58,6 +64,10 @@ export class SeechannelsComponent implements OnInit {
     this.rows = 14;
     this.loading = true
     this.oldSample = {}
+    this.pathToModify = ''
+    this.categoryToModify = ''
+    this.drmToModify = ''
+    this.drmLicenseToModify = ''
     this.newSample = {}
     
   }
@@ -77,7 +87,6 @@ export class SeechannelsComponent implements OnInit {
         this.channels = channels
         channels.map((channel, index) => {
           const sampleList: Sample[] = channel.samples!
-          var sample: Sample = {}
           sampleList.map((sample, sindex) => {
             var sampleObj: SChannels = {
               name: sample.name,
@@ -85,7 +94,9 @@ export class SeechannelsComponent implements OnInit {
               sampleIndx: sindex.toString(),
               category: channel.name,
               uri: sample.uri,
-              drmLicense: sample.drm_license_url
+              drmLicense: sample.drm_license_url,
+              icon: sample.icon,
+              drmScheme: sample.drm_scheme
             }
             this.scChannels.push(sampleObj)
           })
@@ -99,14 +110,25 @@ export class SeechannelsComponent implements OnInit {
 
   }
 
-  visibleForm(value: string) {
+  modifyChannel(drmLicense: string, drmScheme: string, channelIndex: string, sampleIndex: string, sample: Sample, category: string, filterValue?: string) {
+    this.pathToModify = `channels/${channelIndex}/samples/${sampleIndex}`
+    this.oldSample = sample
+    this.categoryToModify = category
+    this.drmLicenseToModify = drmLicense
+    this.drmToModify = drmScheme
+    this.visibleForm(filterValue)
+    
+    
+  }
+
+  visibleForm(value?: string) {
     
     if(this.isVisibleForm) {
       this.filter('')
       this.isVisibleForm = false
     }
     else {
-      this.filter(value)
+      this.filter(value!)
       this.isVisibleForm = true
     }
     
