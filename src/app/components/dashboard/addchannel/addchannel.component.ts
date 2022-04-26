@@ -16,9 +16,11 @@ export class AddchannelComponent implements OnInit {
 
   obsItemsList: AngularFireList<Channel>
   channelForm: FormGroup;
+  buttonDisable: boolean = true
   channel: Channel = { name: '', samples: [{}] }
-  categories: string[] = ['Argentina', 'Interior Argentino', 'Deportes', 'Infatiles', 'Canales Premium', 'Cine', 'Culturales', 'Variedades', 'Musica', 'TV Internacional']
+  categories: string[] = ['Cargando datos...']
   cat: string
+  newCat: string = 'null'
   uri: string
   name: string
   drm_license_url: string
@@ -45,18 +47,13 @@ export class AddchannelComponent implements OnInit {
   ngOnInit(): void {
     this.obsItemsList.valueChanges().subscribe(
       channels => {
+        this.categories.length = 0
         this.channels = channels
+        channels.map(channel => { 
+          this.categories.push(channel.name)
+        })
       }
     )
-
-
-
-    // const {cat, uri, name, drmLicense, drmSch, icon} = this.channelForm.value
-
-    // console.log(this.channel);
-
-
-    // this.cat = cat
   }
 
 
@@ -87,41 +84,54 @@ export class AddchannelComponent implements OnInit {
     return _bool
   }
 
-
+  enableNewCat(){
+    this.newCat = ''
+    this.buttonDisable = false
+  }
 
   createChannel() {
+    let path: string = ''
     this.channel = {
-      name: this.cat.toUpperCase(),
+      name: this.cat,
       samples: [
         {
           uri: this.uri,
           name: this.name.toUpperCase(),
-          drm_license_url: this.drm_license_url,
+          drm_license_url: `\t${this.drm_license_url}`,
           drm_scheme: this.drm_scheme,
           icon: this.icon
-
         }
 
       ]
     }
-    this.channels.map((channel, index) => {
-      if (channel.name === this.name.toUpperCase()) {
-        this.db.object(`channels/${index}/samples`).update(this.channel.samples!).then(
+    
+    for (let i = 0; i < this.channels.length; i++) {
+      const e = this.channels[i];
+      var sampleLenght = e.samples?.length
+      if(e.name === this.channel.name) {
+        path =  `channels/${i}/samples/${sampleLenght!++}`;
+        this.db.object(path).set({
+          uri: this.uri,
+          name: this.name.toUpperCase(),
+          drm_license_url: `\t${this.drm_license_url}`,
+          drm_scheme: this.drm_scheme,
+          icon: this.icon
+        }).then(
           channel => {
             this.msgs = [{ severity: 'success', summary: 'Se creo el canal', detail: `${this.channel.name}` }];
           }
         )
+        break
       }
       else {
-        this.db.object(`channels/${this.channels.length}`).update(this.channel).then(
-          channel => {
-            this.msgs = [{ severity: 'success', summary: 'Se creo el canal', detail: `${this.channel.name}` }];
-          }
-        )
-
+        if(i === this.channels.length) {
+          // path = `channel_test/${this.channels.length++}`
+          this.msgs = [{ severity: 'warn', summary: 'Hubo une error', detail: `${this.channel.name}` }];
+        }
       }
+    }
 
-    })
+    
 
 
 
