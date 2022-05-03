@@ -9,4 +9,5 @@ export interface CurrentUser {
     canales?: Channel[];    // array de canales
     expire?: string;        // string DD/MM/AAAA
     time?: number;          // epoch date que equivale a 10800000    
+    active?: boolean        // booleano que determina si la cuenta esta activa
 }

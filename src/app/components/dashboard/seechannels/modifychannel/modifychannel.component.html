@@ -45,12 +45,9 @@
             <button type="button" pButton pRipple icon="pi pi-pencil" (click)="edit('cat')" class="p-button-sm" label="Editar"></button>
         </div>
     </div>
-    <div class="col-12 text-end">
-        <div class="col-3"> <button type="button" pButton pRipple icon="pi pi-times" class="p-button-sm p-button-outlined p-button-danger" label="Cancelar"></button></div>
-        <div class="col-3">
-            <button type="button" pButton pRipple icon="pi pi-check" class="p-button-sm p-button-success" (click)="updateChannel()" label="Ok"></button>
-
-        </div>
-    </div>
-
+</div>
+<hr class="m-1">
+<div class="text-end">
+    <button type="button" pButton pRipple icon="pi pi-times" (click)="close()" class="p-button-sm p-button-outlined p-button-danger me-1" label="Cancelar"></button>
+    <button type="button" pButton pRipple icon="pi pi-check" class="p-button-sm p-button-success" (click)="updateChannel()" label="Ok"></button>
 </div>

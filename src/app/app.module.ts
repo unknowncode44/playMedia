@@ -18,6 +18,7 @@ import { AddchannelComponent }              from './components/dashboard/addchan
 import { SeechannelsComponent }             from './components/dashboard/seechannels/seechannels.component';
 import { DashboardComponent }               from './components/dashboard/dashboard.component';
 import { DrmComponent }                     from './components/dashboard/drm/drm.component';
+import { ModifychannelComponent }           from './components/dashboard/seechannels/modifychannel/modifychannel.component';
 
 // enviroment
 import { environment }                      from '../environments/environment';
@@ -31,11 +32,6 @@ import { provideAuth,getAuth }              from '@angular/fire/auth';
 import { provideDatabase,getDatabase }      from '@angular/fire/database';
 
 
-
-
-//sidebar
-// import { Sidebar, SidebarModule }                    from 'ng-sidebar';
-
 // ngPrime
 import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
@@ -47,21 +43,15 @@ import{AutoCompleteModule} from 'primeng/autocomplete';
 import {TableModule} from 'primeng/table';
 import {PanelModule} from 'primeng/panel';
 import {ConfirmDialogModule}                from 'primeng/confirmdialog';
-import {ConfirmationService}                from 'primeng/api';
+import {ConfirmationService, MessageService}                from 'primeng/api';
 import { MessagesModule }                   from 'primeng/messages';
 import {DynamicDialogModule}                from 'primeng/dynamicdialog';
 import {DialogService}                      from 'primeng/dynamicdialog';
 import { DialogModule }                     from "primeng/dialog";
+import {ToastModule}                        from 'primeng/toast';
 
 
 import {APP_BASE_HREF}                      from '@angular/common';
-import { ModifychannelComponent } from './components/dashboard/seechannels/modifychannel/modifychannel.component';
-
-
-
-
-
-
 
 
 @NgModule({
@@ -100,12 +90,11 @@ import { ModifychannelComponent } from './components/dashboard/seechannels/modif
     ConfirmDialogModule,
     MessagesModule,
     DynamicDialogModule,
-    DialogModule
-    
-    
-  
+    DialogModule,
+    ToastModule
+
   ],
-  providers: [ConfirmationService, DialogService, {provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [ConfirmationService, DialogService, {provide: APP_BASE_HREF, useValue : '/' }, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

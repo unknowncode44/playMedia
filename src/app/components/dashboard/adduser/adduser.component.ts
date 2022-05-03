@@ -125,47 +125,42 @@ export class AdduserComponent implements OnInit {
         this.newUser.uid = credentials.user!.uid;
 
         this.planStr = plan;
-        console.log(`PLAN: ${plan}`);
         this.role = role;
         this.newUser.role = this.authService.catchRole(role);
         var suscrCode: number = this.authService.catchPlan(plan);
-        console.log(`SUSC: ${suscrCode}`);
 
         if (suscrCode !== 0) {
-          console.log('ENTRE AL IF');
-          
+
           var epochExpirationDate: Date = new Date();
-          console.log(epochExpirationDate);
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)
           var expireDate: Date = new Date(epochExpirationDate);
-
-          console.log(expireDate);
           
 
           let date = expireDate.getDate()
           let month = expireDate.getMonth()
           let year = expireDate.getFullYear()
+          let dateString = date.toString()
 
           month++
-
-          var dateStr = `${month}/${date}/${year}`
-
-          console.log(dateStr);
           
+          if(date < 10) {
+            dateString =`0${date}`
+          }
+          
+          var fmtdDateStr = `${dateString}/${month}/${year}`
+
 
           if(month < 10) {
-            dateStr = `${date}/0${month}/${year}`
+            fmtdDateStr = `${dateString}/0${month}/${year}`
           }
-          console.log(dateStr);
 
-          this.newUser.expire = dateStr;
+          this.newUser.expire = fmtdDateStr;
 
-          console.log(dateStr);
-
-          console.log(`saliendo del if, ${this.newUser.expire}`);
+          
         }
 
         this.newUser.time = 10800000
+        this.newUser.active = true
 
         this.dbService.saveUser(this.newUser, this.newUser.uid)
           .then((done) => { console.log('exito') })

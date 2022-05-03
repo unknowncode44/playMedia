@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { Router } from '@angular/router';
-import { ConfirmationService, Message } from 'primeng/api';
+import { ConfirmationService, Message, MessageService } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { DbService } from 'src/app/db/dbservice.service';
 import { CurrentUser } from 'src/app/models/currente-user.model';
@@ -31,7 +31,7 @@ export class SeeusersComponent implements OnInit {
 
 
 
-  constructor(private db: AngularFireDatabase, private dbService: DbService, private confirmation: ConfirmationService, private router: Router) {
+  constructor(private db: AngularFireDatabase, private dbService: DbService, private confirmation: ConfirmationService, private router: Router, private messages: MessageService) {
     this.items = db.list('users').valueChanges();
     this.usrs = [];
     this.usrsBk = []
@@ -54,6 +54,31 @@ export class SeeusersComponent implements OnInit {
     this.usrs = array
     this.usrsBk = this.usrs
     
+  }
+
+  blockUser(uid: string) {
+    if(uid === undefined) {this.messages.add({severity:'error', summary:'Usuario Ya Bloqueado', detail:`El usuario elegido ya fue bloqueado antes`})}
+    else {
+      this.db.object(`users/${uid}`).set({active: false}).then(() => {
+        this.messages.add({severity:'success', summary:'Usuario Bloqueado', detail:`El usuario con ID: ${uid} fue bloqueado`})
+        setTimeout(() => {
+          this.messages.clear();
+          this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+            this.router.navigate(['users']);
+          });
+        }, 1500);
+      })
+    }
+    
+  }
+
+  ifBlocked(status: boolean): string {
+    if(!status){
+      return 'Bloqueado'
+    }
+    else {
+      return 'Ok'
+    }
   }
 
 

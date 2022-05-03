@@ -1,7 +1,6 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { DbService } from 'src/app/db/dbservice.service';
-import { Channel } from 'src/app/models/channel.model';
 import { Sample } from 'src/app/models/sample.model';
 
 @Component({
@@ -23,6 +22,7 @@ export class ModifychannelComponent implements OnInit {
 
   @Output() sampleReady?: Sample
   @Output() closed?: boolean
+  send = new EventEmitter<string>()
 
 
   newSample: Sample
@@ -30,6 +30,7 @@ export class ModifychannelComponent implements OnInit {
   name    : string         = ''
   license : string         = ''
   scheme  : string         = ''
+
   
 
 
@@ -90,6 +91,10 @@ export class ModifychannelComponent implements OnInit {
    
   }
 
+  close() {
+    this.send.emit('true')
+  }
+
   updateChannel() {
     this.newSample = {
       name: this.sample?.name,
@@ -122,6 +127,8 @@ export class ModifychannelComponent implements OnInit {
     this.closed = true
 
     this.db.object(index).update(this.newSample)
+
+    this.send.emit(this.closed.toString())
     
   }
   

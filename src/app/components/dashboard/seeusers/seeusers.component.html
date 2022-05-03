@@ -1,5 +1,7 @@
+
 <p-card class="min-h-full">
-    <p-messages [value]="msgs"></p-messages>
+    <!-- <p-messages [value]="msgs"></p-messages> -->
+    <p-toast></p-toast>
     <div class="grid pe-3 ps-3">
         <div class="col-8">
             <h3 class="mb-0 p-mt-0">Usuarios</h3>
@@ -21,8 +23,9 @@
                 <!-- <th class="p-0">ID</th> -->
                 <th class="p-0 text-sm">Rol</th>
                 <th class="p-0 text-sm">Expira</th>
+                <th class="p-0 text-sm">Estado</th>
                 <th class="p-0 text-sm">Acciones</th>
-                <!-- <th class="p-0">Estado Suscripcion</th> -->
+                
 
 
             </tr>
@@ -34,13 +37,14 @@
                 <!-- <td class="p-0">{{user.uid}}</td> -->
                 <td class="p-0 text-center  text-sm">{{detTypeUsr(user.role)}}</td>
                 <td class="p-0 text-sm">{{user.expire}}</td>
+                <td class="p-0 text-sm">{{ifBlocked(user.active)}}</td>
 
 
                 <td class="p-0">
                     <div class="pt-1 flex flex-wrap">
                         <div class="p-buttonset">
                             <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" icon="pi pi-refresh"></button>
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="confirm(user.uid, user.email)" icon="pi pi-trash"></button>
+                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="blockUser(user.uid)" icon="pi pi-trash"></button>
                         </div>
                     </div>
                 </td>

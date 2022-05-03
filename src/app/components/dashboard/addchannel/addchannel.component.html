@@ -4,13 +4,13 @@
     <p-messages [value]="msgs"></p-messages>
 
         <div class="grid p-fluid">
-            <div class="col-1 text-lg-end justify-content-end pt-3">
+            <div class="col-2 text-lg-end justify-content-end pt-3">
                 <h5>Categoria:</h5>
             </div>
             <div class="col-4">
                 <p-dropdown [(ngModel)]="cat" [options]="categories" placeholder="Selecciona" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
             </div>
-            <div class="col-1"></div>
+            
             <div class="col-2">
                 <!-- <button pButton (click)="enableNewCat()" icon="pi pi-plus" label="Nueva"></button> -->
             </div>
@@ -36,8 +36,8 @@
             <div class="col-2 text-lg-end justify-content-end pt-3">
                 <h5>drm_scheme:</h5>
             </div>
-            <div class="col-9">
-                <div class="p-inputgroup">
+            <div class="col-10">
+                <div class="p-inputroup">
                     <input type="text" [(ngModel)]="drm_scheme" pInputText placeholder="Ingresa drm_scheme">
                 </div>
             </div>
@@ -58,10 +58,9 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr class="mb-1">
         <div class="text-end">
-
-            <button type="button" pButton class="p-button-outline m-2" icon="pi pi-times" label="Cancelar"></button>
+            <button type="button" pButton class="p-button-outlined p-button-danger m-2" icon="pi pi-times" label="Cancelar"></button>
             <button pButton icon="pi pi-check" class="p-button-success m-2" (click)="createChannel()" type="button" label="Aceptar"></button>
         </div>
 

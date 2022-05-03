@@ -46,7 +46,7 @@
         <ng-template pTemplate="header">
             <h5>Modificar canal</h5>
         </ng-template>
-        <app-modifychannel [sample]="oldSample" [category]="categoryToModify" [path]="pathToModify" [drmLicense]="drmLicenseToModify" [drmScheme]="drmToModify"></app-modifychannel>
+        <app-modifychannel (send)="checkClosed($event.toString())" [sample]="oldSample" [category]="categoryToModify" [path]="pathToModify" [drmLicense]="drmLicenseToModify" [drmScheme]="drmToModify"></app-modifychannel>
         <!-- <ng-template pTemplate="footer">
             <button type="button" pButton pRipple icon="pi pi-times" class="p-button-sm p-button-outlined p-button-danger" (click)="visibleForm('')" label="Cancelar"></button>
             <button type="button" pButton pRipple icon="pi pi-check" class="p-button-sm p-button-success" label="Ok"></button>

@@ -134,6 +134,17 @@ export class SeechannelsComponent implements OnInit {
     
   }
 
+  
+
+  checkClosed(event: string) {
+    console.log(event);
+    
+    if(event === 'true'){
+      this.isVisibleForm = false
+    }
+  }
+  
+
   getSCObject(obj: Channel, index: number) {
     var arr: SChannels[] = [];
     let _sc: SChannels = {}
