@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CurrentUser } from 'src/app/models/currente-user.model';
 import { AuthService } from '../auth-service.service';
 import Swal from 'sweetalert2';
+import { DbService } from 'src/app/db/dbservice.service';
+import { Observable } from 'rxjs';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-login',
@@ -14,11 +17,13 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
   user: CurrentUser;
   loginForm: FormGroup;
+  fbuser?: Observable<CurrentUser>| Observable<any> | any;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private authService: AuthService,
+    private db: AngularFireDatabase
   ) {
     this.loginForm = this.fb.group({});
     this.user = { pass: '', email: '', uid:'', type: 0, role: 0 };
@@ -33,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  loginUser() {
+  async loginUser() {
     if(this.loginForm.invalid) {
       return;
     }
@@ -51,11 +56,17 @@ export class LoginComponent implements OnInit {
         Swal.showLoading();
       },
     });
-
+    var usrsArray: CurrentUser[] = []
     this.authService
     .logIn(email, password)
-    .then((credentials) => {
+    .then( async (credentials) => {
       this.user.uid = credentials.user!.uid;
+
+      await setTimeout(() => {
+        this.getRole(this.user.uid)  
+      }, 5000)
+
+
       localStorage.setItem('currentUser', JSON.stringify(this.user));
       this.router.navigate(['/dashboard']);
       Swal.close()
@@ -66,9 +77,18 @@ export class LoginComponent implements OnInit {
         title: 'Ups!',
         text: 'La contraseña o el email no son correctos!',
       });
-    });
+    })
 
 
   }
+  
+  getRole(uid: string) {
 
+    this.db.object<CurrentUser>(`users/${uid}`).valueChanges()
+        .subscribe(
+          user => {
+            this.user.role = user!.role
+          }
+        )  
+  }
 }

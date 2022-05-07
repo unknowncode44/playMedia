@@ -72,6 +72,7 @@ export class SeeusersComponent implements OnInit {
     
   }
 
+
   ifBlocked(status: boolean): string {
     if(!status){
       return 'Bloqueado'
@@ -165,7 +166,6 @@ export class SeeusersComponent implements OnInit {
 
   }
 
- 
 
   confirm(uid: string, email: string) {
     this.confirmation.confirm({

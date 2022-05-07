@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { deleteUser, User } from '@firebase/auth';
 import { Router } from '@angular/router';
+import {CurrentUser} from '../../models/currente-user.model'
 
 
 @Injectable({
@@ -10,17 +11,29 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   user?: User
+  currentUser?: string
 
   constructor(public auth: AngularFireAuth, public router: Router) {
-   }
+  }
 
   initFirebaseUser(path: string) {
+    let uid
     this.auth.authState.subscribe(fuser => {
-      console.log(fuser);
       if(fuser === null) {
         this.router.navigateByUrl(`/${path}`)
       }
+      uid = fuser!.uid
     })
+
+    return uid
+  }
+
+  getUserUid(): string{
+    let uid = ''
+    this.auth.currentUser.then((credentials) => {
+      uid = credentials!.uid
+    })
+    return uid
   }
 
   logIn(email: string, password: string) {

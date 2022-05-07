@@ -49,9 +49,11 @@ import {DynamicDialogModule}                from 'primeng/dynamicdialog';
 import {DialogService}                      from 'primeng/dynamicdialog';
 import { DialogModule }                     from "primeng/dialog";
 import {ToastModule}                        from 'primeng/toast';
+import {ProgressSpinnerModule}              from 'primeng/progressspinner';
 
 
 import {APP_BASE_HREF}                      from '@angular/common';
+import { SplashComponent } from './components/dashboard/splash/splash.component';
 
 
 @NgModule({
@@ -65,6 +67,7 @@ import {APP_BASE_HREF}                      from '@angular/common';
     SeechannelsComponent,
     DrmComponent,
     ModifychannelComponent,
+    SplashComponent,
   ],
   imports: [
     FormsModule,
@@ -91,7 +94,8 @@ import {APP_BASE_HREF}                      from '@angular/common';
     MessagesModule,
     DynamicDialogModule,
     DialogModule,
-    ToastModule
+    ToastModule,
+    ProgressSpinnerModule
 
   ],
   providers: [ConfirmationService, DialogService, {provide: APP_BASE_HREF, useValue : '/' }, MessageService],

@@ -4,6 +4,7 @@ import { CurrentUser } from '../models/currente-user.model';
 import { Observable } from 'rxjs';
 import { Channel } from '../models/channel.model';
 import { Sample } from '../models/sample.model';
+import { User } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -13,13 +14,39 @@ export class DbService {
   
 
   usrList: AngularFireList<CurrentUser>;
+  users: CurrentUser[] = []
   channelList: Channel[];
 
   constructor(private db: AngularFireDatabase) {
     this.channelList = []
     this.usrList = db.list<CurrentUser>('users');
+    this.usrList.valueChanges().subscribe(users => {
+      this.users = users
+    })
     
    }
+  
+  checkUserRole(uid: string): number {
+    let number  = 0
+    let usrsList: CurrentUser[] = this.users
+    for (let i = 0; i < usrsList.length; i++) {
+      const e = this.users[i];
+      
+      console.log(e.uid);
+      console.log(uid);
+      
+      if(e.uid === uid){
+        number = e.role
+        break
+      }
+      
+    }
+    return number
+  }
+
+  
+
+
 
   saveUser(user: CurrentUser, uid: string){
     return this.db.list('users').set(uid, user);
@@ -45,6 +72,17 @@ export class DbService {
 
   getChannels(): Observable<any[]>{
     return this.db.list('/channels').valueChanges()
+  }
+
+  getUserType(uid: string) {
+    let type: number
+    let user = this.db.object<User>(`/users/${uid}`).valueChanges()
+    if(user === null) {
+      return user
+    }
+    else {
+      return
+    }
   }
 
   deleteUser(uid: string) {
