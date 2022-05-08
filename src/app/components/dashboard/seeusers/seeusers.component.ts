@@ -27,11 +27,24 @@ export class SeeusersComponent implements OnInit {
   first: number =  0;
   rows: number  = 10;
   loading: boolean = true
+  renewUserVisible: boolean = false
+
+  email?       : string
+  expireDate?  : string
+  type?        : string
+  newDate?     : string
 
 
 
 
-  constructor(private db: AngularFireDatabase, private dbService: DbService, private confirmation: ConfirmationService, private router: Router, private messages: MessageService) {
+
+
+  constructor(
+    private db: AngularFireDatabase, 
+    private dbService: DbService, 
+    private confirmation: ConfirmationService, 
+    private router: Router, 
+    private messages: MessageService) {
     this.items = db.list('users').valueChanges();
     this.usrs = [];
     this.usrsBk = []
@@ -205,6 +218,60 @@ export class SeeusersComponent implements OnInit {
     else {
       return ''
     }
+    
+  }
+
+  confirmRenew(date: string, type: number, userEmail: string){
+    let typeStr: string
+    if(!this.renewUserVisible){
+      this.renewUserVisible = true
+    }
+    if(type === 0){
+      typeStr = 'Si, si activas la renovacion se desactivara el demo, y el usuario pasara a plan mensual'
+    }
+    else {
+      typeStr = 'No'
+    }
+
+    this.email      = userEmail
+    this.expireDate = date
+    this.type       = typeStr
+    this.newDate    = this.renewSuscription(date)
+
+    
+  }
+
+
+
+  renewSuscription(date: string): string{  // MSO: formato requerido DD/MM/YYYY
+    var now = new Date()
+    var dateParts = date.split("/");
+    var expireDate = new Date(+dateParts[2], +dateParts[1], +dateParts[0])
+
+    var dateObject = now.getTime() > expireDate.getTime() ? now : expireDate
+
+    console.log(`NOW:   ${now.getTime()}`);
+    console.log(`EXPIRE:   ${expireDate.getTime()}`);
+    
+
+
+    let _date: number = dateObject.getDate()
+    let _month: number = dateObject.getMonth()
+    let _dateStr:  string = dateObject.getDate().toString()
+    var _monthStr: string = (dateObject.getMonth() +1).toString() 
+    let _yearStr:  string = dateObject.getFullYear().toString()
+    
+
+    if (_date < 10) {
+      _dateStr = `0${_dateStr}`
+    }
+    if (_month < 10) {
+      _monthStr = `0${_monthStr}`
+    }
+
+    let newDate: string = `${_dateStr}/${_monthStr}/${_yearStr}`
+    
+    return newDate
     
   }
 

@@ -15,6 +15,10 @@ tr {
     font-size: 18px !important;
 }
 
+.custom-font {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
 .container-custom {
     height: 15rem;
 }

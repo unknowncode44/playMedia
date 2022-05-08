@@ -73,7 +73,7 @@ export class AuthService {
     var code: number;
     switch (plan) {
       case 'Demo 3 horas':
-        code = 1;
+        code = 0;
         break;
       case 'Pack Estandar Mensual':
         code = 2;

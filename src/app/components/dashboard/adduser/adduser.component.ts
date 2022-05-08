@@ -68,7 +68,7 @@ export class AdduserComponent implements OnInit {
     this.newUser = { 
       pass: '', 
       email: '', 
-      type: 1,
+      type: 0,
       role: 2, 
       uid: '', 
       canales: [],
@@ -129,7 +129,7 @@ export class AdduserComponent implements OnInit {
         this.newUser.role = this.authService.catchRole(role);
         var suscrCode: number = this.authService.catchPlan(plan);
 
-        if (suscrCode !== 0) {
+        if (suscrCode !== 10) {
 
           var epochExpirationDate: Date = new Date();
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)

@@ -46,7 +46,7 @@
                 <td class="p-0">
                     <div class="pt-1 flex flex-wrap">
                         <div class="p-buttonset">
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" icon="pi pi-refresh"></button>
+                            <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" (click)="confirmRenew(user.expire, user.type, user.email)" icon="pi pi-refresh"></button>
                             <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="blockUser(user.uid)" icon="pi pi-trash"></button>
                         </div>
                     </div>
@@ -58,7 +58,33 @@
 
     </p-table>
 
-    <p-confirmDialog [style]="{width: '55vw'}" [baseZIndex]="10000" [transitionOptions]="'100ms'">
+    <p-confirmDialog [style]="{width: '55vw'}" [baseZIndex]="10000" [transitionOptions]="'100ms'"></p-confirmDialog>
 
-    </p-confirmDialog>
+    <p-dialog [style]="{width: '55vw'}" header="Renovar Suscripcion" [(visible)]="renewUserVisible">
+        <hr class="p-0 m-0 mb-2">
+        <div class="min-w-full  px-3 m-0">
+            <div class="grid custom-font">
+                <div class="col-12 mb-0 mt-2 p-0">
+                    <p class="m-0 p-0">Usuario: <strong>{{email}}</strong></p>
+                </div>
+                <div class="col-12 mb-0 mt-1 p-0">
+                    <p class="m-0 p-0">Fecha de expiracion: <strong>{{expireDate}}</strong></p>
+                </div>
+                <div class="col-12 mb-0 mt-1 p-0">
+                    <p class="m-0 p-0">Demo activa: <strong>{{type}}</strong></p>
+                </div>
+                <div class="col-12 mb-0 mt-1 p-0">
+                    <p class="m-0 p-0">Nueva fecha de expiracion: <strong>{{newDate}}</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" label="Aceptar" class="p-button-text custom-font"></p-button>
+            <p-button icon="pi pi-times" label="Cancelar" class="custom-font"></p-button>
+        </ng-template>
+    </p-dialog>
+
 </p-card>
