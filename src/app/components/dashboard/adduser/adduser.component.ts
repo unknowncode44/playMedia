@@ -47,10 +47,10 @@ export class AdduserComponent implements OnInit {
     this.results = [];
 
     this.plan = [
-      { name: 'Demo 3 horas', code: 1 },
-      { name: 'Pack Estandar Mensual', code: 2 },
-      { name: 'Pack Futbol Mensual', code: 3 },
-      { name: 'Pack Adultos Mensual', code: 4 },
+      { name: 'Demo 3 horas', code: 0 },
+      { name: 'Pack Estandar Mensual', code: 1 },
+      { name: 'Pack Futbol Mensual', code: 2 },
+      { name: 'Pack Adultos Mensual', code: 3 },
     ];
 
     this.roles = [

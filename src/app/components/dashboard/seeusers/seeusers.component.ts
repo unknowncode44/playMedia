@@ -82,6 +82,15 @@ export class SeeusersComponent implements OnInit {
     }
   }
 
+  ifTest(type: number): string {
+    if(type === 0){
+      return 'Si'
+    }
+    else {
+      return 'No'
+    }
+  }
+
 
 
   next() {
@@ -166,6 +175,39 @@ export class SeeusersComponent implements OnInit {
 
   }
 
+  timeToMinutes(type: number, epochTime: number): string{
+    if(type === 0) {
+      let time = new Date(epochTime)
+      let minutes: string
+      let seconds: string
+
+      if(time.getMinutes() < 10){
+        minutes = `0${time.getMinutes()}`
+      }
+      else{
+        minutes = time.getMinutes().toString()
+      }
+
+      if(time.getSeconds() < 10){
+        seconds = `0${time.getSeconds()}`
+      }
+      else{
+        seconds = time.getSeconds().toString()
+      }
+      
+      if(epochTime === 10800000){
+        return `03:00:00`
+      }
+      else{
+        return `0${(time.getHours()-21).toString()}:${minutes}:${seconds}`
+      }
+    }
+    else {
+      return ''
+    }
+    
+  }
+
 
   confirm(uid: string, email: string) {
     this.confirmation.confirm({
@@ -178,7 +220,7 @@ export class SeeusersComponent implements OnInit {
       rejectButtonStyleClass: 'p-button-outlined p-button-danger',
       accept: () => {
         this.deleteUser(uid, email);
-        // 
+        
     },
     reject: () => {
       this.msgs = [{severity:'warn', summary:'No se realizaron cambios', detail:'No se borro ningun usuario'}];
