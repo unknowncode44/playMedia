@@ -46,8 +46,8 @@
                 <td class="p-0">
                     <div class="pt-1 flex flex-wrap">
                         <div class="p-buttonset">
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" (click)="confirmRenew(user.expire, user.type, user.email)" icon="pi pi-refresh"></button>
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="blockUser(user.uid)" icon="pi pi-trash"></button>
+                            <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" (click)="confirmRenew(user.expire, user.type, user.email, user.uid)" icon="pi pi-refresh"></button>
+                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="deleteUser(user.uid, user.email)" icon="pi pi-trash"></button>
                         </div>
                     </div>
                 </td>
@@ -82,8 +82,8 @@
 
 
         <ng-template pTemplate="footer">
-            <p-button icon="pi pi-check" label="Aceptar" class="p-button-text custom-font"></p-button>
-            <p-button icon="pi pi-times" label="Cancelar" class="custom-font"></p-button>
+            <p-button icon="pi pi-check" (onClick)="renewUser()" label="Aceptar" class="p-button-text custom-font"></p-button>
+            <p-button icon="pi pi-times" (onClick)="renewUserVisible=false" label="Cancelar" class="custom-font"></p-button>
         </ng-template>
     </p-dialog>
 

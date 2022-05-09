@@ -33,6 +33,7 @@ export class SeeusersComponent implements OnInit {
   expireDate?  : string
   type?        : string
   newDate?     : string
+  userUid?     : string
 
 
 
@@ -137,7 +138,6 @@ export class SeeusersComponent implements OnInit {
       }
 
     }
-    console.log(` usuarios: ${filteredArray.length}`);
       this.usrs = filteredArray
 
     return this.usrs
@@ -221,7 +221,7 @@ export class SeeusersComponent implements OnInit {
     
   }
 
-  confirmRenew(date: string, type: number, userEmail: string){
+  confirmRenew(date: string, type: number, userEmail: string, userUid: string){
     let typeStr: string
     if(!this.renewUserVisible){
       this.renewUserVisible = true
@@ -237,8 +237,20 @@ export class SeeusersComponent implements OnInit {
     this.expireDate = date
     this.type       = typeStr
     this.newDate    = this.renewSuscription(date)
-
+    this.userUid    = userUid
     
+    
+  }
+
+  async renewUser(){
+    await this.db.object<CurrentUser>(`users/${this.userUid}`).update({ expire: this.newDate, type: 1 });
+    this.renewUserVisible = false
+    this.msgs = [{severity:'success', summary:'Se renovo la suscripcion', detail:`El usuario ${this.userUid} fue renovado correctamente`}];
+    setTimeout(() => {
+      this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['users']);
+      });
+    }, 1500)
   }
 
 
@@ -250,10 +262,11 @@ export class SeeusersComponent implements OnInit {
 
     var dateObject = now.getTime() > expireDate.getTime() ? now : expireDate
 
-    console.log(`NOW:   ${now.getTime()}`);
-    console.log(`EXPIRE:   ${expireDate.getTime()}`);
-    
+    if(now.getTime() > expireDate.getTime()){
 
+      dateObject = new Date(now.setDate(now.getDate() + 30))
+
+    }
 
     let _date: number = dateObject.getDate()
     let _month: number = dateObject.getMonth()
@@ -270,6 +283,8 @@ export class SeeusersComponent implements OnInit {
     }
 
     let newDate: string = `${_dateStr}/${_monthStr}/${_yearStr}`
+
+  
     
     return newDate
     
