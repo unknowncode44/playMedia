@@ -11,7 +11,7 @@
     </div>
 
     <hr class="my-0">
-
+    <p-messages [value]="msgs"></p-messages>
     <!-- <div class="p-mb-1 mt-0 flex">
             <p-button class="flex-none" type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
             <p-button class="flex-grow-1 text-center" type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
@@ -34,7 +34,7 @@
                     <div class="py-0 flex flex-wrap">
                         <div class="p-buttonset">
                             <button pButton (click)="modifyChannel(chan.drmLicense, chan.drmScheme, chan.channelIndx, chan.sampleIndx, chan, chan.category, chan.name)" class="p-button-sm p-1 p-button-raised p-button-primary" icon="pi pi-refresh"></button>
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" icon="pi pi-trash"></button>
+                            <button pButton (click)="confirmDelete(chan.channelIndx, chan.sampleIndx, chan.name)" class="p-button-sm p-1 p-button-raised p-button-danger" icon="pi pi-trash"></button>
                         </div>
                     </div>
                 </td>
@@ -54,5 +54,9 @@
         </ng-template> -->
 
     </p-dialog>
+
+
+
+    <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="12000"></p-confirmDialog>
 
 </p-card>

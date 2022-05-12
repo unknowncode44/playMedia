@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+import { ConfirmationService, PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { DbService } from 'src/app/db/dbservice.service';
 import { Channel } from 'src/app/models/channel.model';
 import { Sample } from 'src/app/models/sample.model';
+import {Message} from 'primeng/api';
 
 interface SChannels {
   channelIndx?: string,
@@ -41,6 +43,7 @@ export class SeechannelsComponent implements OnInit {
   drmLicenseToModify: string
 
   isVisibleForm: boolean = false
+  isVisibleDelete: boolean = false
 
 
 
@@ -50,10 +53,15 @@ export class SeechannelsComponent implements OnInit {
   cols: any[]
   rows: number;
   loading: boolean;
+  msgs: Message[] = []
 
 
 
-  constructor(private db: AngularFireDatabase, private dbservice: DbService) {
+  constructor(
+    private db: AngularFireDatabase, 
+    private dbservice: DbService,
+    private confirmationService: ConfirmationService, 
+    private primengConfig: PrimeNGConfig) {
     this.obsItemsList = db.list<Channel>('/channels')
     this.filterValue = '';
     this.channels = [];
@@ -69,6 +77,7 @@ export class SeechannelsComponent implements OnInit {
     this.drmToModify = ''
     this.drmLicenseToModify = ''
     this.newSample = {}
+    
     
   }
 
@@ -119,6 +128,38 @@ export class SeechannelsComponent implements OnInit {
     this.visibleForm(filterValue)
     
     
+  }
+
+  confirmDelete(channelIndex: string, sampleIndex: string, channelName: string){
+    this.confirmationService.confirm({
+      message: `Estas Seguro que quieres borrar ${channelName}?`,
+      header: 'Borrar Canal',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+          this.deleteChannel(channelIndex, sampleIndex)
+          this.msgs = [{severity:'info', summary:'Canal Borrado', detail:`Borraste el canal: ${channelName}`}];
+
+      },
+      reject: () => {
+          this.msgs = [{severity:'info', summary:'Cancelado', detail:'Cancelaste la eliminacion del canal'}];
+      }
+  });
+  }
+
+  deleteChannel(channelIndex: string, sampleIndex: string){
+    return this.db.object(`channels/${channelIndex}/samples/${sampleIndex}`)
+    .remove()
+    
+  }
+
+  visibleDelete(value?: string){
+    if(this.isVisibleDelete){
+      this.filter('')
+    }
+    else {
+      this.filter(value!)
+      this.isVisibleForm = true
+    }
   }
 
   visibleForm(value?: string) {

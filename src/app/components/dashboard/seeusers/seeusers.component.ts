@@ -28,13 +28,27 @@ export class SeeusersComponent implements OnInit {
   first: number =  0;
   rows: number  = 10;
   loading: boolean = true
+  renewUserVisible: boolean = false
+
+  email?       : string
+  expireDate?  : string
+  type?        : string
+  newDate?     : string
+  userUid?     : string
 
   suscription?: Subscription
 
 
 
 
-  constructor(private db: AngularFireDatabase, private dbService: DbService, private confirmation: ConfirmationService, private router: Router, private messages: MessageService) {
+
+
+  constructor(
+    private db: AngularFireDatabase, 
+    private dbService: DbService, 
+    private confirmation: ConfirmationService, 
+    private router: Router, 
+    private messages: MessageService) {
     this.items = db.list('users').valueChanges();
     this.usrs = [];
     this.usrsBk = []
@@ -87,6 +101,15 @@ export class SeeusersComponent implements OnInit {
     }
   }
 
+  ifTest(type: number): string {
+    if(type === 0){
+      return 'Si'
+    }
+    else {
+      return 'No'
+    }
+  }
+
 
 
   next() {
@@ -120,7 +143,6 @@ export class SeeusersComponent implements OnInit {
       }
 
     }
-    console.log(` usuarios: ${filteredArray.length}`);
       this.usrs = filteredArray
 
     return this.usrs
@@ -171,6 +193,108 @@ export class SeeusersComponent implements OnInit {
 
   }
 
+  timeToMinutes(type: number, epochTime: number): string{
+    if(type === 0) {
+      let time = new Date(epochTime)
+      let minutes: string
+      let seconds: string
+
+      if(time.getMinutes() < 10){
+        minutes = `0${time.getMinutes()}`
+      }
+      else{
+        minutes = time.getMinutes().toString()
+      }
+
+      if(time.getSeconds() < 10){
+        seconds = `0${time.getSeconds()}`
+      }
+      else{
+        seconds = time.getSeconds().toString()
+      }
+      
+      if(epochTime === 10800000){
+        return `03:00:00`
+      }
+      else{
+        return `0${(time.getHours()-21).toString()}:${minutes}:${seconds}`
+      }
+    }
+    else {
+      return ''
+    }
+    
+  }
+
+  confirmRenew(date: string, type: number, userEmail: string, userUid: string){
+    let typeStr: string
+    if(!this.renewUserVisible){
+      this.renewUserVisible = true
+    }
+    if(type === 0){
+      typeStr = 'Si, si activas la renovacion se desactivara el demo, y el usuario pasara a plan mensual'
+    }
+    else {
+      typeStr = 'No'
+    }
+
+    this.email      = userEmail
+    this.expireDate = date
+    this.type       = typeStr
+    this.newDate    = this.renewSuscription(date)
+    this.userUid    = userUid
+    
+    
+  }
+
+  async renewUser(){
+    await this.db.object<CurrentUser>(`users/${this.userUid}`).update({ expire: this.newDate, type: 1 });
+    this.renewUserVisible = false
+    this.msgs = [{severity:'success', summary:'Se renovo la suscripcion', detail:`El usuario ${this.userUid} fue renovado correctamente`}];
+    setTimeout(() => {
+      this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['users']);
+      });
+    }, 1500)
+  }
+
+
+
+  renewSuscription(date: string): string{  // MSO: formato requerido DD/MM/YYYY
+    var now = new Date()
+    var dateParts = date.split("/");
+    var expireDate = new Date(+dateParts[2], +dateParts[1], +dateParts[0])
+
+    var dateObject = now.getTime() > expireDate.getTime() ? now : expireDate
+
+    if(now.getTime() > expireDate.getTime()){
+
+      dateObject = new Date(now.setDate(now.getDate() + 30))
+
+    }
+
+    let _date: number = dateObject.getDate()
+    let _month: number = dateObject.getMonth()
+    let _dateStr:  string = dateObject.getDate().toString()
+    var _monthStr: string = (dateObject.getMonth() +1).toString() 
+    let _yearStr:  string = dateObject.getFullYear().toString()
+    
+
+    if (_date < 10) {
+      _dateStr = `0${_dateStr}`
+    }
+    if (_month < 10) {
+      _monthStr = `0${_monthStr}`
+    }
+
+    let newDate: string = `${_dateStr}/${_monthStr}/${_yearStr}`
+
+  
+    
+    return newDate
+    
+  }
+
 
   confirm(uid: string, email: string) {
     this.confirmation.confirm({
@@ -183,7 +307,7 @@ export class SeeusersComponent implements OnInit {
       rejectButtonStyleClass: 'p-button-outlined p-button-danger',
       accept: () => {
         this.deleteUser(uid, email);
-        // 
+        
     },
     reject: () => {
       this.msgs = [{severity:'warn', summary:'No se realizaron cambios', detail:'No se borro ningun usuario'}];

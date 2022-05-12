@@ -86,6 +86,7 @@ export class DbService {
   }
 
   deleteUser(uid: string) {
+    this.db.object(`/users/${uid}/sessions`).remove()
     return this.db.object(`/users/${uid}`).remove()
   }
 

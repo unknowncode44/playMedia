@@ -47,10 +47,10 @@ export class AdduserComponent implements OnInit {
     this.results = [];
 
     this.plan = [
-      { name: 'Demo 3 horas', code: 1 },
-      { name: 'Pack Estandar Mensual', code: 2 },
-      { name: 'Pack Futbol Mensual', code: 3 },
-      { name: 'Pack Adultos Mensual', code: 4 },
+      { name: 'Demo 3 horas', code: 0 },
+      { name: 'Pack Estandar Mensual', code: 1 },
+      { name: 'Pack Futbol Mensual', code: 2 },
+      { name: 'Pack Adultos Mensual', code: 3 },
     ];
 
     this.roles = [
@@ -68,7 +68,7 @@ export class AdduserComponent implements OnInit {
     this.newUser = { 
       pass: '', 
       email: '', 
-      type: 1,
+      type: 0,
       role: 2, 
       uid: '', 
       canales: [],
@@ -129,7 +129,7 @@ export class AdduserComponent implements OnInit {
         this.newUser.role = this.authService.catchRole(role);
         var suscrCode: number = this.authService.catchPlan(plan);
 
-        if (suscrCode !== 0) {
+        if (suscrCode !== 10) {
 
           var epochExpirationDate: Date = new Date();
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)
