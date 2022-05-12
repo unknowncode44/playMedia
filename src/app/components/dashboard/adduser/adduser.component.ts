@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CurrentUser } from 'src/app/models/currente-user.model';
-import { AuthService } from '../../auth/auth-service.service';
+import { AuthService } from '../../auth/auth_services/auth-service.service';
 import Swal from 'sweetalert2';
 import { FirebaseError } from '@angular/fire/app';
 import { DbService } from '../../../db/dbservice.service'

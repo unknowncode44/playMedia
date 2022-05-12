@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { Router } from '@angular/router';
 import { ConfirmationService, Message, MessageService } from 'primeng/api';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { DbService } from 'src/app/db/dbservice.service';
 import { CurrentUser } from 'src/app/models/currente-user.model';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-seeusers',
@@ -28,6 +29,8 @@ export class SeeusersComponent implements OnInit {
   rows: number  = 10;
   loading: boolean = true
 
+  suscription?: Subscription
+
 
 
 
@@ -41,7 +44,7 @@ export class SeeusersComponent implements OnInit {
 
   ngOnInit(): void {
     var array: CurrentUser[] = []
-    this.users = this.db.list<CurrentUser>('users').valueChanges()
+    this.suscription = this.users = this.db.list<CurrentUser>('users').valueChanges().pipe(take(1))
     .subscribe(users => {
       console.log(users)
       this.users = users
@@ -49,8 +52,10 @@ export class SeeusersComponent implements OnInit {
         array.push(users[i])
       }
       this.loading = false
-      
     })
+
+    
+    
     this.usrs = array
     this.usrsBk = this.usrs
     

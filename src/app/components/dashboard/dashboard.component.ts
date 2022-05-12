@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 import {MenuItem} from 'primeng/api';
 import { CurrentUser } from 'src/app/models/currente-user.model';
-import { AuthService } from '../auth/auth-service.service';
+import { AuthService } from '../auth/auth_services/auth-service.service';
 
 
 @Component({
@@ -31,23 +31,8 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.authService.initFirebaseUser('login');
+    this.authService.initFirebaseUser('login');
 
-
-
-    // let uid = this.user.uid
-    // this.db
-    // .object<CurrentUser>(`users/${uid}`)
-    // .valueChanges()
-    // .subscribe((result)=>{
-    //   this.user.role = result!.role
-    // })
-
-    console.log(JSON.stringify(this.user));
-    
-    
-    
-    
     this.items = [{
       label: 'Nuevo Usuario',
       icon:'pi pi-plus'

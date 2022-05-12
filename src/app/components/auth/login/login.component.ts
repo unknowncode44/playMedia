@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CurrentUser } from 'src/app/models/currente-user.model';
-import { AuthService } from '../auth-service.service';
+import { AuthService } from '../auth_services/auth-service.service';
 import Swal from 'sweetalert2';
 import { DbService } from 'src/app/db/dbservice.service';
-import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+
+// NgRx
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.reducer';
+import { isLoading, stopLoading } from 'src/app/shared/ui.actions';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -14,16 +19,23 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
   styleUrls: ['./login.component.css',],
 
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   user: CurrentUser;
   loginForm: FormGroup;
   fbuser?: Observable<CurrentUser>| Observable<any> | any;
+  loading: boolean = false
+  success: boolean = false
+  uiSubscription?: Subscription
+
+
+
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private authService: AuthService,
-    private db: AngularFireDatabase
+    private db: AngularFireDatabase,
+    private store: Store<AppState>
   ) {
     this.loginForm = this.fb.group({});
     this.user = { pass: '', email: '', uid:'', type: 0, role: 0 };
@@ -35,6 +47,16 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
+
+    this.uiSubscription = this.store.select('ui')
+            .subscribe( ui => {
+              this.loading = ui.isLoading
+              console.log('cargando subs');
+            })
+  }
+
+  ngOnDestroy(): void {
+    this.uiSubscription?.unsubscribe()
   }
 
 
@@ -43,35 +65,35 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+    this.store.dispatch( isLoading() )
+
     const {email, password} = this.loginForm.value;
 
     this.user.email = email;
     this.user.pass  = password;
     this.user.type  = 0;
 
-    Swal.fire({
-      title: 'Ingresando',
-      showConfirmButton: false,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
+    // Swal.fire({
+    //   title: 'Ingresando',
+    //   showConfirmButton: false,
+    //   didOpen: () => {
+    //     Swal.showLoading();
+    //   },
+    // });
     var usrsArray: CurrentUser[] = []
     this.authService
     .logIn(email, password)
-    .then( async (credentials) => {
+    .then((credentials) => {
       this.user.uid = credentials.user!.uid;
-
-      await setTimeout(() => {
-        this.getRole(this.user.uid)  
-      }, 5000)
-
-
-      localStorage.setItem('currentUser', JSON.stringify(this.user));
-      this.router.navigate(['/dashboard']);
-      Swal.close()
+      this.getRole(this.user.uid).then(
+        () => {
+          this.router.navigate(['/dashboard']);
+        }
+      )
+      
     })
     .catch((err) => {
+      this.store.dispatch( stopLoading() )
       Swal.fire({
         icon: 'error',
         title: 'Ups!',
@@ -81,13 +103,23 @@ export class LoginComponent implements OnInit {
 
 
   }
-  
-  getRole(uid: string) {
 
+  checkSuccess() {
+    if(!this.success){
+      window.setTimeout(this.checkSuccess,100);
+    }
+    else {
+      localStorage.setItem('currentUser', JSON.stringify(this.user));
+      
+    }
+  }
+  
+  async getRole(uid: string) {
     this.db.object<CurrentUser>(`users/${uid}`).valueChanges()
         .subscribe(
-          user => {
+          (user) => {
             this.user.role = user!.role
+            this.success = true
           }
         )  
   }
