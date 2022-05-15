@@ -80,7 +80,7 @@ li {
 }
 
 .divider-container {
-    min-height: 7rem !important;
+    min-height: 5rem !important;
     width: 100%;
 }
 
@@ -93,7 +93,7 @@ li {
 @media (min-height: 625px) {
     
     .divider-container {
-        min-height: 6rem !important;
+        min-height: 4rem !important;
         width: 100%;
     }
     .container-custom p {
