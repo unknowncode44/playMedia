@@ -31,19 +31,26 @@ export class AuthService {
   initFirebaseUser(path: string) {
     let uid
     this.auth.authState.subscribe(fuser => {
-      if(fuser === null) {
+      
+      if (fuser) {
+        
+        uid = fuser!.uid
+        this.db.object<CurrentUser>(`users/${uid}`).valueChanges()
+        .subscribe(
+          dbUser => {
+            let _user: CurrentUser
+            _user = dbUser!
+            this.store.dispatch( authActions.setUser({user: _user}) )
+          }
+        )
+
+      }
+
+      else {
+        this.store.dispatch( authActions.unSetUser() )
         this.router.navigateByUrl(`/${path}`)
       }
-      uid = fuser!.uid
-      this.db.object<CurrentUser>(`users/${uid}`).valueChanges()
-      .subscribe(
-        dbUser => {
-          let _user: CurrentUser
-          _user = dbUser!
-          // console.log(dbUser)
-          this.store.dispatch( authActions.setUser({user: _user}) )
-        }
-      )
+     
       // this.store.dispatch( authActions.setUser() )
     })
 
@@ -98,7 +105,7 @@ export class AuthService {
         code = 0;
         break;
       case 'Pack Estandar Mensual':
-        code = 2;
+        code = 1;
         break;
       case 'Pack Futbol Mensual':
         code = 2;

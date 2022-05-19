@@ -59,6 +59,7 @@ import {ProgressSpinnerModule}              from 'primeng/progressspinner';
 
 import {APP_BASE_HREF}                      from '@angular/common';
 import { SplashComponent } from './components/dashboard/splash/splash.component';
+import { SellersComponent } from './components/dashboard/sellers/sellers.component';
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import { SplashComponent } from './components/dashboard/splash/splash.component'
     DrmComponent,
     ModifychannelComponent,
     SplashComponent,
+    SellersComponent,
   ],
   imports: [
     FormsModule,

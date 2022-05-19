@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { PrimeNGConfig } from 'primeng/api';
 import {MenuItem} from 'primeng/api';
+import { AppState } from 'src/app/app.reducer';
 import { CurrentUser } from 'src/app/models/currente-user.model';
 import { AuthService } from '../auth/auth_services/auth-service.service';
 
@@ -17,12 +19,15 @@ export class DashboardComponent implements OnInit {
 
   user: CurrentUser;
 
-  visible: boolean = true
+  userTest?: CurrentUser;
+
+  visible: boolean = false
 
 
   constructor(
     private primengConfig: PrimeNGConfig, 
-    private authService: AuthService, 
+    private authService: AuthService,
+    private store: Store<AppState>, 
     private router: Router, 
     private db: AngularFireDatabase) {
     this.items = [];
@@ -32,6 +37,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.initFirebaseUser('login');
+  
+
+    if(this.user.role === 0){
+      this.visible = true
+    }
 
     this.items = [{
       label: 'Nuevo Usuario',

@@ -73,24 +73,11 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.user.pass  = password;
     this.user.type  = 0;
 
-    // Swal.fire({
-    //   title: 'Ingresando',
-    //   showConfirmButton: false,
-    //   didOpen: () => {
-    //     Swal.showLoading();
-    //   },
-    // });
     var usrsArray: CurrentUser[] = []
     this.authService
     .logIn(email, password)
     .then((credentials) => {
       this.user.uid = credentials.user!.uid;
-      this.getRole(this.user.uid).then(
-        () => {
-          this.router.navigate(['/dashboard']);
-        }
-      )
-      
     })
     .catch((err) => {
       this.store.dispatch( stopLoading() )
@@ -100,6 +87,13 @@ export class LoginComponent implements OnInit, OnDestroy {
         text: 'La contraseña o el email no son correctos!',
       });
     })
+    .then(
+      async()  => {
+        await this.getRole(this.user.uid)
+      }
+    )
+
+   
 
 
   }
@@ -109,7 +103,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       window.setTimeout(this.checkSuccess,100);
     }
     else {
-      localStorage.setItem('currentUser', JSON.stringify(this.user));
+      
       
     }
   }
@@ -119,6 +113,19 @@ export class LoginComponent implements OnInit, OnDestroy {
         .subscribe(
           (user) => {
             this.user.role = user!.role
+            if(user!.role === 0){this.router.navigate(['/dashboard']); }// aca va!
+            if(user!.role === 1){
+              this.user.points = user!.points
+              this.router.navigate(['/dashboard']); // aca va!
+            }
+            if(user!.role === 2){
+              this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+                this.router.navigate(['login']);
+              });
+            }
+            localStorage.setItem('currentUser', JSON.stringify(this.user));
+            console.log(`getRole: ${JSON.stringify(this.user)}`);
+            // this.router.navigate(['/dashboard']); // aca va!
             this.success = true
           }
         )  

@@ -10,6 +10,15 @@ button {
     font-family: 'Ubuntu', sans-serif !important;
 }
 
+.credit {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+.credit p {
+    font-weight: 500;
+    font-size: 26px;
+}
+
 
 .container-custom {
     height: 15rem;

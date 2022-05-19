@@ -20,7 +20,7 @@
         </div>
 
         <h5>Roles</h5>
-        <div class="grid mb-2">
+        <div class="grid mb-1">
             <div class="col-3">
                 <p-dropdown formControlName="role" class="p-dropdown-lg" [options]="rolesStr" placeholder="Elije un rol"></p-dropdown>
             </div>
@@ -31,13 +31,20 @@
             <div class="col-3">
                 <p-dropdown formControlName="plan" class="p-dropdown-lg" [options]="results" placeholder="Elije un plan"></p-dropdown>
             </div>
-
         </div>
-        <div class="col-12 h-2rem flex ">
+        
+        <div class="grid credit">
+            <div class="col-3 px-0 align-self-center">
+                <h4 class="mb-0">Credito Disponible:</h4>
+            </div>
+            <div class="col-3 text-start px-0">
+                <p class="mb-0">{{points}}</p>
+            </div>
         </div>
+       
         <hr>
         <div class="text-start">
-            <button [disabled]="!registerForm.valid" pButton type="submit" icon="pi pi-save" label="Crear" class="p-button-lg"></button>
+            <button *ngIf="enableButton" [disabled]="!registerForm.valid" pButton type="submit" icon="pi pi-save" label="Crear" class="p-button-lg"></button>
         </div>
     </form>
 

@@ -6,7 +6,7 @@
                 <div class="row row-custom">
                     <div class="grid mb-2">
                         <div class="col-12 p-0">
-                            <img src="assets/logo/TeluniveTV.svg" class="mb-4" style="height: 100px;">
+                            <img src="assets/logo/TeluniveTV.svg" class="mb-0" style="height: 100px;">
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                                     </a>
                                 </li>
 
-                                <li class="mb-2">
+                                <li class="mb-2" *ngIf="visible">
                                     <a href="addchannel">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
@@ -60,7 +60,7 @@
                                     </a>
                                 </li>
 
-                                <li class="mb-2">
+                                <li class="mb-2" *ngIf="visible">
                                     <a href="channels">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
@@ -75,7 +75,22 @@
                                     </a>
                                 </li>
 
-                                <li class="mb-2">
+                                <li class="mb-2" *ngIf="visible">
+                                    <a href="sellers">
+                                        <div class="row">
+                                            <div class="grid ps-3 pe-0">
+                                                <div class="col-2">
+                                                    <img src="assets/icons/man-outline.svg" style="height: 24px;">
+                                                </div>
+                                                <div class="col-10 justify-content-start min-w-auto flex flex-wrap">
+                                                    <p class="p-custom mt-3  ms-2">Vendedores</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="mb-2" *ngIf="visible">
                                     <a href="drm">
                                         <div class="row">
                                             <div class="grid ps-3 pe-0">
@@ -108,9 +123,9 @@
 
                                 </li>
 
-                                <div class="divider-container min-h-50 text-center">
-                                   
-                                </div>
+                                <div *ngIf="!visible" class="divider-container min-h-50 my-5 text-center"></div>
+
+                                <div class="divider-container min-h-50 text-center"></div>
 
                                 <li class="">
                                     <a href="">

@@ -12,11 +12,6 @@
 
     <hr class="my-0">
     <p-messages [value]="msgs"></p-messages>
-    <!-- <div class="p-mb-1 mt-0 flex">
-            <p-button class="flex-none" type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
-            <p-button class="flex-grow-1 text-center" type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
-            <p-button class="flex-none" type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
-        </div> -->
 
     <p-table class="p-table pb-5" [lazy]="true" [loading]="loading" [value]="scChannels" [scrollable]="true" scrollHeight="81vh" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">

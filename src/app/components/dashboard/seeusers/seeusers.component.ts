@@ -38,6 +38,10 @@ export class SeeusersComponent implements OnInit {
 
   suscription?: Subscription
 
+  currentUser: CurrentUser
+
+  noPoints: boolean = false
+
 
 
 
@@ -53,6 +57,7 @@ export class SeeusersComponent implements OnInit {
     this.usrs = [];
     this.usrsBk = []
     this.filterValue = '';
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser')!.toString())
 
    }
 
@@ -60,14 +65,29 @@ export class SeeusersComponent implements OnInit {
     var array: CurrentUser[] = []
     this.suscription = this.users = this.db.list<CurrentUser>('users').valueChanges().pipe(take(1))
     .subscribe(users => {
-      console.log(users)
       this.users = users
       for (let i = 0; i < users.length; i++) {
-        array.push(users[i])
+        let e = users[i]
+        if(this.currentUser.role === 0){
+          if(e.role === 2){
+            array.push(e)
+          }
+        }
+        if(this.currentUser.role === 1){
+          if(e.createdBy === this.currentUser.uid){
+
+            if(e.role === 2){
+              array.push(e)
+            }
+          }
+        }
       }
       this.loading = false
     })
 
+    if(this.currentUser.points === 0){
+      this.noPoints = true
+    }
     
     
     this.usrs = array
@@ -139,7 +159,7 @@ export class SeeusersComponent implements OnInit {
     
     for (let i = 0; i < this.usrs.length; i++) {
       if(this.usrs[i].email.valueOf().startsWith(value)){
-        filteredArray.unshift(this.users[i])
+        filteredArray.unshift(this.usrs[i])
       }
 
     }
