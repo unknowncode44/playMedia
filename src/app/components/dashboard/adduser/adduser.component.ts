@@ -233,7 +233,7 @@ export class AdduserComponent implements OnInit {
 
         }
       })
-      this.decreaseOnePoint()
+      if(this.newUser.type === 1){this.decreaseOnePoint()}
       this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
         this.router.navigate(['dashboard']);
       });
