@@ -177,6 +177,9 @@ export class AdduserComponent implements OnInit {
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)
           if(suscrCode === 0) {epochExpirationDate.setDate(epochExpirationDate.getDate() - 23)}
           if(suscrCode === 1) {this.newUser.type = 1}
+          console.log(`SUSCR CODE>   ${suscrCode}, TYPE>   ${this.newUser.type}`);
+          
+          this.decreaseOnePoint(suscrCode)
           
           var expireDate: Date = new Date(epochExpirationDate);
           
@@ -233,7 +236,7 @@ export class AdduserComponent implements OnInit {
 
         }
       })
-      if(this.newUser.type === 1){this.decreaseOnePoint()}
+      
       this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
         this.router.navigate(['dashboard']);
       });
@@ -241,11 +244,23 @@ export class AdduserComponent implements OnInit {
 
   }
 
-  decreaseOnePoint(){
-    const points: number = this.currentUser.points!
-    this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).update({ points: points-1 });
-    this.currentUser.points = this.currentUser.points! - 1
+  decreaseOnePoint(srcode: number){
+    let disc: number
+    if(srcode === 1){
+      disc = 1
+    }
+    else {
+      disc = 0
+    }
+    const points: number = this.currentUser.points!-disc
+    this.currentUser.points = points
+    this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).update({ points: points });
     localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
+    console.log(`PUNTOS>    ${this.currentUser.points!}`);
+    this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['dashboard']);
+    });
+    
   }
 
 }
