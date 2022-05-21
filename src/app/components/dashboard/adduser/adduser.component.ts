@@ -235,6 +235,10 @@ export class AdduserComponent implements OnInit {
           });
 
         }
+
+        else {
+          console.log(err)
+        }
       })
       
       this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
@@ -251,6 +255,10 @@ export class AdduserComponent implements OnInit {
     }
     else {
       disc = 0
+    }
+
+    if(this.currentUser.role === 0){
+      this.currentUser.points = 100
     }
     const points: number = this.currentUser.points!-disc
     this.currentUser.points = points
