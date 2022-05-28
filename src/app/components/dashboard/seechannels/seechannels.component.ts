@@ -6,6 +6,7 @@ import { DbService } from 'src/app/db/dbservice.service';
 import { Channel } from 'src/app/models/channel.model';
 import { Sample } from 'src/app/models/sample.model';
 import {Message} from 'primeng/api';
+import { take } from 'rxjs/operators';
 
 interface SChannels {
   channelIndx?: string,
@@ -91,12 +92,12 @@ export class SeechannelsComponent implements OnInit {
         this.totalRecords = channels.length
       }
     )
-    this.obsItemsList.valueChanges().subscribe(
+    this.obsItemsList.valueChanges().pipe(take(1)).subscribe(
       channels => {
         this.channels = channels
         channels.map((channel, index) => {
           const sampleList: Sample[] = channel.samples!
-          sampleList.map((sample, sindex) => {
+          channel.samples!.map((sample, sindex) => {
             var sampleObj: SChannels = {
               name: sample.name,
               channelIndx: index.toString(),
@@ -129,6 +130,7 @@ export class SeechannelsComponent implements OnInit {
     
     
   }
+
 
   confirmDelete(channelIndex: string, sampleIndex: string, channelName: string){
     this.confirmationService.confirm({
