@@ -191,23 +191,23 @@
                         <img src="assets/icons/people-outline.svg" class="bg-white pe-2" style="height: 24px;">Ver Usuarios
                     </li>
                 </a>
-                <a href="addchannel">
+                <a href="addchannel" *ngIf="visible">
                     <li class="list-group-item bg-white">
                         <img src="assets/icons/play-outline.svg" class=" bg-white pe-2" style="height: 24px;">Agregar Canales
                     </li>
                 </a>
-                <a href="channels">
+                <a href="channels" *ngIf="visible">
                     <li class="list-group-item bg-white">
                         <img src="assets/icons/play-forward-outline.svg" class="bg-white pe-2" style="height: 24px;">Ver Canales
                     </li>
                 </a>
-                <a href="sellers">
+                <a href="sellers" *ngIf="visible">
                     <li class="list-group-item bg-white">
                         <img src="assets/icons/man-outline.svg" class="bg-white pe-2" style="height: 24px;">Vendedores
                     </li>
                 </a>
 
-                <a href="drm">
+                <a href="drm" *ngIf="visible">
                     <li class="list-group-item bg-white">
                         <img src="assets/icons/settings-outline.svg" class="bg-white pe-2" style="height: 24px;">Modificar DRM
                     </li>
