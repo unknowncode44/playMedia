@@ -1,5 +1,4 @@
 <div class="parent">
-
     <div class="background">
         <div class="sidebar text-center">
             <p-card class="text-center min-h-full justify-content-center min-w-full py-0">
@@ -152,10 +151,88 @@
         </div>
 
     </div>
-    <div class="content border-round">
 
+    <div class="content border-round card-mobile">
         <router-outlet>
         </router-outlet>
     </div>
 
+</div>
+
+
+
+<div class="custom-navbar">
+    <div class="container">
+        <div class="row p-0 m-0">
+            <div class="col-10 brand text-start p-0">
+                <h3 class="p-0 m-0">Telunive TV</h3>
+            </div>
+            <div class="col-2 p-0">
+                <a (click)="openMenu()">
+                    <img src="assets/icons/menu-outline.svg" style="height: 2.5rem;">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container pt-4 mt-1" *ngIf="mobileMenu">
+    <div class="row pt-4">
+        <div class="col-12 pt-2">
+            <ul class="list-group bg-white">
+                <a href="dashboard">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/person-add-outline.svg" class="bg-white pe-2" style="height: 24px;"> Agregar usuario
+                    </li>
+                </a>
+                <a href="/users">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/people-outline.svg" class="bg-white pe-2" style="height: 24px;">Ver Usuarios
+                    </li>
+                </a>
+                <a href="/addchannel">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/play-outline.svg" class=" bg-white pe-2" style="height: 24px;">Agregar Canales
+                    </li>
+                </a>
+                <a href="channels">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/play-forward-outline.svg" class="bg-white pe-2" style="height: 24px;">Ver Canales
+                    </li>
+                </a>
+                <a href="sellers">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/man-outline.svg" class="bg-white pe-2" style="height: 24px;">Vendedores
+                    </li>
+                </a>
+
+                <a href="drm">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/settings-outline.svg" class="bg-white pe-2" style="height: 24px;">Modificar DRM
+                    </li>
+
+                </a>
+                <a href="http://localhost:4200/assets/apk/Telunive_v1.0.apk">
+                    <li class="list-group-item bg-white">
+                        <img src="assets/icons/logo-google-playstore.svg" class="bg-white pe-2" style="height: 24px;"> Bajar APK
+                    </li>
+                </a>
+                <a (click)="logOut()">
+                    <li class="list-group-item mt-2 bg-white">
+                        <img src="assets/icons/log-out-outline.svg" class="bg-white pe-2" style="height: 24px;">Cerrar Sesion</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container pt-4">
+    <div class="row pt-4">
+        <router-outlet>
+        </router-outlet>
+    </div>
 </div>

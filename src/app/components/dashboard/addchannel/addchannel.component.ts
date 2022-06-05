@@ -20,7 +20,7 @@ export class AddchannelComponent implements OnInit {
   channel: Channel = { name: '', samples: [{}] }
   categories: string[] = ['Cargando datos...']
   cat: string
-  newCat: string = 'null'
+  newCat: string = ''
   uri: string
   name: string
   drm_license_url: string
@@ -28,6 +28,7 @@ export class AddchannelComponent implements OnInit {
   icon: string
   channels: Channel[]
   msgs: Message[] = [];
+  newCatBool: boolean = false
 
 
 
@@ -85,8 +86,16 @@ export class AddchannelComponent implements OnInit {
   }
 
   enableNewCat(){
-    this.newCat = ''
-    this.buttonDisable = false
+    if(!this.buttonDisable){
+      this.newCat = ''
+      this.buttonDisable = true
+      this.newCatBool = true
+    }
+    else {
+      this.newCat = ''
+      this.buttonDisable = false
+      this.newCatBool = false
+    }
   }
 
   createChannel() {
@@ -104,29 +113,35 @@ export class AddchannelComponent implements OnInit {
 
       ]
     }
+    if(this.newCatBool){
+      this.createNewCat()
+    }
     
-    for (let i = 0; i < this.channels.length; i++) {
-      const e = this.channels[i];
-      var sampleLenght = e.samples?.length
-      if(e.name === this.channel.name) {
-        path =  `channels/${i}/samples/${sampleLenght!++}`;
-        this.db.object(path).set({
-          uri: this.uri,
-          name: this.name.toUpperCase(),
-          drm_license_url: `\t${this.drm_license_url}`,
-          drm_scheme: this.drm_scheme,
-          icon: this.icon
-        }).then(
-          channel => {
-            this.msgs = [{ severity: 'success', summary: 'Se creo el canal', detail: `${this.channel.name}` }];
+    
+    else{
+      for (let i = 0; i < this.channels.length; i++) {
+        const e = this.channels[i];
+        var sampleLenght = e.samples?.length
+        if(e.name === this.channel.name) {
+          path =  `channels/${i}/samples/${sampleLenght!++}`;
+          this.db.object(path).set({
+            uri: this.uri,
+            name: this.name.toUpperCase(),
+            drm_license_url: `\t${this.drm_license_url}`,
+            drm_scheme: this.drm_scheme,
+            icon: this.icon
+          }).then(
+            channel => {
+              this.msgs = [{ severity: 'success', summary: 'Se creo el canal', detail: `${this.channel.name}` }];
+            }
+          )
+          break
+        }
+        else {
+          if(i === this.channels.length) {
+            // path = `channel_test/${this.channels.length++}`
+            this.msgs = [{ severity: 'warn', summary: 'Hubo une error', detail: `${this.channel.name}` }];
           }
-        )
-        break
-      }
-      else {
-        if(i === this.channels.length) {
-          // path = `channel_test/${this.channels.length++}`
-          this.msgs = [{ severity: 'warn', summary: 'Hubo une error', detail: `${this.channel.name}` }];
         }
       }
     }
@@ -135,6 +150,25 @@ export class AddchannelComponent implements OnInit {
 
 
 
+  }
+
+  createNewCat(){
+    let i    = this.channels.length
+    let path = `channels/${i++}`;
+        this.db.object(path).set(
+          {name: `${this.newCat}`,
+          samples: {
+            uri: this.uri,
+            name: this.name.toUpperCase(),
+            drm_license_url: `\t${this.drm_license_url}`,
+            drm_scheme: this.drm_scheme,
+            icon: this.icon
+          }}
+        ).then(
+          channel => {
+            this.msgs = [{ severity: 'success', summary: 'Se creo el canal', detail: `${this.channel.name}` }];
+          }
+        )
   }
 
 }

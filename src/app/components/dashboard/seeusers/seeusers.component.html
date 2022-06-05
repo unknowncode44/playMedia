@@ -46,7 +46,7 @@
                 <td class="p-0">
                     <div class="pt-1 flex flex-wrap">
                         <div class="p-buttonset">
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" (click)="confirmRenew(user.expire, user.type, user.email, user.uid)" icon="pi pi-refresh"></button>
+                            <button pButton [disabled]="noPoints" class="p-button-sm p-1 p-button-raised p-button-primary" (click)="confirmRenew(user.expire, user.type, user.email, user.uid)" icon="pi pi-refresh"></button>
                             <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="deleteUser(user.uid, user.email)" icon="pi pi-trash"></button>
                         </div>
                     </div>
@@ -76,6 +76,11 @@
                 <div class="col-12 mb-0 mt-1 p-0">
                     <p class="m-0 p-0">Nueva fecha de expiracion: <strong>{{newDate}}</strong></p>
                 </div>
+                <div class="col-12 mb-0 mt-1 p-0">
+                    <p class="m-0 p-0">Credito Disponible: <strong>{{points}}</strong></p>
+                </div>
+
+
             </div>
 
         </div>

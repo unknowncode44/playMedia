@@ -254,7 +254,7 @@ export class AdduserComponent implements OnInit {
       disc = 1
     }
     else {
-      disc = 0
+      disc = 0 
     }
 
     if(this.currentUser.role === 0){

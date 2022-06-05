@@ -3,66 +3,66 @@
     <hr>
     <p-messages [value]="msgs"></p-messages>
 
-        <div class="grid p-fluid">
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>Categoria:</h5>
-            </div>
-            <div class="col-4">
-                <p-dropdown [(ngModel)]="cat" [options]="categories" placeholder="Selecciona" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
-            </div>
-            
-            <div class="col-2">
-                <!-- <button pButton (click)="enableNewCat()" icon="pi pi-plus" label="Nueva"></button> -->
-            </div>
-            <div class="col-4">
-                <!-- <input type="text" [(ngModel)]="newCat" [disabled]="buttonDisable" pInputText placeholder="Nueva Categoria"> -->
-            </div>
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>uri:</h5>
-            </div>
-            <div class="col-10">
-                <div class="p-inputgroup">
-                    <input type="text" [(ngModel)]="uri" pInputText placeholder="Ingresa uri">
-                </div>
-            </div>
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>Nombre:</h5>
-            </div>
-            <div class="col-10">
-                <div class="p-inputgroup">
-                    <input type="text" [(ngModel)]="name" pInputText placeholder="Nombre">
-                </div>
-            </div>
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>drm_scheme:</h5>
-            </div>
-            <div class="col-10">
-                <div class="p-inputroup">
-                    <input type="text" [(ngModel)]="drm_scheme" pInputText placeholder="Ingresa drm_scheme">
-                </div>
-            </div>
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>drm_license_url:</h5>
-            </div>
-            <div class="col-10">
-                <div class="p-inputgroup">
-                    <input type="text" [(ngModel)]="drm_license_url" pInputText placeholder="Ingresa drm_license_url">
-                </div>
-            </div>
-            <div class="col-2 text-lg-end justify-content-end pt-3">
-                <h5>icon:</h5>
-            </div>
-            <div class="col-10">
-                <div class="p-inputgroup">
-                    <input type="text"  [(ngModel)]="icon" pInputText placeholder="Ingresa icon">
-                </div>
+    <div class="grid p-fluid">
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>Categoria:</h5>
+        </div>
+        <div class="col-4">
+            <p-dropdown [(ngModel)]="cat" [disabled]="!buttonDisable" [options]="categories" placeholder="Selecciona" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
+        </div>
+
+        <div class="col-2">
+            <button pButton (click)="enableNewCat()" icon="pi pi-plus" label="Nueva"></button>
+        </div>
+        <div class="col-4">
+            <input type="text" [(ngModel)]="newCat" [disabled]="buttonDisable" pInputText placeholder="Ingresa Nueva Categoria">
+        </div>
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>uri:</h5>
+        </div>
+        <div class="col-10">
+            <div class="p-inputgroup">
+                <input type="text" [(ngModel)]="uri" pInputText placeholder="Ingresa uri">
             </div>
         </div>
-        <hr class="mb-1">
-        <div class="text-end">
-            <button type="button" pButton class="p-button-outlined p-button-danger m-2" icon="pi pi-times" label="Cancelar"></button>
-            <button pButton icon="pi pi-check" class="p-button-success m-2" (click)="createChannel()" type="button" label="Aceptar"></button>
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>Nombre:</h5>
         </div>
+        <div class="col-10">
+            <div class="p-inputgroup">
+                <input type="text" [(ngModel)]="name" pInputText placeholder="Nombre">
+            </div>
+        </div>
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>drm_scheme:</h5>
+        </div>
+        <div class="col-10">
+            <div class="p-inputroup">
+                <input type="text" [(ngModel)]="drm_scheme" pInputText placeholder="Ingresa drm_scheme">
+            </div>
+        </div>
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>drm_license_url:</h5>
+        </div>
+        <div class="col-10">
+            <div class="p-inputgroup">
+                <input type="text" [(ngModel)]="drm_license_url" pInputText placeholder="Ingresa drm_license_url">
+            </div>
+        </div>
+        <div class="col-2 text-lg-end justify-content-end pt-3">
+            <h5>icon:</h5>
+        </div>
+        <div class="col-10">
+            <div class="p-inputgroup">
+                <input type="text" [(ngModel)]="icon" pInputText placeholder="Ingresa icon">
+            </div>
+        </div>
+    </div>
+    <hr class="mb-1">
+    <div class="text-end">
+        <button type="button" pButton class="p-button-outlined p-button-danger m-2" icon="pi pi-times" label="Cancelar"></button>
+        <button pButton icon="pi pi-check" class="p-button-success m-2" (click)="createChannel()" type="button" label="Aceptar"></button>
+    </div>
 
 
 </p-card>

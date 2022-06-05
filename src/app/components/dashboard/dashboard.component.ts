@@ -23,6 +23,8 @@ export class DashboardComponent implements OnInit {
 
   visible: boolean = false
 
+  mobileMenu: boolean = false
+
 
   constructor(
     private primengConfig: PrimeNGConfig, 
@@ -51,6 +53,15 @@ export class DashboardComponent implements OnInit {
       label: 'Ver Usuarios',
       icon: 'pi pi-plus'
     },]
+  }
+
+  openMenu(){
+    if(this.mobileMenu){
+      this.mobileMenu = !this.mobileMenu
+    }
+    else {
+      this.mobileMenu = !this.mobileMenu
+    }
   }
 
   logOut() {

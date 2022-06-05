@@ -42,6 +42,8 @@ export class SeeusersComponent implements OnInit {
 
   noPoints: boolean = false
 
+  points: number
+
 
 
 
@@ -58,10 +60,12 @@ export class SeeusersComponent implements OnInit {
     this.usrsBk = []
     this.filterValue = '';
     this.currentUser = JSON.parse(localStorage.getItem('currentUser')!.toString())
+    this.points = this.currentUser.points!
 
    }
 
   ngOnInit(): void {
+    
     var array: CurrentUser[] = []
     this.suscription = this.users = this.db.list<CurrentUser>('users').valueChanges().pipe(take(1))
     .subscribe(users => {
@@ -85,9 +89,14 @@ export class SeeusersComponent implements OnInit {
       this.loading = false
     })
 
+
     if(this.currentUser.points === 0){
       this.noPoints = true
     }
+
+    
+
+
     
     
     this.usrs = array
@@ -264,10 +273,13 @@ export class SeeusersComponent implements OnInit {
     this.newDate    = this.renewSuscription(date)
     this.userUid    = userUid
     
+
     
   }
 
   async renewUser(){
+    var suscrCode: number  = 1
+    await this.decreaseOnePoint(suscrCode)
     await this.db.object<CurrentUser>(`users/${this.userUid}`).update({ expire: this.newDate, type: 1 });
     this.renewUserVisible = false
     this.msgs = [{severity:'success', summary:'Se renovo la suscripcion', detail:`El usuario ${this.userUid} fue renovado correctamente`}];
@@ -335,6 +347,29 @@ export class SeeusersComponent implements OnInit {
 
     })
   }
+
+  async decreaseOnePoint(srcode: number){
+    let disc: number
+    if(srcode === 1){
+      disc = 1
+    }
+    else {
+      disc = 0 
+    }
+
+    if(this.currentUser.role === 0){
+      this.currentUser.points = 100
+    }
+    const points: number = this.currentUser.points!-disc
+    this.currentUser.points = points
+    await this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).update({ points: points });
+    localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
+    this.points = this.currentUser.points!
+    console.log(`PUNTOS>    ${this.currentUser.points!}`);
+    
+    
+  }
+
 
   
 

@@ -4,7 +4,7 @@
     <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
         <h5 class="mb-1">Ingresa los datos</h5>
         <div class="grid mt-3 mb-2">
-            <div class="col-3">
+            <div class="col-12">
                 <span class="p-float-label p-input-icon-left mt-1">
                 <i class="pi pi-envelope"></i>
                 <input formControlName="email" class="p-inputtext" id="email-input" type="email" pInputText />
@@ -21,18 +21,18 @@
 
         <h5>Roles</h5>
         <div class="grid mb-1">
-            <div class="col-3">
+            <div class="col-12">
                 <p-dropdown formControlName="role" class="p-dropdown-lg" [options]="rolesStr" placeholder="Elije un rol"></p-dropdown>
             </div>
 
         </div>
         <h5>Ingresa tipo de suscripcion</h5>
         <div class="grid">
-            <div class="col-3">
+            <div class="col-12">
                 <p-dropdown formControlName="plan" class="p-dropdown-lg" [options]="results" placeholder="Elije un plan"></p-dropdown>
             </div>
         </div>
-        
+
         <div class="grid credit">
             <div class="col-3 px-0 align-self-center">
                 <h4 class="mb-0">Credito Disponible:</h4>
@@ -41,7 +41,7 @@
                 <p class="mb-0">{{points}}</p>
             </div>
         </div>
-       
+
         <hr>
         <div class="text-start">
             <button *ngIf="enableButton" [disabled]="!registerForm.valid" pButton type="submit" icon="pi pi-save" label="Crear" class="p-button-lg"></button>
