@@ -312,16 +312,18 @@ export class SeeusersComponent implements OnInit {
     let _yearStr:  string = dateObject.getFullYear().toString()
     
 
-    if (_date < 10) {
+    if (_date <= 9) {
       _dateStr = `0${_dateStr}`
     }
-    if (_month < 10) {
+    if (_month <= 8) {
       _monthStr = `0${_monthStr}`
     }
+    
 
     let newDate: string = `${_dateStr}/${_monthStr}/${_yearStr}`
 
-  
+    console.warn(newDate);
+    
     
     return newDate
     

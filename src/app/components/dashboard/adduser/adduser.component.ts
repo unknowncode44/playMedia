@@ -175,7 +175,7 @@ export class AdduserComponent implements OnInit {
           
           var epochExpirationDate: Date = new Date();
           epochExpirationDate.setDate(epochExpirationDate.getDate() + 30)
-          if(suscrCode === 0) {epochExpirationDate.setDate(epochExpirationDate.getDate() - 23)}
+          if(suscrCode === 0) {epochExpirationDate.setDate(epochExpirationDate.getDate() - 28)}
           if(suscrCode === 1) {this.newUser.type = 1}
           console.log(`SUSCR CODE>   ${suscrCode}, TYPE>   ${this.newUser.type}`);
           
