@@ -33,7 +33,7 @@
                     <div class="pt-1 flex flex-wrap">
                         <div class="p-buttonset">
                             <button pButton class="p-button-sm p-1 p-button-raised p-button-primary" (click)="openAddPoints(user.email, user.uid,user.points)" icon="pi pi-refresh"></button>
-                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="pointsDialogVisible=false" icon="pi pi-trash"></button>
+                            <button pButton class="p-button-sm p-1 p-button-raised p-button-danger" (click)="deleteUser(user.uid)" icon="pi pi-trash"></button>
                         </div>
                     </div>
                 </td>
@@ -55,8 +55,8 @@
                     <p class="m-0 p-0">Agregar Puntos:</p>
                     <div class="col-4 m-0 p-0">
                         <div class="p-inputgroup m-0 p-0">
-                            <input type="text" pInputText value="{{pointsToAdd}}" placeholder="Keyword">   
-                            <button type="button" pButton pRipple (click)="increasePoints()" icon="pi pi-plus" styleClass="p-button-warn"></button>      
+                            <input type="text" pInputText value="{{pointsToAdd}}" placeholder="Keyword">
+                            <button type="button" pButton pRipple (click)="increasePoints()" icon="pi pi-plus" styleClass="p-button-warn"></button>
                         </div>
                     </div>
                 </div>

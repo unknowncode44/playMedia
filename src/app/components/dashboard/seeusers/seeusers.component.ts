@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+
 import { Router } from '@angular/router';
 import { ConfirmationService, Message, MessageService } from 'primeng/api';
 import { Observable, Subscription } from 'rxjs';
@@ -15,8 +16,6 @@ import { take } from 'rxjs/operators';
 export class SeeusersComponent implements OnInit {
 
   users: Observable<CurrentUser[]> | Observable<any> | any;
-
-  items: Observable<any[]>;
 
   usrs: CurrentUser[];
   usrsBk: CurrentUser[];
@@ -55,7 +54,6 @@ export class SeeusersComponent implements OnInit {
     private confirmation: ConfirmationService, 
     private router: Router, 
     private messages: MessageService) {
-    this.items = db.list('users').valueChanges();
     this.usrs = [];
     this.usrsBk = []
     this.filterValue = '';
@@ -67,9 +65,63 @@ export class SeeusersComponent implements OnInit {
   ngOnInit(): void {
     
     var array: CurrentUser[] = []
-    this.suscription = this.users = this.db.list<CurrentUser>('users').valueChanges().pipe(take(1))
+    this.suscription = this.db.list<CurrentUser>('users').valueChanges().pipe(take(1))
     .subscribe(users => {
       this.users = users
+      let today = new Date();
+      let twoMonthsAgo = this.substractMonths(2)
+      let oneWeekAgo = this.substractDays(7)
+      console.log(`hoy es ${oneWeekAgo.toLocaleDateString()} <= `);
+      
+      // for (let i = 0; i < users.length; i++) {
+      //   const e = users[i];
+        
+      //   if(e.expire && e.type === 0){
+      //     let splitted = e.expire.split('/')
+      //     let newDate = `${splitted[1]}/${splitted[0]}/${splitted[2]}`
+      //     let eDate = new Date(newDate)
+      //     if(eDate < twoMonthsAgo){
+      //       this.db.object<CurrentUser>(`users/${e.uid}`).remove().then(() => {
+      //         console.log(`${e.email} eliminado`);
+              
+      //       })
+      //     }
+      //   }
+      // }
+
+      // for (let i = 0; i < users.length; i++) {
+      //   const w = users[i];
+      //   if(w.time && w.type === 0){
+      //     if(w.time < 1000){
+      //       this.db.object<CurrentUser>(`users/${w.uid}`).remove().then(() => {
+      //         console.log(`${w.email} eliminado`);
+              
+      //       })
+      //     }
+          
+      //   }
+      // }
+
+      // for (let i = 0; i < users.length; i++) {
+      //   const e = users[i];
+      //   if(e.expire && e.type === 0){
+      //     let splitted = e.expire.split('/')
+      //     let newDate = `${splitted[1]}/${splitted[0]}/${splitted[2]}`
+      //     let eDate = new Date(newDate)
+      //     if(eDate < oneWeekAgo){
+      //       this.db.object<CurrentUser>(`users/${e.uid}`).remove().then(() => {
+      //         console.log(`${e.email} eliminado`);
+              
+      //       })
+      //     }
+      //   }
+        
+      // }
+      
+
+      
+      
+
       for (let i = 0; i < users.length; i++) {
         let e = users[i]
         if(this.currentUser.role === 0){
@@ -94,11 +146,6 @@ export class SeeusersComponent implements OnInit {
       this.noPoints = true
     }
 
-    
-
-
-    
-    
     this.usrs = array
     this.usrsBk = this.usrs
     
@@ -370,6 +417,18 @@ export class SeeusersComponent implements OnInit {
     console.log(`PUNTOS>    ${this.currentUser.points!}`);
     
     
+  }
+
+  substractMonths(numOfMonths: number) : Date {
+    let date_ = new Date()
+    date_.setMonth(date_.getMonth() - numOfMonths)
+    return date_ 
+  }
+
+  substractDays(numOfDays: number) : Date {
+    let date_ = new Date()
+    date_.setDate(date_.getDate() - numOfDays)
+    return date_ 
   }
 
 

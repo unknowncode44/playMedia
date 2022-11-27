@@ -1,5 +1,4 @@
 import { Routes } from "@angular/router";
-import { LoginComponent } from "../auth/login/login.component";
 import { AddchannelComponent } from "./addchannel/addchannel.component";
 import { AdduserComponent } from "./adduser/adduser.component";
 import { DrmComponent } from "./drm/drm.component";

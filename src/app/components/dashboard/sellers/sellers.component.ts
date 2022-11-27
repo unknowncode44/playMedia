@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { MessageService, Message } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CurrentUser } from 'src/app/models/currente-user.model';
+
+declare function deleteUser(uid: string): any;
+
 
 @Component({
   selector: 'app-sellers',
@@ -25,6 +29,7 @@ export class SellersComponent implements OnInit {
   sellerPoints?: number
   sellerUid?: string
 
+ 
 
   pointsToAdd: number
 
@@ -33,7 +38,9 @@ export class SellersComponent implements OnInit {
   constructor(
     private db: AngularFireDatabase,
     private router: Router,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private afAuth: AngularFireAuth
+    
     ) {
     this.users = []
     this.loading =  true
@@ -74,7 +81,7 @@ export class SellersComponent implements OnInit {
     let points = this.sellerPoints! + this.pointsToAdd
     this.db.object<CurrentUser>(`users/${this.sellerUid}`).update({points: points})
     this.msgs = [{severity:'success', summary:'Puntos Agregados', detail:`Se agregaron ${this.pointsToAdd.toString()} al usuario ${this.sellerEmail}`}];
-
+    
     this.pointsDialogVisible = false
     setTimeout(() => {
       this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
@@ -102,6 +109,24 @@ export class SellersComponent implements OnInit {
       this.loading = false
 
     return this.sellers
+  }
+
+  deleteUser(user: string){
+    console.log(user);
+    deleteUser(user)
+    this.db.object<CurrentUser>(`users/${user}`).remove().then( () => {
+      this.loading = true
+      this.msgs = [{severity:'success', summary:'Vendedor Eliminado', detail:`Se elimino al usuario ${this.sellerEmail}`}];
+      setTimeout(() => {
+        this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['sellers']);
+          
+        });
+        this.loading = false
+      }, 1500)
+    }
+      
+    )
   }
 
 }
