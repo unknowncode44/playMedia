@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CurrentUser } from 'src/app/models/currente-user.model';
 
-declare function deleteUser(uid: string): any;
+
 
 
 @Component({
@@ -113,7 +113,6 @@ export class SellersComponent implements OnInit {
 
   deleteUser(user: string){
     console.log(user);
-    deleteUser(user)
     this.db.object<CurrentUser>(`users/${user}`).remove().then( () => {
       this.loading = true
       this.msgs = [{severity:'success', summary:'Vendedor Eliminado', detail:`Se elimino al usuario ${this.sellerEmail}`}];

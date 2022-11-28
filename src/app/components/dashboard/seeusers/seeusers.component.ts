@@ -7,6 +7,7 @@ import { Observable, Subscription } from 'rxjs';
 import { DbService } from 'src/app/db/dbservice.service';
 import { CurrentUser } from 'src/app/models/currente-user.model';
 import { take } from 'rxjs/operators';
+import { AuthService } from '../../auth/auth_services/auth-service.service';
 
 @Component({
   selector: 'app-seeusers',
@@ -49,7 +50,8 @@ export class SeeusersComponent implements OnInit {
 
 
   constructor(
-    private db: AngularFireDatabase, 
+    private db: AngularFireDatabase,
+    private authService: AuthService, 
     private dbService: DbService, 
     private confirmation: ConfirmationService, 
     private router: Router, 
@@ -58,6 +60,18 @@ export class SeeusersComponent implements OnInit {
     this.usrsBk = []
     this.filterValue = '';
     this.currentUser = JSON.parse(localStorage.getItem('currentUser')!.toString())
+    this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).valueChanges().subscribe( r => {
+      if(r === null){
+        localStorage.removeItem('currentUser')
+        this.authService.logOut()
+        this.router.navigate(['login'])
+      }
+      else {
+        this.currentUser = r
+        localStorage.setItem('currentUser', JSON.stringify(r))
+      }
+    })
+
     this.points = this.currentUser.points!
 
    }
@@ -117,10 +131,6 @@ export class SeeusersComponent implements OnInit {
       //   }
         
       // }
-      
-
-      
-      
 
       for (let i = 0; i < users.length; i++) {
         let e = users[i]

@@ -57,6 +57,21 @@ export class AdduserComponent implements OnInit {
     this.registerForm = this.fb.group({})
 
     this.currentUser = JSON.parse(localStorage.getItem('currentUser')!.toString())
+    this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).valueChanges().subscribe( r => {
+      if(r === null){
+        localStorage.removeItem('currentUser')
+        this.authService.logOut()
+        this.router.navigate(['login'])
+      }
+      else {
+        this.currentUser = r
+        localStorage.setItem('currentUser', JSON.stringify(r))
+      }
+    })
+    
+
+    
+    
     this.points = this.currentUser.points
 
     
@@ -132,6 +147,20 @@ export class AdduserComponent implements OnInit {
   }
 
   registerUser() {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser')!.toString())
+    this.db.object<CurrentUser>(`users/${this.currentUser.uid}`).valueChanges().subscribe( r => {
+      if(r === null){
+        localStorage.removeItem('currentUser')
+        this.authService.logOut()
+        this.router.navigate(['login'])
+      }
+      else {
+        this.currentUser = r
+        localStorage.setItem('currentUser', JSON.stringify(r))
+      }
+    })
+
+
     if (this.registerForm.invalid) {
       return;
     }

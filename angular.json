@@ -40,7 +40,7 @@
                             "node_modules/primeflex/primeflex.css"
                         ],
                         "scripts": [
-                            "src/assets/js/auth.js"
+
                         ]
                     },
                     "configurations": {
